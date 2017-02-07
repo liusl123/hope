@@ -2,7 +2,7 @@
 @section('con')
 <div class="mws-panel grid_8">
     <div class="mws-panel-header">
-        <span><i class="icon-table"></i>用户浏览</span>
+        <span><i class="icon-table"></i>已删除商品</span>
     </div>
     <div class="mws-panel-body no-padding">
         <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
@@ -52,9 +52,9 @@
                 <thead>
                     <tr role="row">
                         <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 156px;">ID</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">用户名</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">邮箱</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 136px;">电话</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">商品名</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">类别</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 136px;">单价</th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">状态</th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">操作</th>
                     </tr>
@@ -67,20 +67,20 @@
                             <tr class="even">
                         @endif
                                 <td class=" sorting_1">{{$v['id']}}</td>
-                                <td class=" ">{{$v['name']}}</td>
-                                <td class=" ">{{$v['email']}}</td>
-                                <td class=" ">{{$v['phone']}}</td>
+                                <td class=" ">{{$v['goods']}}</td>
+                                <td class=" ">{{$v['cate']}}</td>
+                                <td class=" ">{{$v['price']}}</td>
                                 <td class=" ">
-                                    @if($v['status'] == 0)
-                                        禁用
+                                    @if($v['state'] == 4)
+                                        准备删除
                                     @else
                                         启用
                                     @endif
                                 </td>
                                 <td class=" ">
-                                    <a href="/admin/user/del/{{$v['id']}}" class='icon-trash' style='font-size:30px;color:blue'></a>
+                                    <a href="/admin/recycle/delg/{{$v['id']}}" class='icon-trash' style='font-size:30px;color:blue'></a>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="/admin/user/edit/{{$v['id']}}" class='icon-tools' style='font-size:25px;color:blue'></a>
+                                    <a href="/admin/recycle/restoreg/{{$v['id']}}" class='icon-bended-arrow-right' style='font-size:25px;color:blue'></a>
                                 </td>
                             </tr>
                     @endforeach

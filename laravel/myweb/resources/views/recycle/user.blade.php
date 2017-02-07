@@ -2,7 +2,7 @@
 @section('con')
 <div class="mws-panel grid_8">
     <div class="mws-panel-header">
-        <span><i class="icon-table"></i>用户浏览</span>
+        <span><i class="icon-table"></i>已删除用户</span>
     </div>
     <div class="mws-panel-body no-padding">
         <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
@@ -78,9 +78,9 @@
                                     @endif
                                 </td>
                                 <td class=" ">
-                                    <a href="/admin/user/del/{{$v['id']}}" class='icon-trash' style='font-size:30px;color:blue'></a>
+                                    <a href="/admin/recycle/delu/{{$v['id']}}" class='icon-trash' style='font-size:30px;color:blue'></a>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="/admin/user/edit/{{$v['id']}}" class='icon-tools' style='font-size:25px;color:blue'></a>
+                                    <a href="/admin/recycle/restoreu/{{$v['id']}}" class='icon-bended-arrow-right' style='font-size:25px;color:blue'></a>
                                 </td>
                             </tr>
                     @endforeach

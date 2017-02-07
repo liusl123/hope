@@ -2,24 +2,30 @@
 @section('con')
 <div class="mws-panel grid_8">
     <div class="mws-panel-header">
-        <span>分类修改</span>
+        <span>用户修改</span>
     </div>
     
     <div class="mws-panel-body no-padding">
-        <form class="mws-form" action="/admin/cate/update" method="post">
+        <form class="mws-form" action="/admin/user/update" method="post">
         {{csrf_field()}}
             <input type="hidden" name='id' value='{{$vo['id']}}' />
+                
             <div class="mws-form-inline">
                 <div class="mws-form-row">
-                    <label class="mws-form-label">父分类</label>
+                    <label class="mws-form-label">邮箱</label>
                     <div class="mws-form-item">
-                        <input type="text" class='small' value='{{$funame}}' readonly name='cate' />
+                        <input type="text" class="small" name='email' value='{{$vo['email']}}'>
                     </div>
                 </div>
+            </div>
+            <div class="mws-form-inline">
                 <div class="mws-form-row">
-                    <label class="mws-form-label">子分类</label>
+                    <label class="mws-form-label">状态</label>
                     <div class="mws-form-item">
-                        <input type="text" class="small" value='{{$vo['cate']}}' name='cate'>
+                        <select name="status" class="small">
+                            <option value="0" @if($vo['status'] == '0') selected @endif>禁用</option>
+                            <option value="1" @if($vo['status'] == '1') selected @endif>启用</option>
+                        </select>
                     </div>
                 </div>
             </div>
