@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/admin','AdminController@index');
+Route::get('/','AdminController@index');
 Route::controller('/admin/user','UserController');
 Route::controller('/admin/cate','CateController');
 Route::controller('/admin/good','GoodsController');
 Route::controller('/login','LoginController');
 Route::controller('/admin/administrator','AdministratorController');
 Route::controller('/sy','SyController');
-Route::controller('/order/orders','OrdersController');
+Route::controller('/admin/orders','OrdersController');
