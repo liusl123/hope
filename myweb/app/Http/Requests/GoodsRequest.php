@@ -29,7 +29,7 @@ class GoodsRequest extends Request
             'descr'=>'required|between:0,2000',
             'price'=>'required|between:0,999999999',
             'store'=>'required',
-            'picname'=>'required|image'
+            'picname'=>'image'
         ];
     }
     public function messages(){
@@ -43,7 +43,6 @@ class GoodsRequest extends Request
             'price.required'=>'单价必须填写',
             'price.between'=>'单价小于999999999',
             'store.required'=>'库存量必须填写',
-            'picname.required'=>'图片必须填加',
             'picname.image'=>'必须为图片格式(jpeg、png、bmp、gif、或 svg)'
         ];
     }

@@ -22,7 +22,7 @@
 	    	</div>
 
 	    	<div class="dataTables_filter" id="DataTables_Table_1_filter">
-	    		<label>Search: <input type="text" name="key" aria-controls="DataTables_Table_1" id="search"></label>
+	    		<label>Search: <input type="text"  name="key" aria-controls="DataTables_Table_1" id="search"></label>
 	    	</div>
 		
 
@@ -41,11 +41,11 @@
 				<tbody role="alert" aria-live="polite" id="z" aria-relevant="all"></tbody>
 	   		</table>
 		   	<div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
-				<a  id="shou" class="paginate_button" tabindex="0">首页</a>
-				<a  id="shang" class="paginate_button" tabindex="0">上一页</a>
-				<a  id="xia" class="paginate_button" tabindex="0">下一页</a>
-				<a  id="mo" class="paginate_button" tabindex="0">末页</a>
-				当前页<select class="paginate_button" id="ye" style="width:60px"></select>
+				<a  id="shou" class="paginate_button" tabindex="0"><<</a>
+				<a  id="shang" class="paginate_button" tabindex="0"><</a>
+				<a  id="xia" class="paginate_button" tabindex="0">></a>
+				<a  id="mo" class="paginate_button" tabindex="0">>></a>
+				now<select class="paginate_button" id="ye" style="width:60px"></select>
 		   	</div>
 	   	</div>
 	</div>

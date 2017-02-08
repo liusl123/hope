@@ -22,7 +22,7 @@ class InsertGoodsSeeder extends Seeder
         	$temp['store']= str_random(10);
         	$temp['num']=rand(1,100000);
         	$temp['clicknum']=rand(1,100000);
-        	$temp['picname']='/uploads/14848803031510.png';
+        	$temp['picname']='/uploads/14864812028081.gif';
         	$data[]=$temp;
         }
         \DB::table('goods')->insert($data);
