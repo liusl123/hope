@@ -1,0 +1,19 @@
+
+<div class="vivo-menu-series">
+
+<div class="vms-bigbox">
+
+<div class="vms-box cl">
+
+<dl>
+<?php foreach($cate as $v): ?>
+<dt><a class="v-gb-ico" href="/product.html"><?php echo e($v['cate']); ?></a></dt>
+<?php endforeach; ?>
+</dl>
+
+
+</div>
+
+</div>
+
+</div>
