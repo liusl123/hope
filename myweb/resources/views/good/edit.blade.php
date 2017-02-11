@@ -63,31 +63,6 @@
                 </div>
             </div>
                     <div class="mws-form-row">
-                        <label class="mws-form-label">颜色</label>
-                        <div class="mws-form-item clearfix">
-                            <ul class="mws-form-list inline">
-                                <li><input type="checkbox" @if(in_array('玫瑰金',explode('/',$vo['color']))) checked @endif name="color[]" value="玫瑰金"> <label>玫瑰金</label></li>
-                                <li><input type="checkbox" @if(in_array('天空黑',explode('/',$vo['color']))) checked @endif name="color[]" value="天空黑"> <label>天空黑</label></li>
-                                <li><input type="checkbox" @if(in_array('金色',explode('/',$vo['color']))) checked @endif name="color[]" value="金色"> <label>金色</label></li>
-                                <li><input type="checkbox" @if(in_array('白色',explode('/',$vo['color']))) checked @endif name="color[]" value="白色"> <label>白色</label></li>
-                                <li><input type="checkbox" @if(in_array('黄色',explode('/',$vo['color']))) checked @endif name="color[]" value="黄色"> <label>黄色</label></li>
-                                <li><input type="checkbox" @if(in_array('蓝色',explode('/',$vo['color']))) checked @endif name="color[]" value="蓝色"> <label>蓝色</label></li>
-                                <li><input type="checkbox" @if(in_array('黑色',explode('/',$vo['color']))) checked @endif name="color[]" value="黑色"> <label>黑色</label></li>
-                                <li><input type="checkbox" @if(in_array('紫色',explode('/',$vo['color']))) checked @endif name="color[]" value="紫色"> <label>紫色</label></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mws-form-row">
-                        <label class="mws-form-label">尺寸</label>
-                        <div class="mws-form-item clearfix">
-                            <ul class="mws-form-list inline">
-                                <li><input type="checkbox" @if(in_array('4.5',explode('/',$vo['size']))) checked @endif name="size[]" value="4.5"> <label>4.5</label></li>
-                                <li><input type="checkbox" @if(in_array('5.0',explode('/',$vo['size']))) checked @endif name="size[]" value="5.0"> <label>5.0</label></li>
-                                <li><input type="checkbox" @if(in_array('5.5',explode('/',$vo['size']))) checked @endif name="size[]" value="5.5"> <label>5.5</label></li>
-                                <li><input type="checkbox" @if(in_array('6.0',explode('/',$vo['size']))) checked @endif name="size[]" value="6.0"> <label>6.0</label></li>
-                            </ul>
-                        </div>
-                    </div>
                       <div class="mws-form-row">
                         <label class="mws-form-label">充电器</label>
                         <div class="mws-form-item clearfix">
@@ -123,19 +98,7 @@
                     <div class="mws-form-item">
                          <input type="text" class="small" name='store' value='{{$vo['store']}}'>
                     </div>
-               </div>
-                <div class="mws-form-row">
-                    <label class="mws-form-label">被购买量</label>
-                    <div class="mws-form-item">
-                         <input type="text" class="small" name='num' value='{{$vo['num']}}'>
-                    </div>
-               </div>
-                <div class="mws-form-row">
-                    <label class="mws-form-label">被点击次数</label>
-                    <div class="mws-form-item">
-                         <input type="text" class="small" name='clicknum' value='{{$vo['clicknum']}}'>
-                    </div>
-               </div>
+               </div
                 <div class="mws-form-row">
                     <label class="mws-form-label">商品图片</label>
                     <div class="mws-form-item">

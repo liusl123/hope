@@ -57,32 +57,6 @@
                              </select>
                         </div>
                    </div>
-                   <div class="mws-form-row">
-                        <label class="mws-form-label">颜色</label>
-                        <div class="mws-form-item clearfix">
-                            <ul class="mws-form-list inline">
-                                <li><input type="checkbox" name="color[]" value="玫瑰金"> <label>玫瑰金</label></li>
-                                <li><input type="checkbox" name="color[]" value="天空黑"> <label>天空黑</label></li>
-                                <li><input type="checkbox" name="color[]" value="金色"> <label>金色</label></li>
-                                <li><input type="checkbox" name="color[]" value="白色"> <label>白色</label></li>
-                                <li><input type="checkbox" name="color[]" value="黄色"> <label>黄色</label></li>
-                                <li><input type="checkbox" name="color[]" value="蓝色"> <label>蓝色</label></li>
-                                <li><input type="checkbox" name="color[]" value="黑色"> <label>黑色</label></li>
-                                <li><input type="checkbox" name="color[]" value="紫色"> <label>紫色</label></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mws-form-row">
-                        <label class="mws-form-label">尺寸</label>
-                        <div class="mws-form-item clearfix">
-                            <ul class="mws-form-list inline">
-                                <li><input type="checkbox" name="size[]" value="xl"> <label>4.5</label></li>
-                                <li><input type="checkbox" name="size[]" value="l"> <label>5.0</label></li>
-                                <li><input type="checkbox" name="size[]" value="m"> <label>5.5</label></li>
-                                <li><input type="checkbox" name="size[]" value="s"> <label>6.0</label></li>
-                            </ul>
-                        </div>
-                    </div>
                       <div class="mws-form-row">
                         <label class="mws-form-label">充电器</label>
                         <div class="mws-form-item clearfix">
@@ -117,18 +91,6 @@
                         <label class="mws-form-label">库存量</label>
                         <div class="mws-form-item">
                              <input type="text" class="small" name='store' value='{{old('store')}}'>
-                        </div>
-                   </div>
-                    <div class="mws-form-row">
-                        <label class="mws-form-label">被购买量</label>
-                        <div class="mws-form-item">
-                             <input type="text" class="small" name='num' value='{{old('num')}}'>
-                        </div>
-                   </div>
-                    <div class="mws-form-row">
-                        <label class="mws-form-label">被点击次数</label>
-                        <div class="mws-form-item">
-                             <input type="text" class="small" name='clicknum' value='{{old('clicknum')}}'>
                         </div>
                    </div>
                     <div class="mws-form-row">

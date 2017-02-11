@@ -276,6 +276,24 @@
                         </ul>
                     </li>
                 </ul>
+                 <ul>
+                    <li>
+                        <a href="#"><i class="icon-gift"></i>后台活动管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/activity/index">活动浏览</a></li>
+                            <li><a href="/admin/activity/add">活动添加</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                 <ul>
+                    <li>
+                        <a href="#"><i class="icon-gift"></i>后台商品详情管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/xq/index">后台商品详情浏览</a></li>
+                            <li><a href="/admin/xq/add">后台商品详情添加</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <ul>
                     <li>
                         <a href="#"><i class="icon-truck"></i>商品订单管理</a>
