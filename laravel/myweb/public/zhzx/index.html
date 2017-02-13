@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+
+
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="edit_page.js"></script>
+<script type="text/javascript">
+function logout()
+{
+	document.getElementById("form_account").setAttribute("action", "/v3/web/login/logout");
+	document.getElementById("form_account").submit();
+}
+</script>
+<title>vivo帐号中心</title>
+
+
+<link media="all" href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<form id="form_account" name="form_account" action="https://passport.vivo.com.cn/v3/web/login/account" method="post">
+
+	<input name="client_id" value="" type="hidden"> 
+	<input name="redirect_uri" value="" type="hidden">
+	<div class="top_bg">
+		<div class="top_middle">
+			<div class="left_logo"><img src="logo.png" alt=""></div>
+			<div class="logo_word">帐号中心</div>
+			<a class="logo_word" style="color: rgb(255, 255, 255);" href="http://www.vivo.com.cn/">官网</a>
+			<a class="logo_word" style="color: rgb(255, 255, 255);" href="http://bbs.vivo.com.cn/">社区</a>
+			<a class="logo_word" style="color: rgb(255, 255, 255);" href="http://shop.vivo.com.cn/">商城</a>
+		</div>
+	</div>
+
+<!-- 中间部分 -->
+	
+	<div class="middle_bg">
+		<div class="left">
+			<div class="portrait_bg">
+			<!--<div class="right_img">
+					
+					
+					<img id="small_img" src="http://download0.vivo.com.cn/usrsys" alt="" />
+					
+				</div> -->
+				<div class="right_login_info">
+					<p class="u_name">123玩家</p>
+					<p class="exit"><a href="#" onclick="logout();">退出</a></p>
+				</div>
+			</div> 
+		<!--  	<dl>
+				<dd class="dt_bg3 dd_bg" ><a href="/web/personal/jsp/editavatar.jsp?uuid=2fc3fa0a-d2dd-48cd-8822-3ecbb1d84eac&bigAvatarUrl=" target="cont"  id="tes" style="color: #fff;"> <span class="a_span" >&nbsp; </span>编辑头像</a></dd>
+			</dl>-->
+			<dl>
+				<dt class="dt_bg2">密码安全</dt>
+				<dd><a href="https://passport.vivo.com.cn/web/personal/jsp/updatepwd.jsp?uuid=2fc3fa0a-d2dd-48cd-8822-3ecbb1d84eac" target="cont">修改密码</a></dd>
+				<dd><a href="https://passport.vivo.com.cn/v3/web/login/hasPwdPro?uuid=2fc3fa0a-d2dd-48cd-8822-3ecbb1d84eac" target="cont">密保问题</a></dd>
+			</dl>
+			<dl>
+				<dt class="dt_bg1">绑定信息</dt>
+				<dd><a href="https://passport.vivo.com.cn/v3/web/login/toBandPage?uuid=2fc3fa0a-d2dd-48cd-8822-3ecbb1d84eac&amp;bt=bandphone" target="cont">手机号码</a></dd>
+				<dd><a href="https://passport.vivo.com.cn/v3/web/login/toBandPage?uuid=2fc3fa0a-d2dd-48cd-8822-3ecbb1d84eac&amp;bt=bandemail" target="cont">邮箱</a></dd>
+			</dl>
+		</div>
+		<div class="right">
+		
+		 	<iframe name="cont" class="mainFrame" id="mainFrame" style="width: 100%; height: 685px; border: 1px none;" src="index_1.html">
+			</iframe>
+		</div>
+	</div>
+
+
+
+<!-- 尾部 -->
+<!--		<div class="bottom">
+		<div class="bottom_bg">
+			<div class="bottom_middle">
+				<p class="foot_a" >
+					<a href="">举报</a>
+					<a href="">小黑屋</a>
+					<a href="">手机版</a>
+					<a href="">Archiver</a>
+					<a href="" title="bbs"> vivo智能手机互动社区</a>
+					( 粤ICP备05100288号 )
+				</p>
+				<p>
+					GMT+8, 2013-11-27 09:32 , Processed in 0.076928 second(s), Total 3, Slave 1 queries , Memcache On.
+				</p>
+				
+			</div>
+		</div>
+	</div>-->
+	</form>
+
+
+
+
+
+
+</body>
+</html>

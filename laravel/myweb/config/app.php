@@ -41,6 +41,10 @@ return [
 
     'timezone' => 'UTC',
 
+
+
+    'timezone' => 'PRC',
+
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -196,4 +200,7 @@ return [
     ],
 
     'upload_dir'=>'./uploads/'
+
+
+
 ];

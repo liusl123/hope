@@ -1,0 +1,54 @@
+/* ::::: https://passport.vivo.com.cn/mergeaccountv2/web/css/login.css ::::: */
+
+* { padding: 0px; margin: 0px; font-size: 12px; }
+html { color: rgb(0, 0, 0); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+body { font-family: "Microsoft YaHei","tahoma"; font-size: 75%; }
+a { color: rgb(153, 153, 153); text-decoration: none; cursor: pointer; outline: 0px none; }
+a:hover { text-decoration: none; color: rgb(0, 140, 214); }
+a:focus { border: 0px none; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+ol, li, ul, dl, dt, dd { list-style: outside none none; }
+fieldset, img { border: 0px none; }
+input, textarea, select, button { font-family: inherit; font-size: inherit; font-weight: inherit; outline-style: none; outline-width: 0pt; resize: none; padding: 0px; margin: 0px; }
+b, em, i { display: inline-block; vertical-align: middle; font-weight: normal; font-style: normal; }
+.hide_out ul li { display: block; position: relative; margin-bottom: 10px; border: 1px solid rgb(255, 255, 255); }
+.hide_out ul li.li_input { background: rgb(245, 245, 245) none repeat scroll 0% 0%; position: relative; overflow: hidden; }
+input.v_inp, .pwdPlaceholder { height: 28px; line-height: 28px; width: 271px; vertical-align: middle; background: transparent none repeat scroll 0% 0%; border: medium none; font-size: 16px; color: rgb(51, 51, 51); border-radius: 3px; overflow: hidden; padding: 10px 40px; display: block; }
+input.v_inp:focus {  }
+.sulong_btn { margin: 0px; padding: 0px; width: 100%; height: 48px; line-height: 48px; overflow: hidden; text-align: center; vertical-align: middle; border: medium none; font-size: 18px; color: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 3px; transition: all 0.3s ease-in-out 0s; }
+.hide_out ul li em { width: 20px; height: 20px; overflow: hidden; position: absolute; top: 15px; left: 12px; }
+.hide_out li b { width: 20px; height: 20px; overflow: hidden; position: absolute; top: 15px; right: 12px; display: none; }
+.hide_out ul li b, .hide_out ul li em, .other-method ul li a b { background: transparent url('vivo-loginreg-ico.png') no-repeat scroll 0% 0%; }
+.banner_bg { width: 100%; position: relative; height: 330px; overflow: hidden; background: transparent url('login-xshot-bbg.jpg') no-repeat scroll center center / cover ; }
+.banner_bg .logo { width: 302px; height: 80px; overflow: hidden; margin: 105px auto 65px; display: block; background: transparent url('logo.png') no-repeat scroll 0% 0%; position: relative; z-index: 10; }
+.banner_bg p { display: block; margin: 0px auto; line-height: 48px; color: rgb(255, 255, 255); font-size: 26px; overflow: hidden; text-align: center; font-weight: 700; position: relative; z-index: 11; }
+.middle_box { width: 570px; margin: 30px auto; overflow: hidden; }
+.hide_out { width: 100%; overflow: hidden; padding-top: 2px; }
+.hide_out p.sub-title { width: 355px; font-size: 14px; color: rgb(85, 85, 85); margin: 0px auto 15px; overflow: hidden; }
+.hide_out li.username em { background-position: 0px 0px; }
+.hide_out ul li b.correct { background-position: -20px 0px; }
+.hide_out ul li p.tip { font-size: 14px; padding-top: 4px; color: rgb(240, 65, 65); display: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.v_dark_btn { background: rgb(0, 140, 214) none repeat scroll 0% 0%; }
+.v_dark_btn:hover { background: rgb(0, 170, 255) none repeat scroll 0% 0%; }
+.mid-box { width: 351px; margin: 0px auto; }
+.black-mask { border: 1px solid green; height: 330px; width: 100%; background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.6; position: absolute; left: 0px; top: 0px; z-index: 1; }
+.nav-bg { padding: 20px 0px; }
+.nav-ul { width: 690px; margin: 0px auto; overflow: hidden; }
+.nav-ul li { width: 228px; float: left; text-align: center; }
+.d-a-st { display: block; font-size: 16px; margin: 10px 5px; color: rgb(180, 180, 180); }
+.nav-ul li a.a-blue { color: rgb(126, 209, 253); }
+.nav-ul li a:hover { color: rgb(0, 140, 214); }
+.nav-ul li .a-blue { color: rgb(126, 209, 253); }
+.serial { display: inline-block; width: 23px; height: 23px; line-height: 23px; text-align: center; background: transparent url('li_xu2.png') no-repeat scroll 0% 0%; color: rgb(180, 180, 180); font-size: 14px; }
+.serial-bg1 { background: transparent url('li_xu.png') no-repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.state-bg1 { height: 16px; background: transparent url('huakuai1.png') no-repeat scroll 0% 0%; }
+.state-bg2 { height: 16px; background: transparent url('huakuai2.png') no-repeat scroll 0% 0%; }
+.state-bg3 { height: 16px; background: transparent url('huakuai3.png') no-repeat scroll 0% 0%; }
+.hide_out ul li.login-btn2 { margin-bottom: 10px; padding-top: 10px; }
+.black_overlay { display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgb(0, 0, 0); z-index: 1001; opacity: 0.8; }
+.popup { display: none; width: 690px; z-index: 1002; border-radius: 3px; position: relative; margin: 0px auto; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.close-bt { display: block; width: 18px; height: 18px; position: absolute; top: 10px; right: 10px; z-index: 500; cursor: pointer; }
+.popup-main { padding: 20px; }
+.popup-main p { line-height: 30px; font-size: 14px; }
+.popup-main p.v-title { color: rgb(0, 140, 214); }
+.i-now-bt { width: 135px; height: 40px; line-height: 40px; text-align: center; font-size: 18px; color: rgb(255, 255, 255); border-radius: 3px; margin: 30px auto; cursor: pointer; }

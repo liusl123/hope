@@ -25,3 +25,34 @@ Route::controller('/admin/xq','XqController');
 // Route::group(['middleware'=>'login'],function(){
 // 	//网站首页
 // });
+
+
+//后台登录页面
+
+//登录模块
+Route::controller('/login','LoginController');
+
+//临时测试订单的路由
+Route::controller('/order','OrderController');
+
+Route::controller('/address','AddressController');
+
+//用户模块
+Route::controller('/admin/user','UserController');
+   
+//axjx阿贾克斯
+  Route::controller('/ajax','AjaxController');
+
+//类别模块
+
+
+   
+//验证码
+   // Route::controller('/code','LoginController');
+
+   
+
+
+ //   Event::listen('illuminate.query',function($query){
+ //     var_dump($query);
+ // });
