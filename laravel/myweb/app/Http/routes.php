@@ -37,7 +37,9 @@ Route::controller('/admin','AdminController');
 // 验证码
 Route::get('/code','AdminController@code');
 
+// Route::group(['middleware'=>'login'],function(){
 
+// });
 Route::controller('/home/good','GoodController');
 
 // Route::controller('/sy','SyController');
@@ -56,7 +58,7 @@ Route::controller('/address','AddressController');
 
    
 //axjx阿贾克斯
-  Route::controller('/ajax','AjaxController');
+Route::controller('/ajax','AjaxController');
 
 
 
