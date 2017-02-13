@@ -9,77 +9,85 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
-{   
-    // 用户添加
+
+{
+  
     public function getAdd(){
         return view('user.add');
     }
-    // 执行添加操作
     public function postInsert(Request $request){
-        $this->validate($request,[
-            'name' => 'required',
-            'username' => 'required',
-            'repass' => 'same:pass|required',
-            'email' => 'required|email',
-        ],[
-            'name.required' => '姓名必须填写',
-            'username.required' => '账号必须填写',
-            'repass.same' => '两次密码不一致',
-            'repass.required' => '重复密码必须填写',
-            'email.required' => '邮箱必须填写',
-            'email.email' => '邮箱格式不正确'
-        ]);
-        $data = $request -> except(['_token','repass']);
-        $data['pass'] = Hash::make($data['pass']);//解密Hash::check()
-        $data['token'] = str_random(50);
-        $data['status'] = 0;
-
-        $res = DB::table('user') -> insert($data);
+        $this->validate($request, [
+        'username' => 'required|unique:user',
+        'name' => 'required',
+        'pass'=>'required',
+        'repass'=>'same:pass|required',
+        'email'=>'required',
+        'phone'=>'required',
+   
+    ],[
+        'username.required' => '账户是必填的',
+        'username.unique' => '账户已存在',
+        'name.required'  => '姓名是必填的',
+        'pass.required'=>'密码是必填的',
+        'repass.same'=>'两次密码必须一致',
+        'repass.required'=>'重复密码必须存在',
+        'email.required'=>'邮箱必须存在',
+        'phone.required'=>'手机是必填的',
+    ]
+    );
+        $data=$request->except(['_token','repass']);
+        $res=DB::table('user')->insert($data);
         if($res){
-            return redirect('/admin/user/index')->with('success','添加成功');
+           return redirect('/admin/user/index')->with('success','插入成功');
         }else{
-            return back()->with('error','添加失败');
-        }
-    }
-    public function getIndex(Request $request){
-        $data = DB::table('user') -> where(function($query) use($request){
-            if($request -> input('keyword')!=null){
-                $query -> where('name','like','%'.$request -> input('keyword').'%')
-                       -> orwhere('email','like','%'.$request -> input('keyword').'%')
-                       -> orwhere('status' , $request -> input('keyword'));
-            }
-            
-        }) -> where('state','1') -> paginate($request -> input('num',5));
-        return view('user.index',['list' => $data,'request' => $request -> all()]);
-    }
-    // 删除
-    public function getDel($id){
-        $res = DB::table('user')->where('id',$id)->update(['state'=>0]);
-        // dd($res);
-        if($res){
-            return redirect('/admin/user/index')->with('success','删除成功');
-        }else{
-            return back()->with('error','删除失败');
+            return back()->with('error','插入失败');
         }
     }
 
-    public function getEdit($id){
-        return view('user.edit',[
-            'vo' => DB::table('user') -> where('id','=',$id) -> first()
-        ]);
+    //用户的浏览
+   public function getIndex(Request $request){
+    // $res=$request->all();
+
+    $data=DB::table('user')->where(function($query) use($request){
+        if($request->input('keyword')!=null){
+        $query->where('username','like','%'.$request->input('keyword').'%')
+        ->orwhere('email','like','%'.$request->input('keyword').'%');
     }
+    })->paginate($request->input('num',5));
+    // $data=DB::table('user')->paginate(3);
+    // dd($data);
+    // var_dump($request->input('num'));
+    return view('user.index',['list'=>$data,'request'=>$request->all()]);
+   }
+   //用户的删除
+   public function getDel($id){
+    // echo '用户的删除';
+    // echo "$id";
+    $res=DB::table('user')->where('id',$id)->delete();
+    if($res){
+        return redirect("/admin/user/index")->with('success','删除成功');
+    }else{
+        return redirect("/admin/user/index")->with('error','删除失败');
+    }
+   }
+   //用户的修改
+   public function getEdit($id){
+    // echo '用户的修改';
+    // echo "$id";
+    $data=DB::table('user')->where('id',$id)->first();
+    // dd($data);
+    return view('user.edit',['list'=>$data]);    
+   }
 
-    public function postUpdate(Request $request){
-        $data = $request -> only(['email','status']);
-        // 验证
-
-        // 执行修改
-        $res = DB::table('user') -> where('id',$request -> input('id')) -> update($data);
+   public function postUpdate(Request $request){
+        $data=$request->only('id','email','status');
+        // dd($data);
+        $res=DB::table('user')->where('id',$data['id'])->update($data);
         if($res){
-            return redirect('/admin/user/index') -> with('success','修改成功');
-        }else{
-            return back() -> with('error','修改失败');
-        }
-    }
 
+            return redirect('/admin/user/index')->with('success','修改成功');
+        }else{
+            return redirect('/admin/user/index')->with('error','修改失败');
+        }
+   }
 }

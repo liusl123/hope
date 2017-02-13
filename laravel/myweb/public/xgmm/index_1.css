@@ -1,0 +1,21 @@
+/* ::::: https://passport.vivo.com.cn/web/personal/css/edit_page.css ::::: */
+
+* { padding: 0px; margin: 0px; font-size: 12px; }
+input { border: medium none; cursor: pointer; }
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, textarea { font-size: 14px; font-family: Tahoma,Helvetica,Ubuntu,"Microsoft YaHei",SimSun,sans-serif; }
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border: medium none; padding: 0px; }
+.compile_topimg_cont { background: rgb(255, 255, 255) none repeat scroll 0% 0%; overflow: hidden; width: 95%; margin: 25px auto 0px; }
+.hide_box { width: 100%; overflow: hidden; }
+.compile_topimg_cont .title { width: 100%; height: 50px; border-bottom: 1px solid rgb(221, 231, 232); font-size: 16px; line-height: 65px; color: rgb(1, 179, 238); padding-left: 10px; }
+.compile_topimg_middle { width: 85%; margin-left: 40px; padding-top: 40px; }
+.login_bt3 { width: 110px; height: 30px; text-align: center; font-size: 14px; color: rgb(255, 255, 255); border-radius: 5px; background: rgb(18, 186, 225) none repeat scroll 0% 0%; }
+.but_left2 { margin-left: 140px; }
+.but_top { margin-top: 20px; }
+.hang_bg { width: 100%; overflow: hidden; margin-bottom: 15px; }
+.front_word { width: 90px; height: 32px; line-height: 32px; float: left; font-size: 14px; text-align: right; }
+.completion { width: 235px; height: 30px; line-height: 16px; float: left; padding-left: 3px; border-radius: 5px; font-size: 14px; }
+.normal_border { border: 1px solid rgb(226, 224, 224); }
+.error_border { border: 1px solid rgb(252, 61, 33); }
+.error_word { display: none; height: 32px; line-height: 32px; float: left; overflow: hidden; text-align: left; color: rgb(255, 0, 0); padding-left: 10px; }
+.error_box { display: none; color: rgb(252, 61, 33); overflow: hidden; line-height: 30px; margin-left: 90px; }
+.wrong_ico { padding-left: 30px; background: transparent url('wrong.jpg') no-repeat scroll 5px 8px; color: rgb(251, 60, 31); }

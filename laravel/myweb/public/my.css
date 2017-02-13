@@ -1,0 +1,190 @@
+
+*::-moz-selection {
+    background: #008cd6 none repeat scroll 0 0;
+    color: #fff;
+    text-shadow: none;
+}
+body {
+    font: 14px/1.5 "Microsoft Yahei",Arial;
+    text-rendering: optimizelegibility;
+}
+a {
+    color: #008cd7;
+    cursor: pointer;
+    outline: 0 none;
+    text-decoration: none;
+}
+a:hover {
+    color: #535353;
+    text-decoration: none;
+}
+a:focus {
+    border: 0 none;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+ol, li, ul, dl, dt, dd {
+    list-style: outside none none;
+}
+fieldset, img {
+    border: 0 none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline-style: none;
+    outline-width: 0;
+    padding: 0;
+    resize: none;
+}
+input[type="text"], input[type="tel"], textarea {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 3px 6px;
+}
+input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus {
+    background-color: #fff;
+    border-color: #86cef4 !important;
+    box-shadow: 0 1px 2px rgba(0, 140, 214, 0.075) inset, 0 0 4px rgba(0, 140, 214, 0.75);
+}
+area {
+    outline: 0 none;
+}
+area:active {
+    outline: 0 none;
+}
+textarea {
+    overflow: auto;
+    resize: none;
+    vertical-align: top;
+}
+button {
+    cursor: pointer;
+}
+.btn-blue {
+    background-color: #008cd6;
+    border: 1px solid #008cd6;
+    color: #fff;
+}
+.btn-blue:hover {
+    background-color: #0272ad;
+    border-color: #0272ad;
+}
+.btn-confirm, .btn-append {
+    background-color: #ff4e4f;
+    border: 1px solid #ff4e4f;
+    color: #fff;
+}
+.btn-confirm:hover, .btn-append:hover {
+    background-color: #e22122;
+    border: 1px solid #e22122;
+}
+.btn-cancel {
+    background-color: #f3f3f3;
+    border: 1px solid #e6e6e6;
+    color: #666;
+}
+.btn-cancel:hover {
+    background-color: #e6e6e6;
+}
+.btn-disabled {
+    background-color: #a8a8a8;
+    border: 1px solid #a8a8a8;
+    color: #fff;
+    cursor: not-allowed;
+}
+.btn-appointment {
+    background-color: #ffaa06;
+    border: 1px solid #ffaa06;
+    color: #fff;
+}
+.btn-appointment:hover {
+    background-color: #ff7800;
+    border-color: #ff7800;
+}
+b, em, i {
+    font-style: normal;
+    font-weight: 400;
+}
+.cl::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.cl {
+}
+.red {
+    color: #f04141 !important;
+}
+.gray {
+    color: #a0a0a0 !important;
+}
+.blue {
+    color: #008cd6 !important;
+}
+.yellow {
+    color: #ffc000 !important;
+}
+.bold {
+    font-weight: 700 !important;
+}
+.hidden {
+    display: none;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.txt-left {
+    text-align: left !important;
+}
+.txt-right {
+    text-align: right !important;
+}
+.table-cell {
+    display: table-cell;
+}
+dfn {
+    font-family: "Microsoft YaHei" !important;
+    font-style: normal;
+}
+.mask {
+    background-color: #333;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.my-placeholder {
+    color: #bbb !important;
+}

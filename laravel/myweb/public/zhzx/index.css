@@ -1,0 +1,28 @@
+/* ::::: https://passport.vivo.com.cn/web/personal/css/edit_page.css ::::: */
+
+* { padding: 0px; margin: 0px; font-size: 12px; }
+a { text-decoration: none; outline: medium none; }
+a:hover { text-decoration: underline; }
+a:hover, a:active { outline: 0px none; }
+img { border: 0px none; }
+input { border: medium none; cursor: pointer; }
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, textarea { font-size: 14px; font-family: Tahoma,Helvetica,Ubuntu,"Microsoft YaHei",SimSun,sans-serif; }
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border: medium none; padding: 0px; }
+.top_bg { width: 100%; height: 70px; background: rgb(53, 165, 252) none repeat scroll 0% 0%; }
+.top_bg .top_middle { width: 1000px; margin: 0px auto; background: rgb(53, 165, 252) url('bg_02.jpg') no-repeat scroll 0% 0%; overflow: hidden; }
+.top_bg .top_middle .left_logo { width: 135px; float: left; }
+.logo_word { float: left; font-size: 22px; color: rgb(165, 238, 255); line-height: 70px; padding-left: 20px; }
+.middle_bg { width: 1000px; margin: 0px auto; overflow: hidden; }
+.middle_bg .left { height: 685px; width: 169px; float: left; overflow: hidden; border-right: 1px solid rgb(235, 235, 235); }
+.middle_bg .right { width: 830px; float: right; overflow: hidden; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.portrait_bg { width: 100%; height: 55px; margin: 15px 0px; }
+.right_login_info { width: 110px; height: 55px; float: right; color: rgb(106, 105, 105); }
+.u_name { line-height: 30px; }
+.exit a { font-size: 14px; color: rgb(106, 105, 105); }
+.exit a:hover { color: rgb(53, 165, 252); }
+.middle_bg .left dl dt { font-size: 14px; color: rgb(147, 146, 146); padding-left: 45px; }
+.dt_bg1 { background: rgb(235, 235, 235) url('dt1.jpg') no-repeat scroll 5px 5px; }
+.dt_bg2 { background: rgb(235, 235, 235) url('dt2.jpg') no-repeat scroll 5px 5px; }
+dl dt, dl dd { width: 100%; height: 42px; line-height: 42px; text-align: left; }
+dl dd a { display: block; width: 100%; height: 42px; color: rgb(79, 78, 78); font-size: 14px; font-weight: 500; padding-left: 60px; }
+dl dd a:hover { text-decoration: none; background: transparent url('dd1.jpg') no-repeat scroll 0% 0%; }

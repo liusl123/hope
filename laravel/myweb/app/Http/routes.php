@@ -9,6 +9,7 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
+
 */
 
 
@@ -33,3 +34,30 @@ Route::get('/code','AdminController@code');
 // Event::listen('illuminate.query',function($query){
 //      var_dump($query);
 //  });
+
+//登录模块
+Route::controller('/login','LoginController');
+
+//临时测试订单的路由
+Route::controller('/order','OrderController');
+
+Route::controller('/address','AddressController');
+
+//用户模块
+Route::controller('/admin/user','UserController');
+   
+//axjx阿贾克斯
+  Route::controller('/ajax','AjaxController');
+
+
+
+   
+//验证码
+   // Route::controller('/code','LoginController');
+
+   
+
+
+ //   Event::listen('illuminate.query',function($query){
+ //     var_dump($query);
+ // });

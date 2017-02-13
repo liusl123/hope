@@ -1,0 +1,210 @@
+/* ::::: https://swsdl.vivo.com.cn/vivoshop/web/dist/css/global_79a0974.css ::::: */
+
+*::-moz-selection { background: none repeat scroll 0% 0% rgb(0, 140, 214); color: rgb(255, 255, 255); text-shadow: none; }
+body { font: 14px/1.5 "Microsoft Yahei",Arial; text-rendering: optimizelegibility; }
+a { color: rgb(0, 140, 215); text-decoration: none; cursor: pointer; outline: 0px none; }
+a:hover { color: rgb(83, 83, 83); text-decoration: none; }
+a:focus { border: 0px none; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+ol, li, ul, dl, dt, dd { list-style: none outside none; }
+fieldset, img { border: 0px none; }
+table { border-collapse: collapse; border-spacing: 0px; }
+input, textarea, select, button { font-family: inherit; font-size: inherit; font-weight: inherit; outline-style: none; outline-width: 0px; resize: none; padding: 0px; margin: 0px; }
+input[type="text"], input[type="tel"], textarea { padding: 3px 6px; border: 1px solid rgb(204, 204, 204); border-radius: 2px; }
+input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus { background-color: rgb(255, 255, 255); border-color: rgb(134, 206, 244) ! important; box-shadow: 0px 1px 2px rgba(0, 140, 214, 0.075) inset, 0px 0px 4px rgba(0, 140, 214, 0.75); }
+textarea { overflow: auto; vertical-align: top; resize: none; }
+button { cursor: pointer; }
+.btn-confirm, .btn-append { background-color: rgb(255, 78, 79); color: rgb(255, 255, 255); border: 1px solid rgb(255, 78, 79); }
+.btn-confirm:hover, .btn-append:hover { background-color: rgb(226, 33, 34); border: 1px solid rgb(226, 33, 34); }
+.btn-cancel { background-color: rgb(243, 243, 243); color: rgb(102, 102, 102); border: 1px solid rgb(230, 230, 230); }
+.btn-cancel:hover { background-color: rgb(230, 230, 230); }
+b, em, i { font-weight: 400; font-style: normal; }
+.cl:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.cl {  }
+.wrapper { width: 1200px; margin: 0px auto; }
+dfn { font-style: normal; font-family: "Microsoft YaHei" ! important; }
+/* ::::: https://swsdl.vivo.com.cn/vivoshop/web/dist/css/layout_3a0d4d9.css ::::: */
+
+#header, #footer, #content { min-width: 1200px; }
+#header { border-bottom: 1px solid rgba(0, 0, 0, 0.05); z-index: 99; background: none repeat scroll 0% 0% rgb(255, 255, 255); position: relative; }
+.head-search { padding: 20px 0px; width: 100%; background: none repeat scroll 0% 0% rgb(32, 34, 35); position: relative; z-index: 99; display: none; }
+#header .search-box { width: 700px; height: 40px; margin: 0px auto; background: none repeat scroll 0% 0% rgb(102, 102, 102); box-shadow: 0px 1px 2px rgb(0, 0, 0); position: relative; z-index: 99; }
+#header .search-box input { width: 550px; height: 20px; padding: 10px 20px; font-size: 14px; color: rgb(85, 85, 85); border: 0px none; background: none repeat scroll 0% 0% rgb(255, 255, 255); overflow: hidden; vertical-align: middle; border-radius: 0px; }
+#header .search-box button { width: 110px; height: 40px; text-align: center; font-size: 14px; color: rgb(255, 255, 255); border: 0px none; overflow: hidden; vertical-align: middle; background: none repeat scroll 0% 0% rgb(0, 140, 214); outline: 0px none; cursor: pointer; transition: background 0.2s ease-in-out 0s; }
+#header .search-box button:hover { background: none repeat scroll 0% 0% rgb(0, 116, 178); }
+#header .search-box button:active { box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset; }
+#header .search-box a.close { width: 24px; height: 24px; position: absolute; top: 8px; right: -40px; background: url('vivo-head-ico_7a552f5.png') no-repeat scroll -86px 0px transparent; }
+#header .search-box a.close:hover { background-position: -86px -25px; }
+#navigator { height: 80px; margin: auto; background: none repeat scroll 0% 0% rgb(255, 255, 255); position: relative; z-index: 999; }
+#navigator a.vivo-logo { float: left; width: 95px; height: 60px; margin-top: 10px; transform: translate3d(0px, 0px, 0px); }
+#navigator > ul { float: left; height: 80px; margin-left: 50px; overflow: hidden; }
+#navigator > ul > li { min-width: 106px; height: 80px; overflow: hidden; text-align: center; float: left; border-right: 1px solid rgb(242, 242, 242); }
+#navigator > ul > li:first-child { border-left: 1px solid rgb(242, 242, 242); }
+#navigator > ul > li a { display: block; line-height: 80px; font-size: 16px; color: rgb(102, 102, 102); transition: all 0.3s ease-in-out 0s; }
+#navigator ul li a:hover, #navigator ul li.current a, #navigator ul li.current a:hover, #navigator ul li.active a, #navigator ul li.active a:hover { color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(0, 140, 214); }
+#navigator .search-user { float: right; height: 60px; margin-top: 10px; position: relative; }
+.top-quick-menu > li { float: left; width: 42px; height: 42px; margin-left: 15px; position: relative; top: 8px; border: 1px solid rgb(231, 231, 231); background: none repeat scroll 0% 0% rgb(255, 255, 255); border-radius: 50%; }
+.top-quick-menu > li:hover { border-color: rgb(0, 140, 214); background: none repeat scroll 0% 0% rgb(0, 140, 214); }
+.top-quick-menu > li > a { display: inline-block; height: 42px; width: 42px; overflow: hidden; border-radius: 50%; position: relative; }
+.top-quick-menu b { width: 42px; height: 42px; display: inline-block; border-radius: 50%; background: url('vivo-head-ico_7a552f5.png') no-repeat scroll 0% 0% transparent; }
+.top-quick-menu b img { width: 42px; height: 42px; }
+.top-quick-menu .search b { background-position: 0px 0px; }
+.top-quick-menu .search:hover b { background-position: 0px -43px; }
+.top-quick-menu .user b { background-position: -43px 0px; }
+.top-quick-menu .user:hover b { background-position: -43px -43px; }
+.top-quick-menu .shoppingcart b { background-position: 0px -84px; }
+.top-quick-menu .shoppingcart:hover b { background-position: 0px -126px; }
+.top-quick-menu .shopcart-num { width: 16px; height: 16px; line-height: 16px; text-align: center; vertical-align: middle; overflow: hidden; background: none repeat scroll 0% 0% rgb(230, 0, 18); color: rgb(255, 255, 255); font-size: 12px; position: absolute; top: 4px; right: 4px; font-family: tahoma; border-radius: 50%; }
+.top-quick-menu .user-menu { display: none; position: absolute; right: 0px; top: 51px; border: 1px solid rgb(237, 237, 237); background-color: rgb(255, 255, 255); z-index: 9; }
+.top-quick-menu .user-menu li { height: 50px; line-height: 50px; padding-left: 25px; width: 125px; font-size: 14px; cursor: pointer; }
+.top-quick-menu .user-menu li a { color: rgb(102, 102, 102); }
+.top-quick-menu .user-menu li:hover { background-color: rgb(0, 140, 214); }
+.top-quick-menu .user-menu li:hover a { color: rgb(255, 255, 255); }
+.user-menu .member-center { position: relative; }
+.user-menu .member-center .icon-angular { position: absolute; width: 45px; height: 20px; right: 7px; top: -20px; z-index: 99; background: url('icons-login_20c2a7f.png') no-repeat scroll -26px -91px transparent; }
+.top-quick-menu .user-menu i { display: inline-block; width: 29px; height: 29px; margin-right: 15px; vertical-align: middle; background: url('icons-login_20c2a7f.png') no-repeat scroll 0% 0% transparent; }
+.top-quick-menu .member-center:hover i { background-position: 0px -46px; }
+.top-quick-menu .my-order i { background-position: -48px 0px; }
+.top-quick-menu .my-order:hover i { background-position: -48px -46px; }
+.top-quick-menu .logout i { background-position: -100px 0px; }
+.top-quick-menu .logout:hover i { background-position: -100px -46px; }
+#content { padding-bottom: 30px; }
+#footer { overflow: hidden; }
+.shop-agree { height: 86px; position: relative; text-align: center; border-bottom: 1px solid rgb(232, 232, 233); border-top: 1px solid rgb(232, 232, 233); background: none repeat scroll 0% 0% rgb(250, 250, 250); }
+.shop-agree ul { height: 86px; display: block; margin: auto; position: relative; }
+.shop-agree li { float: left; width: 25%; text-align: left; padding-top: 14px; }
+.shop-agree li.shop-agree-last { text-align: right; }
+.shop-agree li a { color: rgb(51, 51, 51); }
+.shop-agree li p { color: rgb(61, 61, 61); float: left; padding-left: 10px; font-size: 18px; height: 60px; line-height: 60px; }
+.shop-agree li p span { color: rgb(61, 61, 61); font-size: 30px; vertical-align: middle; padding-right: 10px; position: relative; top: -2px; }
+.shop-agree li b { float: left; width: 60px; height: 60px; overflow: hidden; vertical-align: middle; background: url('footer-icon_02a1be2.png') no-repeat scroll 0px 0px transparent; }
+.shop-agree li b.b1 { background-position: 0px 0px; }
+.shop-agree li b.b2 { background-position: -62px 0px; }
+.shop-agree li b.b3 { margin-left: 30px; background-position: -124px 0px; }
+.shop-agree li b.b4 { background-position: -185px 0px; }
+.shop-help { height: auto; position: relative; padding: 25px 0px; background: none repeat scroll 0% 0% rgb(250, 250, 250); }
+.shop-help dl { float: left; display: block; width: 20%; }
+.shop-help dl.shop-help-last { margin-right: 0px; }
+.shop-help dt { color: rgb(0, 140, 214); font-size: 16px; padding-bottom: 10px; }
+.shop-help dt b { display: inline-block; vertical-align: middle; width: 28px; height: 28px; overflow: hidden; background: url('footer-icon_02a1be2.png') no-repeat scroll 0% 0% transparent; margin-right: 5px; }
+.shop-help dt b.b1 { background-position: 0px -61px; }
+.shop-help dt b.b2 { background-position: -30px -61px; }
+.shop-help dt b.b3 { background-position: -64px -61px; }
+.shop-help dt b.b4 { background-position: -93px -61px; }
+.shop-help dt b.b5 { background-position: -123px -61px; }
+.shop-help dd { line-height: 30px; color: rgb(153, 153, 153); }
+.shop-help dd a { color: rgb(153, 153, 153); transition: all 0.3s ease-in-out 0s; }
+.shop-help dd a:hover { color: rgb(0, 140, 214); }
+.shop-help .online-service { cursor: pointer; }
+.footer-copyright { background: none repeat scroll 0% 0% rgb(32, 34, 35); padding: 30px 0px; }
+.footer-copyright .copy-info { width: 600px; float: left; }
+.footer-copyright .sns-box { float: right; }
+.footer-copyright a.footer-logo { width: 95px; height: 30px; float: left; position: relative; background: url('vivo-footer-logo_018fcf3.jpg') no-repeat scroll 0% 0% transparent; vertical-align: middle; margin-right: 20px; }
+.footer-copyright .copy-info { color: rgb(102, 102, 102); padding-top: 5px; }
+.footer-copyright .copy-info a { color: rgb(102, 102, 102); transition: color 0.2s ease-in-out 0s; }
+.footer-copyright .copy-info a:hover { color: rgb(0, 140, 214); }
+.footer-copyright .sns-box { color: rgb(204, 204, 204); position: relative; }
+.footer-copyright .sns-box a { width: 27px; height: 27px; display: inline-block; overflow: hidden; margin-left: 8px; background: none repeat scroll 0% 0% rgb(77, 78, 79); border-radius: 4px; transition: background 0.2s ease-in-out 0s; vertical-align: middle; }
+.footer-copyright .sns-box a > b { width: 27px; height: 27px; overflow: hidden; display: inline-block; background: url('vivo-sns-ico_b902584.png') no-repeat scroll 0% 0% / 135px 54px transparent; }
+.footer-copyright .sns-box a:hover > b { transition-delay: 0.1s; }
+.footer-copyright .sns-box a.sina b { background-position: 0px 0px; }
+.footer-copyright .sns-box a.sina:hover { background: none repeat scroll 0% 0% rgb(229, 44, 66); }
+.footer-copyright .sns-box a.sina:hover b { background-position: 0px -27px; }
+.footer-copyright .sns-box a.tencent b { background-position: -27px 0px; }
+.footer-copyright .sns-box a.tencent:hover { background: none repeat scroll 0% 0% rgb(20, 173, 223); }
+.footer-copyright .sns-box a.tencent:hover b { background-position: -27px -27px; }
+.footer-copyright .sns-box a.weixin > b { background-position: -54px 0px; }
+.footer-copyright .sns-box a.weixin:hover { background: none repeat scroll 0% 0% rgb(32, 169, 0); }
+.footer-copyright .sns-box a.weixin:hover > b { background-position: -54px -27px; }
+.footer-copyright .sns-box a.renren b { background-position: -108px 0px; }
+.footer-copyright .sns-box a.renren:hover { background: none repeat scroll 0% 0% rgb(5, 107, 232); }
+.footer-copyright .sns-box a.renren:hover b { background-position: -108px -27px; }
+.vivo-weixin-overbox { width: 143px; height: 143px; background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; bottom: 40px; right: -56px; border-radius: 2px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); z-index: 99; display: none; }
+.weixin:hover .vivo-weixin-overbox { display: block; }
+.vivo-weixin-overbox img { position: relative; left: 15px; top: 15px; }
+.vivo-weixin-overbox b { width: 18px; height: 12px; overflow: hidden; background: url('overbox-cd-icon_3b34d96.png') no-repeat scroll 0% 0% transparent; position: absolute; bottom: -12px; left: 50%; margin-left: -9px; }
+#side-bar { position: fixed; right: 14px; top: 60%; z-index: 99; }
+#side-bar li { border-top: 1px solid rgb(204, 204, 204); }
+#side-bar li:first-child { border-top: 0px none; }
+#side-bar li > a { position: relative; display: block; width: 47px; height: 49px; background: none no-repeat scroll center center rgb(195, 195, 195); }
+#side-bar li:first-child > a { border-top-left-radius: 2px; border-top-right-radius: 2px; }
+#side-bar li.last > a { border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; }
+#side-bar li > a:before { position: absolute; right: 47px; bottom: 0px; display: none; padding: 0px 9px 0px 18px; color: rgb(168, 225, 255); font-size: 14px; line-height: 49px; white-space: nowrap; border-top-left-radius: 2px; border-bottom-left-radius: 2px; background-color: rgb(36, 155, 220); }
+#side-bar li.hide { display: none; }
+#side-bar .service { background-image: url('icon-online-service_b441fd1.png'); }
+#side-bar .service:before { content: "在线客服"; }
+#side-bar .qrcode { background-image: url('icon-qrcode_b904055.png'); }
+#side-bar .qrcode-container { display: none; position: absolute; right: 72px; bottom: 0px; padding: 14px 14px 8px; font-size: 0px; text-align: center; background-color: rgb(255, 255, 255); box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.1); }
+#side-bar .qrcode-container img { margin-bottom: 4px; padding: 8px; width: 109px; height: 109px; border: 2px solid rgb(0, 141, 217); }
+#side-bar .qrcode-container p { color: rgb(119, 119, 119); font-size: 13px; line-height: 18px; }
+#side-bar .feedback { background-image: url('icon-feedback_ff5a377.png'); }
+#side-bar .feedback:before { content: "意见反馈"; }
+#side-bar .feedback-container { display: none; position: absolute; right: 72px; bottom: 0px; padding: 0px 33px 30px; font-size: 14px; cursor: default; background-color: rgb(255, 255, 255); box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.1); }
+#side-bar .feedback-container .close { position: absolute; right: 10px; top: 10px; width: 36px; height: 36px; cursor: pointer; background: url('icon-feedback-close_bb934ea.png') no-repeat scroll center center transparent; }
+#side-bar .feedback-container .title { padding: 38px 0px 23px; color: rgb(51, 51, 51); font-size: 21px; line-height: 1; text-align: center; }
+#side-bar .feedback-container .problem-container { position: relative; display: inline-block; vertical-align: top; cursor: default; overflow: hidden; border-radius: 2px; border: 1px solid rgb(224, 224, 224); }
+#side-bar .feedback-container .problem { position: relative; box-sizing: border-box; padding: 0px 23px 0px 7px; max-width: 392px; color: rgb(102, 102, 102); font-size: 16px; line-height: 34px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#side-bar .feedback-container .problem:after { content: ""; position: absolute; right: 7px; top: 11px; width: 9px; height: 12px; background: url('icon-select_77dde3f.png') no-repeat scroll center center transparent; }
+#side-bar .feedback-container select { position: absolute; left: 0px; top: 0px; width: 100%; height: 34px; opacity: 0; background-color: rgb(255, 255, 255); }
+#side-bar .feedback-container option { color: rgb(102, 102, 102); font-size: 16px; line-height: 20px; }
+#side-bar textarea::-moz-placeholder, #side-bar input::-moz-placeholder { color: rgb(204, 204, 204); }
+#side-bar textarea:-moz-placeholder, #side-bar input:-moz-placeholder { color: rgb(204, 204, 204); }
+#side-bar .feedback-container textarea, #side-bar .feedback-container .contact-way, #side-bar .feedback-container .code-input { box-sizing: border-box; display: block; margin-top: 14px; padding: 0px 7px; height: 36px; color: rgb(102, 102, 102); line-height: 34px; border-radius: 2px; border: 1px solid rgb(224, 224, 224); }
+#side-bar .feedback-container textarea { padding: 7px; width: 394px; height: 119px; line-height: 20px; text-align: justify; }
+#side-bar .feedback-container .contact-way { width: 394px; }
+#side-bar .feedback-container .change-code { float: right; margin-top: 14px; color: rgb(0, 140, 214); line-height: 36px; cursor: pointer; text-decoration: underline; }
+#side-bar .feedback-container .code { float: right; margin: 14px 18px 0px 0px; width: 84px; height: 36px; }
+#side-bar .feedback-container .error { visibility: hidden; margin: 5px 0px; color: rgb(248, 0, 0); line-height: 34px; }
+#side-bar .feedback-container .error:before { content: ""; display: inline-block; vertical-align: top; margin: 7px 5px 0px 0px; width: 20px; height: 20px; background: url('icon-error_66a9017.png') no-repeat scroll center center transparent; }
+#side-bar .feedback-container button { display: block; margin: 0px auto; width: 160px; height: 36px; color: rgb(255, 255, 255); font-size: 16px; border: 0px none; border-radius: 2px; background-color: rgb(0, 140, 214); }
+#side-bar .backtop { background-image: url('icon-backtop_d05a940.png'); }
+#side-bar .backtop:before { content: "返回顶部"; }
+/* ::::: https://swsdl.vivo.com.cn/vivoshop/web/dist/js/common/dialog/dialog_523c50b.css ::::: */
+
+/* ::::: https://swsdl.vivo.com.cn/vivoshop/web/dist/js/common/dialog/dialog_523c50b.css ::::: */
+
+/* ::::: https://swsdl.vivo.com.cn/vivoshop/web/dist/css/modules/buy-process_e40c238.css ::::: */
+
+.buy-steps { margin: 65px 0px; height: 52px; background: url('buy-process-bar_0a1afdc.png') no-repeat scroll 0px 0px transparent; }
+.order-table { margin-top: 20px; width: 100%; color: rgb(102, 102, 102); border: 1px solid rgb(227, 227, 227); table-layout: fixed; text-align: center; vertical-align: middle; word-wrap: break-word; }
+.order-table .prod-item { border-top: 1px solid rgb(227, 227, 227); }
+.order-table th { height: 44px; font-weight: 400; font-size: 14px; color: rgb(102, 102, 102); background-color: rgb(250, 250, 250); }
+.order-table td { border-right: 1px solid rgb(227, 227, 227); }
+.order-table .prod-line > td { vertical-align: top; padding-top: 75px; }
+.order-table .prod-line .prod-pic { position: relative; padding-top: 25px; padding-bottom: 25px; vertical-align: top; border-right: 0px none; font-size: 0px; }
+.order-table .prod-pic img { width: 120px; height: 120px; }
+.order-table .prod-line .prods-info { padding-left: 15px; border-right: 1px solid rgb(227, 227, 227); }
+.prods-info-table { margin-top: -20px; width: 100%; table-layout: fixed; }
+.order-table .prod-name a { display: inline-block; width: 100%; color: rgb(51, 51, 51); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.order-table .prod-name a:hover { color: rgb(0, 140, 215); }
+.figure img { width: 100%; height: auto; }
+.prod-info td { padding-top: 9px; padding-bottom: 20px; }
+.prod-info .prod-name { text-align: left; }
+.order-table .total-price { color: rgb(240, 65, 65); }
+.btn-box { margin: 37px 0px 0px; text-align: right; }
+.btn-box button { width: 150px; height: 35px; font-size: 18px; border-radius: 3px; cursor: pointer; }
+.btn-box .btn-cancel { margin-right: 15px; }
+/* ::::: https://swsdl.vivo.com.cn/vivoshop/web/dist/css/web-page/shopcart_a8b5215.css ::::: */
+
+.order-table { color: rgb(104, 104, 104); }
+.order-table .td-check { text-align: center; }
+.order-table td { border-right: 0px none; }
+.prods-info-table td:last-child { padding-right: 30px; text-align: right; }
+.checkbox { display: inline-block; width: 20px; height: 20px; cursor: pointer; vertical-align: middle; background: url('icon-checkbox_c2c693c.png') no-repeat scroll left bottom transparent; }
+.checkbox.checked { background-position: 0px top; }
+.number-box { display: inline-block; font-size: 0px; vertical-align: top; }
+.prod-list .prod-num { margin: 0px 5px; width: 30px; height: 21px; padding: 0px 2px; font-size: 14px; text-align: center; border: 1px solid rgb(222, 222, 222); border-radius: 0px; vertical-align: middle; }
+.prod-list .reduce-num, .prod-list .add-num { display: inline-block; height: 21px; width: 21px; text-align: center; font-size: 18px; line-height: 21px; color: rgb(102, 102, 102); vertical-align: middle; border: 1px solid rgb(222, 222, 222); }
+.order-table .prod-line .prod-pic { border-left: 1px solid rgb(227, 227, 227); }
+.order-table .prod-line .prod-pic img { width: 118px; height: 118px; }
+.help-line { display: inline-block; color: red; }
+.price-list { margin-top: 5px; margin-bottom: 5px; }
+.price-list li { text-align: right; font-size: 14px; padding: 5px 0px; }
+.price-list .price { display: inline-block; padding-right: 25px; }
+.discount-price .price, .real-price .price, .real-price em { color: rgb(240, 65, 65); }
+.option-box { position: relative; height: 80px; padding-left: 12px; padding-right: 25px; background-color: rgb(249, 249, 249); }
+.option-operation li { float: left; margin-right: 20px; height: 80px; line-height: 80px; }
+.real-price { position: absolute; right: 25px; height: 80px; line-height: 80px; font-size: 14px; }
+.real-price .price { width: 150px; font-size: 30px; vertical-align: middle; }
+.btn-box { text-align: right; }
+.btn-box button { width: 150px; height: 35px; line-height: 1; font-size: 18px; border-radius: 3px; cursor: pointer; }
