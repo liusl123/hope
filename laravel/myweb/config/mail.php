@@ -51,10 +51,10 @@ return [
     | You may wish for all e-mails sent by your application to be sent from
     | the same address. Here, you may specify a name and address that is
     | used globally for all e-mails that are sent by your application.
-    | 'from' => ['address' => '15101629533@163.com', 'name' => null],
+    |
     */
 
-    
+
     'from' => ['address' => '13780203621@163.com', 'name' => null],
 
     /*

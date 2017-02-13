@@ -39,6 +39,7 @@ return [
     |
     */
 
+    'timezone' => 'UTC',
 
 
 
@@ -198,8 +199,8 @@ return [
 
     ],
 
-
     'upload_dir'=>'./uploads/'
+
 
 
 ];

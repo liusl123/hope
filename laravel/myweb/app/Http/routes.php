@@ -9,7 +9,6 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
-
 */
 
 
@@ -19,21 +18,36 @@ Route::group(['middleware'=>'adminlogin'],function(){
 
     //分类模块
     // Route::controller('/admin/cate','CateController');
-
+    // 
+    Route::controller('/admin/cate','CateController');
+    Route::controller('/admin/good','GoodsController');
+    Route::controller('/admin/administrator','AdministratorController');
+    Route::controller('/admin/xq','XqController');
+    Route::controller('/admin/orders','OrdersController'); 
+       
     // 回收站
     Route::controller('/admin/recycle','RecycleController');
     
 });
 // 后台登录
 Route::controller('/admin','AdminController');
+
 // 验证码
 Route::get('/code','AdminController@code');
 
 
-// sql语句记录
-// Event::listen('illuminate.query',function($query){
-//      var_dump($query);
-//  });
+ 
+Route::get('/','AdminController@index');
+// Route::controller('/admin/user','UserController');
+
+
+Route::controller('/home/good','GoodController');
+
+// Route::controller('/sy','SyController');
+
+Route::controller('/admin/activity','ActivityController');
+Route::controller('/home/activity','ActivityController');
+
 
 //登录模块
 Route::controller('/login','LoginController');
@@ -55,9 +69,8 @@ Route::controller('/admin/user','UserController');
 //验证码
    // Route::controller('/code','LoginController');
 
-   
 
-
- //   Event::listen('illuminate.query',function($query){
- //     var_dump($query);
- // });
+// sql语句记录
+// Event::listen('illuminate.query',function($query){
+//      var_dump($query);
+//  });

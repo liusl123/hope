@@ -66,12 +66,21 @@ body,
 .ui-dialog-titlebar-close
 {
     background-color:#88a9eb;
+#mws-footer{
+    margin: 0 4%;
+    text-align: center;
+    padding: 16px 0;
+    bottom: 0;
+    left: 206px;
+    right: 0;
+    border-top: 1px solid #dadada;
+    position: absolute;
 }
 
 #page li{
     float: left;
     height: 20px;
-    padding: 0px 10px;
+    padding: 0 10px;
     display: block;
     font-size: 12px;
     line-height: 20px;
@@ -85,3 +94,4 @@ body,
     border-left: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.15) inset;
 }
+

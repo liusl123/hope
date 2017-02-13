@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
