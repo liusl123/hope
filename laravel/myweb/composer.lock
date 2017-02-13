@@ -4,7 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+
     "content-hash": "f1ed3e6074cf5a3b9907c9f436a2e2cb",
+
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -61,7 +63,7 @@
             "time": "2016-09-16T12:50:15+00:00"
         },
         {
-            "name": "curl/curl",
+             "name": "curl/curl",
             "version": "1.6.0",
             "source": {
                 "type": "git",
@@ -272,7 +274,8 @@
             "time": "2015-11-06T14:35:42+00:00"
         },
         {
-            "name": "gregwar/captcha",
+
+             "name": "gregwar/captcha",
             "version": "v1.1.1",
             "source": {
                 "type": "git",
@@ -320,6 +323,7 @@
             "time": "2015-09-11T15:23:20+00:00"
         },
         {
+
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
