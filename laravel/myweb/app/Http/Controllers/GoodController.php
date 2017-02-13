@@ -27,7 +27,7 @@ class GoodController extends Controller
          $c = DB::table('cate')->join('activity','cate.cate','=','activity.cate')->select('activity.*','cate.cate')->get();
          // dd($c);
         if( $v = DB::table('goods as g')
-        ->join('good_xq as xq','g.id','=','xq.goodid')
+        ->join('good_xq as xq','g.id','=','xq.good_id')
         ->select('xq.*','g.*')->where('g.id','=',$id)
         ->get()){
              $reg = '/src=[\'"]?([^\'"]*)[\'"]?/';

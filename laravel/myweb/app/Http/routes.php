@@ -24,7 +24,9 @@ Route::group(['middleware'=>'adminlogin'],function(){
     Route::controller('/admin/administrator','AdministratorController');
     Route::controller('/admin/xq','XqController');
     Route::controller('/admin/orders','OrdersController'); 
-       
+    //用户模块
+    Route::controller('/admin/user','UserController');
+    Route::controller('/admin/activity','ActivityController');
     // 回收站
     Route::controller('/admin/recycle','RecycleController');
     
@@ -36,16 +38,10 @@ Route::controller('/admin','AdminController');
 Route::get('/code','AdminController@code');
 
 
- 
-Route::get('/','AdminController@index');
-// Route::controller('/admin/user','UserController');
-
-
 Route::controller('/home/good','GoodController');
 
 // Route::controller('/sy','SyController');
 
-Route::controller('/admin/activity','ActivityController');
 Route::controller('/home/activity','ActivityController');
 
 
@@ -57,8 +53,7 @@ Route::controller('/order','OrderController');
 
 Route::controller('/address','AddressController');
 
-//用户模块
-Route::controller('/admin/user','UserController');
+
    
 //axjx阿贾克斯
   Route::controller('/ajax','AjaxController');

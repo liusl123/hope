@@ -10,8 +10,6 @@ use App\Http\Controllers\Controller;
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
@@ -33,7 +31,7 @@ class AdminController extends Controller
                     // 将用户信息存入到session中
                     session(['admin'=>$res]);
                     // dd(session('admin')['name']);
-                    return redirect('/admin/index');
+                    return redirect('/admin');
                 }else{
                     return back()->with('error','密码错误');
                 }
