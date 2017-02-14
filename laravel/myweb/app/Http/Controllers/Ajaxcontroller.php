@@ -33,4 +33,18 @@ class AjaxController extends Controller
     	}
     	// echo "hahahaha";
     }
+
+    //在个人中心修改密码时.判断原密码是否正确
+    public function getOldpwd(){
+       // echo "在个人中心修改密码时.判断原密码是否正确";
+        // var_dump($_GET['oldpwd']);提交过来的旧密码
+        $id=session('id');
+        $res=DB::table('user')->where('id',$id)->first();
+        // $res['pass'];从数据库中查询出来的真是的旧密码
+        if($res['pass']==$_GET['oldpwd']){
+            echo '是';
+        }else{
+            echo '不是a';
+        }
+    }
 }

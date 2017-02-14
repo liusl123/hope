@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Not Found.</title>
-
+        <title>Be right back.</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
         <style>
@@ -40,7 +39,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Not Found.</div>
+                <div class="title">SORRY I'Dont KNOW!!!</div>
             </div>
         </div>
     </body>

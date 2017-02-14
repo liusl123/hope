@@ -53,9 +53,9 @@
                 <ul class="top-quick-menu">
                     <li id="j_SearchTrigger" class="search"><a href="javascript:void(0)" rel="nofollow"><b></b></a></li>
                     <li id="j_UserMenuTrigger">
-                    	<a href="http://shop.vivo.com.cn/my/" class="user"><b><img src="/grzx/small"></b></a>
+                    	<a href="#" class="user"><b><img src="/grzx/small"></b></a>
                         <ul class="user-menu">
-                        	<li class="member-center"><a href="http://shop.vivo.com.cn/my/"><i></i>个人中心</a><span class="icon-angular"></span></li>
+                        	<li class="member-center"><a href="/login/grzx"><i></i>个人中心</a><span class="icon-angular"></span></li>
                             <li class="my-order"><a href="http://shop.vivo.com.cn/my/order"><i></i>我的订单</a></li>
                             <li class="logout"><a href="/login/logout"><i></i>退出登录</a></li>
                         </ul>
@@ -78,8 +78,8 @@
             </a>
         </li> -->
         <li class="mem-name member-menu-nickName"><i class="icon-mem"></i>
-         @if(!empty(session('home'))) 
-            {{session('home')}}
+         @if(!empty(session('name'))) 
+            {{session('name')}}
         @else 
             游客
         @endif 
@@ -97,7 +97,8 @@
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/remark/all-remark">我的评论</a></dd>
         <dt class="menu-title"><i class="icon-account"></i>我的账户</dt>
         <dd class="menu-item"><a href="/login/grzxgrzl">个人资料</a></dd>
-        <dd class="menu-item"><a href="/login/grzxshdz">收货地址</a></dd>
+        <dd class="menu-item"><a href="/order/add">收货地址</a></dd>
+        <!-- <dd class="menu-item"><a href="/login/grzxshdz">收货地址</a></dd> -->
         <dd class="menu-item"><a href="/login/xgmm">我的密码</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/coupon">我的优惠券</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/favorite">我的收藏</a></dd>
@@ -106,8 +107,8 @@
 <dl>
     <dd class="module-item mem-overview">
         <h1 class="welcome-info">您好，<span class="name">
-        @if(!empty(session('home'))) 
-            {{session('home')}}
+        @if(!empty(session('name'))) 
+            {{session('name')}}
         @else 
             游客
         @endif 
@@ -270,6 +271,13 @@
 <script src="/grzx/vivo-stat_265b49b.js"></script>
 <script src="/grzx/login_confirm_485e7b4.js"></script>
 <script src="/grzx/query-vcoin_32d1f89.js"></script>
+
+<script src="/grzxgrzl/jquery.validate.min_76c74f2.js"></script>
+<script src="/grzxgrzl/dialog_6a2b3fb.js" type="text/javascript"></script>
+<script src="/grzxgrzl/region_a46b4bb.js"></script>
+<script src="/grzxgrzl/calendar_e0577ca.js"></script>
+<script src="/grzxgrzl/chinese.birthday.selector_724b59a.js"></script>
+<script src="/grzxgrzl/member-detail_f3c5ed8.js" type="text/javascript"></script>
 
 
 <script>

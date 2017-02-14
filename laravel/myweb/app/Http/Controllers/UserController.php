@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Hash;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
+
 {
   
     public function getAdd(){
-        // echo '用户添加';
         return view('user.add');
     }
     public function postInsert(Request $request){
@@ -34,12 +35,7 @@ class UserController extends Controller
         'phone.required'=>'手机是必填的',
     ]
     );
- 
-
-    
-        // echo '执行添加动作';
         $data=$request->except(['_token','repass']);
-        // dd($data);
         $res=DB::table('user')->insert($data);
         if($res){
            return redirect('/admin/user/index')->with('success','插入成功');

@@ -9,11 +9,43 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
-
 */
 
-//后台登录页面
-	Route::get('/admin','AdminController@index');
+
+Route::group(['middleware'=>'adminlogin'],function(){
+    //后台主页
+    Route::get('/admin', 'AdminController@index');
+
+    //分类模块
+    // Route::controller('/admin/cate','CateController');
+    // 
+    Route::controller('/admin/cate','CateController');
+    Route::controller('/admin/good','GoodsController');
+    Route::controller('/admin/administrator','AdministratorController');
+    Route::controller('/admin/xq','XqController');
+    Route::controller('/admin/orders','OrdersController'); 
+    //用户模块
+    Route::controller('/admin/user','UserController');
+    Route::controller('/admin/activity','ActivityController');
+    // 回收站
+    Route::controller('/admin/recycle','RecycleController');
+    
+});
+// 后台登录
+Route::controller('/admin','AdminController');
+
+// 验证码
+Route::get('/code','AdminController@code');
+
+// Route::group(['middleware'=>'login'],function(){
+
+// });
+Route::controller('/home/good','GoodController');
+
+// Route::controller('/sy','SyController');
+
+Route::controller('/home/activity','ActivityController');
+
 
 //登录模块
 Route::controller('/login','LoginController');
@@ -23,23 +55,19 @@ Route::controller('/order','OrderController');
 
 Route::controller('/address','AddressController');
 
-//用户模块
-Route::controller('/admin/user','UserController');
+
    
 //axjx阿贾克斯
-  Route::controller('/ajax','AjaxController');
+Route::controller('/ajax','AjaxController');
 
-//类别模块
-   Route::controller('/admin/cate','CateController');
 
 
    
 //验证码
    // Route::controller('/code','LoginController');
 
-   
 
-
- //   Event::listen('illuminate.query',function($query){
- //     var_dump($query);
- // });
+// sql语句记录
+// Event::listen('illuminate.query',function($query){
+//      var_dump($query);
+//  });

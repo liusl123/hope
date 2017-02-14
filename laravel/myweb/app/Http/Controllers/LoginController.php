@@ -41,8 +41,13 @@ class LoginController extends Controller{
                         $email=$res['email'];
                         session(['id'=>$id]);
                         session(['email'=>$email]);
+                        $data=DB::table('user')->where('id',$id)->first();
+                        $name=$data['username'];
+                        session(['name'=>$name]);
                         // dd(session('error'));
-                        return view('login.sznc');
+                        // return view('login.sznc');
+                        // return view('login.grzxgrzl');
+                        return  redirect('/login/grzxgrzl');
                     }else{
                         // echo "不是第一次登陆,直接就去个人中心,个人中心显示昵称";
                         // dd($request->all());
@@ -51,6 +56,9 @@ class LoginController extends Controller{
                         $email=$res['email'];
                         session(['id'=>$id]);
                         session(['email'=>$email]);
+                        $data=DB::table('user')->where('id',$id)->first();
+                        $name=$data['username'];
+                        session(['name'=>$name]);
                         // dd(session('error'));
                         return view('login.grzx');
 
@@ -80,12 +88,18 @@ class LoginController extends Controller{
                     session()->forget('error');
                     if(empty(session('home'))){
                         // echo "第一次登陆,要设置昵称,之后再去个人中心";
-                        return view('login.sznc');
+                        // return view('login.sznc');
                          $res=DB::table('user')->where('phone',$request->input('account'))->first();
                         $id=$res['id'];
                         $phone=$res['phone'];
                         session(['id'=>$id]);
                         session(['phone'=>$phone]);
+                        //本来没有但是为了不设置昵称,所以设定的这个
+                        $data=DB::table('user')->where('id',$id)->first();
+                        $name=$data['username'];
+                        session(['name'=>$name]);
+                        return view('login.grzx');
+
 
                     }else{
                         // echo "不是第一次登陆,直接就去个人中心,个人中心显示昵称";
@@ -97,6 +111,9 @@ class LoginController extends Controller{
                         session(['phone'=>$phone]);
                         // dd(session('id'));
                         // dd(session('phone'));
+                        $data=DB::table('user')->where('id',$id)->first();
+                        $name=$data['username'];
+                        session(['name'=>$name]);
                         return view('login.grzx');
 
                     }
@@ -121,9 +138,12 @@ class LoginController extends Controller{
     public function getLogout(){
         // echo "退出登录";
         session()->forget('phone');
+        session()->forget('iphone');
+        session()->forget('iemail');
         session()->forget('id');
         session()->forget('error');
         session()->forget('home');
+        session()->forget('name');
         // dd(session('error'));
         return redirect('/login/login');
     }
@@ -230,13 +250,13 @@ class LoginController extends Controller{
 
                         //发送一个模板(含有一个链接)
                         // Mail::send('模板名','模板参数',function ($message) use($data){
-                        return view('login.yxzccg');
-                        dd('避免发送邮件特别频繁,将return提前');
+                        // return view('login.yxzccg');
+                        // dd('避免发送邮件特别频繁,将return提前');
                         Mail::send('email.jihuo',['token'=>$data['token'],'id'=>$user_id],function ($message) use($data){
                             $message->to($data['email']);
-                            $message->subject('激活邮件');
+                            $message->subject('邮件');
                         });
-                        
+                        return view('login.yxzccg');
 
                         
                     
@@ -248,11 +268,65 @@ class LoginController extends Controller{
     }
     // 个人中心
     public function getGrzx(){
+
         return view('login.grzx');
     }
-    // 个人中心的个人资料
+
     public function getGrzxgrzl(){
-        return view('login.grzxgrzl');
+        $id=session('id');
+     
+        $res=DB::table('user')->where('id',$id)->first();
+        // dd( $res);
+        if($res['username']){
+            $username=$res['username'];
+            session(['name'=>$username]);
+            $res=DB::table('user')->where('id',$id)->first();
+
+            return view('login.grzxgrzl',['data'=>$res]);
+        }else{
+            // return ('login.xggrzl');
+            return redirect('/login/xggrzll');
+        }
+        
+    }
+
+      //个人中心修改个人资料
+    public function postXggrzl(){
+        // echo "修改个人资料";
+
+        return view('login.xggrzl');
+    }
+
+    public function getXggrzll(){
+        // echo "修改个人资料";
+
+        return view('login.xggrzl');
+    }
+
+
+    public static function postDoxggrzl(Request $request){
+        // echo "保存个人资料";
+        $data=$request->all();
+        $id=session('id');
+        $name=$data['name'];
+        $sex=$data['sex'];
+        $iphone=$data['iphone'];
+        $iemail=$data['iemail'];
+        $res=DB::table('user')->where('id',$id)->update(['username'=>$name,'sex'=>$sex,'phone'=>$iphone,'email'=>$iemail,]);
+        
+        // $funame=DB::table('cate')->where('id',$pid)->first()['cate'];
+        
+        // $data=DB::table('user')->where('id',$id)->first();
+        // dd($data);
+        // session(['name'=>$name]);
+        // session(['sex'=>$sex]);
+        // session(['iphone'=>$iphone]);
+        // session(['iemail'=>$iemail]);
+        // dd(session('iemail'));
+        // return view('login.xggrzl');
+        return redirect('/login/grzxgrzl');
+ 
+        // 
     }
      // 个人中心的我的订单
     public function getGrzxwddd(){
@@ -313,10 +387,10 @@ class LoginController extends Controller{
         session(['mcode'=>$code]);
         session(['phone'=>$account]);
 
-        echo session('mcode');
+        // echo session('mcode');
         //为了验证测试并且不浪费短信所以将return view('login.sendforgetyzm');提前避免了浪费短信
-        return view('login.sendforgetyzm');
-        dd($code);
+        // return view('login.sendforgetyzm');
+        // dd($code);
         $curl->get('http://xfdlamp169.applinzi.com?to='.$account.'&com=vivo&code='.$code);        
         if ($curl->error) {
             echo "短信发送失败";
