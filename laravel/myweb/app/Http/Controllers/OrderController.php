@@ -24,6 +24,12 @@ class OrderController extends Controller
     	return view('order.add',['address'=>$address]);
     }
 
+    public function getIndexadd(){
+
+        $address=AddressController::getAddressById(2);
+        return view('order.indexadd',['address'=>$address]);
+    }
+
     //获取当前用户的购物车中的订单总价
     public function getTotal(){
     	$cart=session('cart');
@@ -65,7 +71,7 @@ class OrderController extends Controller
         $res=DB::table('addresses')->where('id',$id)->delete();
 
         if($res){
-            return redirect('/order/add');
+            return redirect('/order/indexadd');
         }else{
             return back();
         }

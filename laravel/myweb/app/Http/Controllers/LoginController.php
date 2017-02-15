@@ -33,35 +33,42 @@ class LoginController extends Controller{
                     // echo '密码正确';
                     // dd('aa');
                     session()->forget('error');
-                    if(empty(session('home'))){
-                        // echo "第一次登陆,要设置昵称,之后再去个人中心";
-                       
-                        $res=DB::table('user')->where('email',$request->input('account'))->first();
-                        $id=$res['id'];
-                        $email=$res['email'];
-                        session(['id'=>$id]);
-                        session(['email'=>$email]);
-                        $data=DB::table('user')->where('id',$id)->first();
-                        $name=$data['username'];
-                        session(['name'=>$name]);
-                        // dd(session('error'));
-                        // return view('login.sznc');
-                        // return view('login.grzxgrzl');
-                        return  redirect('/login/grzxgrzl');
-                    }else{
+                    // dd($res['status']);
+                    if($res['status']==1){
+                            if(empty(session('home'))){
+                                // echo "第一次登陆,要设置昵称,之后再去个人中心";
+                               
+                                $res=DB::table('user')->where('email',$request->input('account'))->first();
+                                $id=$res['id'];
+                                $email=$res['email'];
+                                session(['id'=>$id]);
+                                session(['email'=>$email]);
+                                $data=DB::table('user')->where('id',$id)->first();
+                                $name=$data['username'];
+                                session(['name'=>$name]);
+                                // dd(session('error'));
+                                // return view('login.sznc');
+                                // return view('login.grzxgrzl');
+                                return  redirect('/login/grzxgrzl');
+                            }else{
                         // echo "不是第一次登陆,直接就去个人中心,个人中心显示昵称";
-                        // dd($request->all());
-                        $res=DB::table('user')->where('email',$request->input('account'))->first();
-                        $id=$res['id'];
-                        $email=$res['email'];
-                        session(['id'=>$id]);
-                        session(['email'=>$email]);
-                        $data=DB::table('user')->where('id',$id)->first();
-                        $name=$data['username'];
-                        session(['name'=>$name]);
-                        // dd(session('error'));
-                        return view('login.grzx');
+                                // dd($request->all());
+                                $res=DB::table('user')->where('email',$request->input('account'))->first();
+                                $id=$res['id'];
+                                $email=$res['email'];
+                                session(['id'=>$id]);
+                                session(['email'=>$email]);
+                                $data=DB::table('user')->where('id',$id)->first();
+                                $name=$data['username'];
+                                session(['name'=>$name]);
+                                // dd(session('error'));
+                                return view('login.grzx');
 
+                            }
+                    }else{
+                        session(['error'=>"账户未激活"]);
+                        // dd(session('error'));
+                        return  redirect('/login/login');
                     }
                     
                 }else{
@@ -86,37 +93,44 @@ class LoginController extends Controller{
                 // if(Hash::check($res['pass'],$pass)){
                     // echo '密码正确';
                     session()->forget('error');
-                    if(empty(session('home'))){
-                        // echo "第一次登陆,要设置昵称,之后再去个人中心";
-                        // return view('login.sznc');
-                         $res=DB::table('user')->where('phone',$request->input('account'))->first();
-                        $id=$res['id'];
-                        $phone=$res['phone'];
-                        session(['id'=>$id]);
-                        session(['phone'=>$phone]);
-                        //本来没有但是为了不设置昵称,所以设定的这个
-                        $data=DB::table('user')->where('id',$id)->first();
-                        $name=$data['username'];
-                        session(['name'=>$name]);
-                        return view('login.grzx');
+                    // dd($res['status']);   
+                        if($res['status']==1){
+                                if(empty(session('home'))){
+                                        // echo "第一次登陆,要设置昵称,之后再去个人中心";
+                                        // return view('login.sznc');
+                                         $res=DB::table('user')->where('phone',$request->input('account'))->first();
+                                        $id=$res['id'];
+                                        $phone=$res['phone'];
+                                        session(['id'=>$id]);
+                                        session(['phone'=>$phone]);
+                                        //本来没有但是为了不设置昵称,所以设定的这个
+                                        $data=DB::table('user')->where('id',$id)->first();
+                                        $name=$data['username'];
+                                        session(['name'=>$name]);
+                                        return view('login.grzx');
 
 
-                    }else{
-                        // echo "不是第一次登陆,直接就去个人中心,个人中心显示昵称";
-                        // dd($request->all());
-                        $res=DB::table('user')->where('phone',$request->input('account'))->first();
-                        $id=$res['id'];
-                        $phone=$res['phone'];
-                        session(['id'=>$id]);
-                        session(['phone'=>$phone]);
-                        // dd(session('id'));
-                        // dd(session('phone'));
-                        $data=DB::table('user')->where('id',$id)->first();
-                        $name=$data['username'];
-                        session(['name'=>$name]);
-                        return view('login.grzx');
+                                }else{
+                                        // echo "不是第一次登陆,直接就去个人中心,个人中心显示昵称";
+                                        // dd($request->all());
+                                        $res=DB::table('user')->where('phone',$request->input('account'))->first();
+                                        $id=$res['id'];
+                                        $phone=$res['phone'];
+                                        session(['id'=>$id]);
+                                        session(['phone'=>$phone]);
+                                        // dd(session('id'));
+                                        // dd(session('phone'));
+                                        $data=DB::table('user')->where('id',$id)->first();
+                                        $name=$data['username'];
+                                        session(['name'=>$name]);
+                                        return view('login.grzx');
 
-                    }
+                                }
+                        }else{
+                        session(['error'=>"账户未激活"]);
+                        // dd(session('error'));
+                        return  redirect('/login/login');
+                        }
                     
                 }else{
                     // echo '密码不正确';
@@ -203,7 +217,6 @@ class LoginController extends Controller{
         // echo '手机';
             // dd($_POST['RegisterForm']['mode']);
             if(session('code')==$request->input('phonecode')){
-                // echo "赶紧做吧";
                 $b=$request->only(['account']);
                 $data['phone']=$b['account'];
                 // $data=$request->all();
@@ -215,7 +228,10 @@ class LoginController extends Controller{
                 // dd($data);
                 if($user_id=DB::table('user')->insertGetId($data)){
                     // echo "手机用户插入成功";
-                    return view('login.grzx');
+                    // return view('login.grzx');不去这了要去发送激活短信
+                    session(['id'=>$user_id]);
+                    // dd(session('id'));
+                    return view("login.jhsj");
                     
                 }else{
                     return back();
@@ -349,10 +365,10 @@ class LoginController extends Controller{
             if($res){
                 return view('login.login');
             }else{
-                echo "激活失败";
+                return back();
             }
         }else{
-            echo '非法请求';
+            return back();
         }
         
     }
@@ -402,11 +418,52 @@ class LoginController extends Controller{
        
     }
 
+
+        // 发送注册短信验证码
+    public function postSendjhyzm(Request $request){
+     
+       
+        $curl = new \Curl\Curl();
+        // $curl->get('http://xfdlamp169.applinzi.com/index.php?&com=vivo&code=1234');
+        $code=rand(0000,9999);
+        $account=$request->input('account');
+        session(['mcode'=>$code]);
+        session(['phone'=>$account]);
+
+        // echo session('mcode');
+        //为了验证测试并且不浪费短信所以将return view('login.sendforgetyzm');提前避免了浪费短信
+        // return view('login.sendforgetyzm');
+        // dd($code);
+        $curl->get('http://xfdlamp169.applinzi.com?to='.$account.'&com=vivo&code='.$code);        
+        if ($curl->error) {
+            echo "短信发送失败";
+        }
+        else {
+            // echo $curl->response;
+            return view('login.sendjhyzm');
+        }
+       
+    }
     //判断验证码是否正确
     public function postDosendyzm(Request $request){
         if( $request->input('phonecode')==session('mcode')){
             // echo "验证码正确";
             return view('login.czmm');
+        }else{
+            echo "验证码不正确";
+        }
+    }
+      //判断激活验证码是否正确
+    public function postDosendjhyzm(Request $request){
+        if( $request->input('phonecode')==session('mcode')){
+            // echo "验证码正确";修改用户的状态
+            $id=session('id');
+            $res=DB::table('user')->where('id',$id)->update(['status'=>1]);
+            if($res){
+                 return redirect('/login/grzx');
+            }else{
+                return back();
+            }
         }else{
             echo "验证码不正确";
         }
@@ -422,7 +479,8 @@ class LoginController extends Controller{
         if($res){
             return view('login.mmxgcg');
         }else{
-            echo '密码修改失败';
+            // echo '密码修改失败';
+            return back();
         }
 
     }

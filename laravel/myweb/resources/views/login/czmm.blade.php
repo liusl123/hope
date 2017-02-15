@@ -8,12 +8,15 @@
 				<ul class="emailregister cl" style="display:block;">
 					<form action="/login/update" method="post">
 					{{csrf_field()}}
+					<br>
+					<br>
+					<br>
 						<li class="psw li_input">
 							<em></em>
 							<input class="v_inp" placeholder="请输入新密码" name="resetpwd" id="_resetpwd" onfocus="inputFocus('_resetpwd')" onblur="checkResetPwd('_resetpwd')" type="password">
-							<p class="tip" id="error_resetpwd" style="display: block;">密码不能为空</p>
+							<p class="tip" id="error_resetpwd" style="display: none;">密码不能为空</p>
 							
-							<b class="error" style="display: inline-block;"></b>
+							<b class="error" style="display: inline-none;"></b>
 						</li>
 						<li class="psw li_input">
 							<em></em>

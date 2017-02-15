@@ -10,7 +10,15 @@ use App\Http\Controllers\Controller;
 class OrdersController extends Controller
 {
     public function getIndex(){
-    	return view('orders.index');
+        $id=2;
+        $res= DB::table('orders as o')
+         ->join('order_details as od','o.id','=','od.order_id')
+         ->join('goods as g','g.id','=','od.goods_id')
+         ->select('g.goods','o.*','g.picname','od.color','g.price','od.num')
+         ->where('o.user_id','=',$id)
+         ->get();
+        // dd($res);
+    	return view('orders.index',['list'=>$res]);
     }
 
     public function getShow(Request $request){
@@ -60,4 +68,24 @@ class OrdersController extends Controller
             echo 'no';
         }
     }
+
+    public function getFahuo($id){
+        // echo $id;
+        $stauts=2;
+        $res=DB::table('orders')->where('order_num',$id)->update(['status'=> $stauts]);
+        // $res=DB::table('orders')->where('order_num',$id)->get();
+        // dd($res);
+         // $res= DB::table('orders')->where('id',$id)->update(['status'=>$val]);
+        // $res= DB::table('orders')->get();
+        // dd($res);
+        if($res){
+            // echo "发货成功";
+            return back()->with('success','发货成功');
+        }else{
+            // echo "发货失败";
+            return back()->with('error','发货失败');
+        }
+    }
+
+
 }

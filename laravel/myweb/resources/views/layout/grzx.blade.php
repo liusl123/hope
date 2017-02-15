@@ -101,7 +101,7 @@
         <dd class="menu-item"><a href="/login/grzxgrzl">个人资料</a></dd>
         <!-- <dd class="menu-item"><a href="/login/grzxshdz">收货地址</a></dd> -->
         <!-- <dd class="menu-item"><a href="/login/grzxshdz">收货地址</a></dd> -->
-        <dd class="menu-item"><a href="/order/add">收货地址</a></dd>
+        <dd class="menu-item"><a href="/order/indexadd">收货地址</a></dd>
         <dd class="menu-item"><a href="/login/xgmm">我的密码</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/coupon">我的优惠券</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/favorite">我的收藏</a></dd>
