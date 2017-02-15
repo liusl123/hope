@@ -39,7 +39,7 @@
 							<input class="v_inp" type="password" autocomplete="off" placeholder="密码" id="_pwd" name="pwd"
 							 onfocus="inputFocus('_pwd')" onblur="inputBlur('_pwd','密码不能为空')"/>
 							 
-							<p class="tip" id="error_pwd" ></p>
+							<p class="tip" id="error_pwd" style="display: none"></p>
 							
 							
 

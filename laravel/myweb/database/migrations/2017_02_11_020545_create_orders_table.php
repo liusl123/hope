@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id')->comment('下单用户id');
             $table->integer('address_id')->comment('收货地址id');
             $table->decimal('total',8,2)->comment('总价');
+            $table->char('commit',255)->comment('备注');
             $table->integer('status')->comment('订单状态默认为1')->default(1);
 
             $table->timestamps();

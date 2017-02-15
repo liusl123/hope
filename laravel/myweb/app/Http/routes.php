@@ -11,6 +11,18 @@
 |
 */
 
+// Route::controller('/admin/user','UserController');
+Route::controller('/home/good','GoodController');
+// Route::controller('/sy','SyController');
+// Route::controller('/admin/orders','OrdersController');
+Route::controller('/home/activity','ActivityController');
+Route::controller('/home/sc','ScController');
+Route::controller('/home/shouji','SjController');
+Route::controller('/home/sp','XiController');
+Route::controller('/admin/xq','XqController');
+Route::controller('/admin/photo','PhotoController');
+Route::controller('/admin/color','ColorController');
+// Route::controller('/admin/lunbo','LbController');
 
 Route::group(['middleware'=>'login'],function(){
     //后台主页
@@ -18,7 +30,13 @@ Route::group(['middleware'=>'login'],function(){
 
     //分类模块
     // Route::controller('/admin/cate','CateController');
-
+    Route::controller('/admin/cate','CateController');
+    Route::controller('/admin/good','GoodsController');
+    Route::controller('/admin/administrator','AdministratorController');
+    Route::controller('/admin/orders','OrdersController'); 
+    //用户模块
+    Route::controller('/admin/user','UserController');
+    Route::controller('/admin/activity','ActivityController');
     // 回收站
     Route::controller('/admin/recycle','RecycleController');
     

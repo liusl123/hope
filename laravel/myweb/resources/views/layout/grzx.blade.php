@@ -10,7 +10,8 @@
     <meta name="keywords" content="vivo智能手机官方商城">
     <meta name="description" content="vivo智能手机官方商城">
     <link rel="shortcut icon" href="/grzx/favicon_7761e1f.ico">
-    <link media="all" href="/ho/grzxgrzl/index.css" type="text/css" rel="stylesheet">
+
+    <link media="all" href="/grzxgrzl/index.css" type="text/css" rel="stylesheet">
 
     <!-- 后期自己加的css-->
     <link rel="stylesheet" href="/ho/grzx/myq.css">
@@ -55,10 +56,11 @@
                 <ul class="top-quick-menu">
                     <li id="j_SearchTrigger" class="search"><a href="javascript:void(0)" rel="nofollow"><b></b></a></li>
                     <li id="j_UserMenuTrigger">
-                        <a href="#" class="user"><b><img src="/ho/grzx/small"></b></a>
+
+                        <a href="#" class="user"><b><img src="/grzx/small"></b></a>
                         <ul class="user-menu">
-                            <li class="member-center"><a href="/ho/login/grzx"><i></i>个人中心</a><span class="icon-angular"></span></li>
-                            <li class="my-order"><a href="http://www.lamp160.com/home/order/xq"><i></i>我的订单</a></li>
+                            <li class="member-center"><a href="/login/grzx"><i></i>个人中心</a><span class="icon-angular"></span></li>
+                            <li class="my-order"><a href="http://shop.vivo.com.cn/my/order"><i></i>我的订单</a></li>
                             <li class="logout"><a href="/login/logout"><i></i>退出登录</a></li>
                         </ul>
                     </li>
@@ -234,25 +236,27 @@
     var webCtx = "";
     var passportLoginUrlPrefix = "https://passport.vivo.com.cn/v3/web/login/authorize?client_id=3&redirect_uri=";
 </script>
-<script src="/ho/grzx/jquery.min_6163309.js"></script>
-<script src="/ho/grzx/jquery.cookie_a5283b2.js"></script>
-<script src="/ho/grzx/jquery.lazyload_546c1da.js"></script>
-<script src="/ho/grzx/jquery-placeholder_fb6154c.js"></script>
-<script src="/ho/grzx/vivo-common_38aa2f0.js"></script>
-<script src="/ho/grzx/dialog_6a2b3fb.js"></script>
-<script src="/ho/grzx/vivo-stat_265b49b.js"></script>
-<script src="/ho/grzx/login_confirm_485e7b4.js"></script>
-<script src="/ho/grzx/query-vcoin_32d1f89.js"></script>
-
-<script src="/ho/grzxgrzl/jquery.validate.min_76c74f2.js"></script>
-<script src="/ho/grzxgrzl/dialog_6a2b3fb.js" type="text/javascript"></script>
-<script src="/ho/grzxgrzl/region_a46b4bb.js"></script>
-<script src="/ho/grzxgrzl/calendar_e0577ca.js"></script>
-<script src="/ho/grzxgrzl/chinese.birthday.selector_724b59a.js"></script>
-<script src="/ho/grzxgrzl/member-detail_f3c5ed8.js" type="text/javascript"></script>
 
 
 <script src="/ho/ddxq/my_order_44f932e.js" type="text/javascript"></script>
+
+<script src="/grzx/jquery.min_6163309.js"></script>
+<script src="/grzx/jquery.cookie_a5283b2.js"></script>
+<script src="/grzx/jquery.lazyload_546c1da.js"></script>
+<script src="/grzx/jquery-placeholder_fb6154c.js"></script>
+<script src="/grzx/vivo-common_38aa2f0.js"></script>
+<script src="/grzx/dialog_6a2b3fb.js"></script>
+<script src="/grzx/vivo-stat_265b49b.js"></script>
+<script src="/grzx/login_confirm_485e7b4.js"></script>
+<script src="/grzx/query-vcoin_32d1f89.js"></script>
+
+<script src="/grzxgrzl/jquery.validate.min_76c74f2.js"></script>
+<script src="/grzxgrzl/dialog_6a2b3fb.js" type="text/javascript"></script>
+<script src="/grzxgrzl/region_a46b4bb.js"></script>
+<script src="/grzxgrzl/calendar_e0577ca.js"></script>
+<script src="/grzxgrzl/chinese.birthday.selector_724b59a.js"></script>
+<script src="/grzxgrzl/member-detail_f3c5ed8.js" type="text/javascript"></script>
+
 
 
 <script>

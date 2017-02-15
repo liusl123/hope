@@ -143,7 +143,7 @@
         @foreach($as as $val)
                 <li class="v_sina">
                 <div class="vc-me-mediabox cl">
-                    <div class="figure"><a href="/home/good/xq/{{$val['id']}}" target="_blank"><img  src="{{$val['picname']}}" width="125" height="105" alt="vivo智能手机" /></a></div>
+                    <div class="figure"><a href="/home/sp/xi/{{$val['id']}}" target="_blank"><img  src="{{$val['photo5']}}" width="125" height="105" alt="vivo智能手机" /></a></div>
                     <div class="cont">
                         <a class="v-gb-ico" href="" target="_blank"><h3>{{$val['goods']}}</h3></a>
                         <a href="" target="_blank"><p>{{$val['descr']}}</p></a>

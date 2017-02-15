@@ -69,16 +69,9 @@ class GoodsController extends Controller
 	public function getDel($id){
 		$vo = DB::table('goods')->where('id',$id)->first();
 		if(DB::table('goods')->where('id',$id)->delete()){
-			if(file_exists('.'.$vo['picname'])){
-				unlink('.'.$vo['picname']);
+			if(file_exists($vo['picname'])){
+				unlink($vo['picname']);
 			}
-            $reg = '/src=[\'"]?([^\'"]*)[\'"]?/';
-            preg_match_all($reg,$vo['con'],$arr);
-            foreach($arr[1] as $path){
-                if(file_exists('.'.$path)){
-                    unlink('.'.$path);
-                }
-            }
 			return redirect('/admin/good/index')->with('success','删除成功');
 		}else{
 			return back()->with('error','删除失败');	
@@ -107,24 +100,10 @@ class GoodsController extends Controller
         //删除原来的数据
         if(!empty($data['picname'])){  //如果原文章主图被修改         
             // 删除原来的主图      
-            if(file_exists('.'.$vo['picname'])){
-                unlink('.'.$vo['picname']);
+            if(file_exists($vo['picname'])){
+                unlink($vo['picname']);
             }
         }
-        $reg = '/src=[\'"]?([^\'"]*)[\'"]?/';
-        preg_match_all($reg,$vo['con'],$arr1);
-        preg_match_all($reg,$data['con'],$arr2);
-        // dd($arr1);
-        $res = $arr1==$arr2?true:false;
-        
-        if(!$res){      
-            foreach($arr1[1] as $path){
-                if(file_exists($path)){
-                    unlink($path);
-                }
-            }
-        }
-		// dd($data);
 		if(DB::table('goods')->where('id',$request->input('id'))->update($data)){
 			return redirect('/admin/good/index')->with('success','修改成功');
 			// echo '啦啦啦';

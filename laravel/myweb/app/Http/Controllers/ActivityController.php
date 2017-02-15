@@ -113,11 +113,16 @@ class ActivityController extends Controller
         // $id=$request->input('id');
         // dd($id);
         $c = DB::table('cate')->join('activity','cate.cate','=','activity.cate')->select('activity.*','cate.cate')->get();
-        $b = DB::table('cate')->join('goods','cate.cate','=','goods.cate')->select('goods.*','cate.cate')->get();
+        $b = DB::table('cate')
+        ->join('goods','cate.cate','=','goods.cate')
+        ->join('photo','goods.id','=','photo.goodid')
+        ->select('goods.*','photo.photo5','cate.cate')->get();
+        // $v = DB::table('lb')->get();
         // dd($b);
         return view('home.index',[
             'vo'=>$c,
             'as'=>$b,
+            // 'vc'=>$v
             ]);
     }
 }

@@ -251,10 +251,38 @@
             <div id="mws-navigation">
                 <ul>
                     <li>
-                        <a href="#"><i class="icon-add-contact"></i>用户模块</a>
-                        <ul class='closed'>
-                            <li><a href="/admin/user/index">浏览用户</a></li>
-                            <li><a href="/admin/user/add">添加用户</a></li>
+
+                        <a href="#"><i class="icon-official"></i>前台用户管理</a>
+                        <ul  class='closed'>
+                            <li><a href="/admin/user/index">用户浏览</a></li>
+                            <li><a href="/admin/user/add">用户添加</a></li>
+                        </ul>
+                    </li>
+               
+                    <li>
+                        <a href="#"><i class="icon-user"></i>后台用户管理</a>
+                        <ul  class='closed'>
+                            <li><a href="/admin/administrator/index">用户浏览</a></li>
+                            <li><a href="/admin/administrator/add">用户添加</a></li>
+                        </ul>
+                    </li>
+                
+                    <li>
+                        <a href="#"><i class="icon-th-list"></i>商品分类管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/cate/index">分类浏览</a></li>
+                            <li><a href="/admin/cate/add">分类添加</a></li>
+                        </ul>
+                    </li>
+               
+                    <li>
+                        <a href="#"><i class="icon-folder-closed"></i>后台商品管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/good/index">商品浏览</a></li>
+                            <li><a href="/admin/good/add">商品添加</a></li>
+                            <li><a href="/admin/color/index">颜色浏览</a></li>
+                            <li><a href="/admin/photo/index">图片浏览</a></li>
+                             <li><a href="/admin/xq/index">商品详情浏览</a></li>
                         </ul>
                     </li>
                     <li>
