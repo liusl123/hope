@@ -11,40 +11,15 @@ class GoodController extends Controller
 {
      public function getXq($id){
         // dd($id);
-       // $vo = DB::table('goods')->where('id',$id)->first();
-        $vo = DB::table('goods')->where('id',$id)->first();
-        // dd($vo);
-        $vc = DB::table('good_xq')->where('id',$id)->first();
-       // $co =DB::table('goods')->where('id','>=',1)->value('cate');
-        $source = $vc['banben'];//按逗号分离字符串 
-        $hello = explode('/',$source); 
-
-        // for($index=0;$index<count($hello);$index++) 
-        // { 
-        // echo $hello[$index]; 
-        // } 
-       // dd($hello);// $data = DB::table('goods')->get(); 
-         $c = DB::table('cate')->join('activity','cate.cate','=','activity.cate')->select('activity.*','cate.cate')->get();
-         // dd($c);
-        if( $v = DB::table('goods as g')
-        ->join('good_xq as xq','g.id','=','xq.good_id')
-        ->select('xq.*','g.*')->where('g.id','=',$id)
-        ->get()){
-             $reg = '/src=[\'"]?([^\'"]*)[\'"]?/';
-             preg_match_all($reg,$vo['con'],$arr);
-              $reg = '/src=[\'"]?([^\'"]*)[\'"]?/';
-             preg_match_all($reg,$vc['contype'],$arr);
-              return view('home.xq',[
-              'as'=>$v,
-              'aa'=>$c,
-              'bb'=>$hello
-        // 'aa'=>$arr
+       // dd($vo);// $data = DB::table('goods')->get();
+        $v = DB::table('goods as g')
+        ->join('good_xq as xq', 'g.id','=','xq.good_id')
+        ->select('xq.banben','xq.zping','xq.nume','xq.color','xq.fuwu','xq.size','xq.rongliang','g.id','g.goods','g.cate','g.company','g.descr','g.price','g.picname','g.con','g.erji','g.cdq','g.zpg','g.state')
+        ->where('g.id','=',$id)
+        ->get();
+        // dd($arr);
+     return view('home.xq',[
+        'as'=>$v,
         ]);
-      }else{
-        return back()->with('error','查询失败'); 
-      }
-       
-        // dd($v);
-   
     }
 }

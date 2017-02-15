@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1ed3e6074cf5a3b9907c9f436a2e2cb",
+    "content-hash": "1de9e73a3b35157a2b2b285d6c8c2a2f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -59,61 +59,6 @@
                 "preload"
             ],
             "time": "2016-09-16T12:50:15+00:00"
-        },
-        {
-             "name": "curl/curl",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-mod/curl.git",
-                "reference": "213d0cc23a4a305f5d7a153d98f2db644a6ca909"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/php-mod/curl/213d0cc23a4a305f5d7a153d98f2db644a6ca909.zip",
-                "reference": "213d0cc23a4a305f5d7a153d98f2db644a6ca909",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*",
-                "squizlabs/php_codesniffer": "~2.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Curl": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hassan Amouhzi",
-                    "email": "hassan@anezi.net",
-                    "homepage": "http://hassan.amouhzi.com"
-                },
-                {
-                    "name": "php-curl-class",
-                    "homepage": "https://github.com/php-curl-class"
-                },
-                {
-                    "name": "user52",
-                    "homepage": "https://github.com/user52"
-                }
-            ],
-            "description": "cURL class for PHP",
-            "homepage": "https://github.com/php-mod/curl",
-            "keywords": [
-                "curl",
-                "dot"
-            ],
-            "time": "2017-01-13T18:26:02+00:00"
         },
         {
             "name": "danielstjules/stringy",
@@ -1119,7 +1064,6 @@
         },
         {
             "name": "symfony/console",
-
             "version": "v2.7.22",
             "source": {
                 "type": "git",
@@ -1176,7 +1120,6 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-12-05T13:00:57+00:00"
         },
         {
@@ -1230,7 +1173,6 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-11-03T07:52:58+00:00"
         },
         {
@@ -1288,7 +1230,6 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-11-15T12:52:31+00:00"
         },
         {
@@ -1344,7 +1285,6 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-12-09T18:19:27+00:00"
         },
         {
@@ -1405,7 +1345,6 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-10-13T01:43:15+00:00"
         },
         {
@@ -1455,7 +1394,6 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-12-03T05:31:03+00:00"
         },
         {
@@ -1512,7 +1450,6 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-11-25T22:28:18+00:00"
         },
         {
@@ -1766,7 +1703,6 @@
         },
         {
             "name": "symfony/process",
-
             "version": "v2.7.22",
             "source": {
                 "type": "git",
@@ -1812,7 +1748,6 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-11-21T09:47:03+00:00"
         },
         {
@@ -1887,7 +1822,6 @@
                 "uri",
                 "url"
             ],
-
             "time": "2016-11-25T12:07:11+00:00"
         },
         {
@@ -1951,7 +1885,6 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-
             "time": "2016-11-18T20:26:45+00:00"
         },
         {
@@ -3339,7 +3272,6 @@
         },
         {
             "name": "symfony/yaml",
-
             "version": "v3.2.1",
             "source": {
                 "type": "git",

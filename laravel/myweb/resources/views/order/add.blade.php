@@ -11,22 +11,13 @@
     <meta name="description" content="vivo智能手机官方商城">
     <link rel="shortcut icon" href="favicon_7761e1f.ico">
 
-    
-    
-    
-
-
-
-
-
-
 
     <!--[if lt IE 9]>
     <script src="https://swsdl.vivo.com.cn/vivoshop/web/dist/js/bower_components/html5shiv/dist/html5shiv.min_23e126e.js"></script>
     <![endif]-->
 
 
-<link media="all" href="/ddtj/index.css" type="text/css" rel="stylesheet">
+<link media="all" href="/ho/ddtj/index.css" type="text/css" rel="stylesheet">
 </head>
 <body class="buy-process">
 <header id="header">
@@ -37,7 +28,7 @@
     </div>
     <div class="wrapper">
         <nav id="navigator" class="cl">
-            <a href="https://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/ddtj/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
+            <a href="https://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/ho/ddtj/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
             <ul class="cl">
                 <li><a href="https://shop.vivo.com.cn/product/phone">手机</a></li>
                 <li><a href="https://shop.vivo.com.cn/product/parts">配件</a></li>
@@ -50,7 +41,7 @@
                 <ul class="top-quick-menu">
                     <li id="j_SearchTrigger" class="search"><a href="javascript:void(0)" rel="nofollow"><b></b></a></li>
                     <li id="j_UserMenuTrigger">
-                        <a href="https://shop.vivo.com.cn/my/" class="user"><b><img src="/ddtj/small"></b></a>
+                        <a href="https://shop.vivo.com.cn/my/" class="user"><b><img src="/ho/ddtj/small"></b></a>
                         <ul class="user-menu">
                             <li class="member-center"><a href="https://shop.vivo.com.cn/my/"><i></i>个人中心</a><span class="icon-angular"></span></li>
                             <li class="my-order"><a href="https://shop.vivo.com.cn/my/order"><i></i>我的订单</a></li>
@@ -78,7 +69,7 @@
                 <dd class="address-info">
                     <ul class="adress-list">
                         @foreach($address as $v)
-                        <li class="address-item J_address-item "  name="address" aid="{{$v['id']}}">
+                        <li class="address-item J_address-item dianji"  name="address" aid="{{$v['id']}}">
                             <label class="inner">
                                 <p>姓名:{{$v['name']}}</p>                              
                                 <p>电话:{{$v['phone']}}</p>                              
@@ -93,21 +84,21 @@
                     </ul>
                     <ul class="adress-list">
                     <!-- 执行下单操作 -->
-                        <form action="/order/xiadan" method="post">
+                        <!-- <form action="/order/xiadan" method="post">
                             {{csrf_field()}}
                             <input type="hidden" name='address_id'value=''>
                             <input type="submit" value="执行下单" id="saveAddress " class="btn-blue submit">
-                        </form>
+                        </form> -->
                         <br>  
                     <!-- 删除下单操作 -->
-                        <form action="/order/delxiadan" method="post">
+                        <form action="/home/order/delxiadan" method="post">
                             {{csrf_field()}}
                             <input type="hidden" name='address_id'value=''>
-                            <input type="submit" value="删除地址" id="saveAddress " class="btn-blue submit">
+                            <input type="submit" value="删除地址" id="btn-submit" class="btn-blue submit">
                         </form>
                     </ul>    
                    <!--  <form id="shipping-address-new-edit" method="post" onsubmit="return false" novalidate="novalidate" action="/order/doadd"> -->
-                    <form action="/address/doadd" method="post">
+                    <form action="/home/address/doadd" method="post">
                         {{csrf_field()}}
                         <dl class="address-info-new cl hidden" style="display: none;">
                             <dt><span class="must">*</span>收货人：</dt>
@@ -138,12 +129,133 @@
                         </dl>
                     </form>
                 </dd>
+
+                <dt class="module-title">支付方式<small id="j_payTypeText">已选择：
+在线支付                            
+                        </small></dt>
+                <dd class="delivery-info paymethod-info">
+                        <div class="pay-method on" value="online_pay">
+在线支付                            <i></i>
+                        </div>
+                </dd>
+                <dt class="module-title">发票信息</dt>
+                <dd class="invoice-info">
+                    <div class="tax-type on" value="1">个人发票<i></i></div>
+                    <div class="tax-type" value="2">公司发票<i></i></div>
+                    <label><span class="red">*</span>发票抬头：<input id="tax-title" name="taxTitle" value="" type="text"></label>
+                </dd>
+            <form action="/home/order/xiadan" method='post'>
+
+                    <dt class="module-title">确认商品</dt>
+                    <dd>
+                        <div class="prod-list">
+                            <table class="order-table" cellpadding="0">
+                                <thead>
+                                <tr>
+                                    <th width="194"></th>
+                                    <th style="text-align: left;">商品名称</th>
+                                    <th width="124">价格（元）</th>
+                                    <th width="146">数量</th>
+                                    <th width="146">优惠</th>
+                                    <th width="137">赠送V币</th>
+                                    <th width="162">小计（元）</th>
+                                </tr>
+                                </thead>
+                                @foreach($data as $v)
+                                    <input class="order-commodity-main" skuid="1882" spuid="90" num="1" type="hidden">
+                                    <tbody class="prod-item ">
+                                        <tr id='{{$v['id']}}' class="prod-line">
+                                            <td class="prod-pic">
+                                                <a class="figure" href="https://shop.vivo.com.cn/product/90" target="_top"><img src="1882_1481558960471_100x100.png" alt=""></a>
+                                            </td>
+                                            <td class="prods-info" colspan="2">
+                                                <table class="prods-info-table">
+                                                    <colgroup>
+                                                        <col width="80">
+                                                        <col>
+                                                        <col width="120">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr class="prod-info">
+                                                            <td class="prod-name" colspan="2">
+                                                                <a class="figure" href="https://shop.vivo.com.cn/product/90" target="_top">{{$v['goods']}}</a>
+                                                                <br> 颜色：{{$v['color']}}
+                                                            </td>
+                                                            <td>{{$v['price']}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td>{{$v['num']}}</td>
+                                            <td class="prod-privilege J_promotion-price">
+                                                -0.00</td>
+                                            <td>{{$v['price']*$v['num']}}</td>
+                                            <td class="total-price J_total-price">{{$v['price']*$v['num']}}</td>
+                                        </tr>
+                                    </tbody>
+                                    @endforeach
+                            </table>
+                        </div>
+                        <div class="order-info-box cl">
+                            <ul>
+                                <li class="coupon-info cl">
+                                    <div class="coupon-info-title"><i></i>使用优惠券</div>
+                                    <div class="info-box">
+                                        <label>选择已有优惠券：<select class="sel-select-coupon">
+                                            <option value="">选择优惠券</option>
+                                        </select></label>
+                                        <label>如果您有通过站外方式获得的优惠券，请在此输入号码：<input class="txt-coupon-num" value="" type="text"></label>
+                                        <button id="check_coupon" class="btn-blue">验证优惠码</button>
+                                    </div>
+                                </li>
+                                <li class="order-remark cl">
+                                    <div class="info-box">
+                                        <label><i></i>订单备注：</label>
+                                        <textarea name='commit' id="order-memo" class="tta-order-remark" placeholder="限300字（若有特殊需求，请联系商城在线客服）" rows="1"></textarea>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="other-info right-box pull-right">
+                                <ul>
+                                    <li class="order-sum"><label>商品:&nbsp;&nbsp;<em class="red zongshu"></em>件
+                                        &nbsp;商品总金额：</label><span>¥<dfn id='zongjia'><input type="hidden" name='total' value="{{$t}}" />{{$t}}</dfn></span>
+                                    </li>
+                                    <li class="order-sum"><label>优惠：</label><span class="red">-<dfn>¥</dfn><span id="privilege">0.00</span></span>
+                                    </li>
+                                    <li class="order-sum"><label>运费：</label><span class="red"><dfn>¥</dfn><span id="postAmount">0.00</span></span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </dd>
+                    <dt class="real-price-box">
+                        <ul class="delivery-address">
+                            <li class="item">
+                                <label>地址：</label><span id="receiveAddress"></span></li>
+                            <li class="item receiver-name"><label>收件人：</label><span id="receivePerson"> </span>
+                            </li>
+                        </ul>
+                        <!-- <label>应付总额</label><span class="real-price red"><dfn>¥</dfn></span> -->
+                    </dt>
+                </dl>
+                <div class="btn-box">
+                        {{csrf_field()}}
+                        <input type="hidden" name='address_id' value='{{$v['id']}}' />
+                        <!-- <input type="hidden" name='total' value='{{$t}}' /> -->
+                        
+                        <a href="/home/cart/index"><button id="btn-back2shoppingcart" class="btn-cancel" title="返回购物车">返回购物车</button></a>
+                        <button id="btn-submit-order" class="btn-confirm" title="提交订单">提交订单</button>
+                    
+                </div>
+            </form>
+            <div>
+                <form id="orderPayform" method="post" action="https://shop.vivo.com.cn/order/cart/confirm?uniqueCodes=1_1882"></form>
+            </div>
             </dl>
        </div>
     </div>
     <!--content end -->
-
-</div>
+   <br /><br /> 
 <footer id="footer">
     <div class="shop-agree">
         <div class="wrapper cl">
@@ -265,48 +377,116 @@
     var webCtx = "";
     var passportLoginUrlPrefix = "https://passport.vivo.com.cn/v3/web/login/authorize?client_id=3&redirect_uri=";
 </script>
-<script src="/ddtj/jquery.min_6163309.js"></script>
-<script src="/ddtj/jquery.cookie_a5283b2.js"></script>
-<script src="/ddtj/jquery.lazyload_546c1da.js"></script>
-<script src="/ddtj/jquery-placeholder_fb6154c.js"></script>
-<script src="/ddtj/vivo-common_38aa2f0.js"></script>
-<script src="/ddtj/dialog_6a2b3fb.js"></script>
-<script src="/ddtj/vivo-stat_265b49b.js"></script>
-<script src="/ddtj/login_confirm_485e7b4.js"></script>
-<script src="/ddtj/region_a46b4bb.js"></script>
-<script src="/ddtj/jquery.validate.min_76c74f2.js"></script>
-<script src="/ddtj/dialog_6a2b3fb.js"></script>
-<script src="/ddtj/view_1c5c771.js"></script>
-<script src="/ddtj/view_1c5c7711.js"></script>
+<script src="/ho/ddtj/jquery.min_6163309.js"></script>
+<script src="/ho/ddtj/jquery.cookie_a5283b2.js"></script>
+<script src="/ho/ddtj/jquery.lazyload_546c1da.js"></script>
+<script src="/ho/ddtj/jquery-placeholder_fb6154c.js"></script>
+<script src="/ho/ddtj/vivo-common_38aa2f0.js"></script>
+<script src="/ho/ddtj/dialog_6a2b3fb.js"></script>
+<script src="/ho/ddtj/vivo-stat_265b49b.js"></script>
+<script src="/ho/ddtj/login_confirm_485e7b4.js"></script>
+<script src="/ho/ddtj/region_a46b4bb.js"></script>
+<script src="/ho/ddtj/jquery.validate.min_76c74f2.js"></script>
+<script src="/ho/ddtj/dialog_6a2b3fb.js"></script>
+<script src="/ho/ddtj/view_1c5c771.js"></script>
+<script src="/ho/ddtj/view_1c5c7711.js"></script>
 
 <!-- 城市级联 -->
 <!-- <script src="/cj/jquery.js"></script> -->
-<script src="/cj/area.js"></script>
-<script src="/cj/location.js"></script>
+<script src="/ho/cj/area.js"></script>
+<script src="/ho/cj/location.js"></script>
 
 <script type="text/javascript">
-            $(document).ready(function(){
-                showLocation();
+    
+    // 寻找收件人
+    $('.dianji').each(function(){
+        $(this).click(function(){
+            var id = $(this).attr('aid');
 
-                //显示id对应的地址
-                $('.info').each(function(){
-                    var info=$(this).find('span').attr('dizhi');
-                    var res=change(info);
-                    $(this).find('span').html(res);
-                });
+            $.ajax({
+                url:'/home/order/shoujian',
+                data:{'id':id},
+                dataType:'json',
+                success:function(mes){
+                    // alert($(mes).attr('id'));
+                    $('#receivePerson').html($(mes).attr('name'));
+                    $('#receiveAddress').html($(mes).attr('sheng')+'/'+$(mes).attr('shi')+'/'+$(mes).attr('xian')+'/'+$(mes).attr('jiedao'));
+                    $(document).ready(function(){
+                        showLocation();
 
-                function change(info){
-                    var arr=info.split('/');
-                    var xx=new Location();
-                    var xx=xx.items;
-                    var sheng=xx[0][arr[0]];
-                    var shi=xx[0+','+arr[0]][arr[1]];
-                    var xian=xx[0+','+arr[0]+','+arr[1]][arr[2]];
+                        //显示id对应的地址
+                        $('#receiveAddress').each(function(){
+                            var info=$(this).html();
+                            var res=change(info);
+                            $('#receiveAddress').html(res);
+                        });
 
-                    return sheng+shi+xian;
+                        function change(info){
+                            var arr = info.split('/');
+
+                            var xx = new Location();
+                            var xx = xx.items;
+                            var sheng = xx[0][arr[0]];
+                            var shi = xx[0+','+arr[0]][arr[1]];
+                            var xian = xx[0+','+arr[0]+','+arr[1]][arr[2]];
+                            var jiedao = arr[3];
+
+                            return sheng+shi+xian+jiedao;
+                        }
+
+                    });
                 }
-
             });
+        });
+    });
+    // 修改总价
+    // function count(){
+    //     var coun = 0;
+    //     $('.prod-line').each(function(){
+    //         var xiaoji = parseFloat($(this).find('.prods-info').next('td').html())*parseFloat($(this).find('prod-name').next('td').html());
+    //         coun+=xiaoji;     
+    //     });
+    //     alert(coun);
+    //     $('#zongjia').html(coun);
+    // }
+    // count();
+    
+    // 修改数量
+    function num(){
+        var num = 0;
+        $('.prod-line').each(function(){
+            var newnum = parseFloat($(this).find('.prods-info').next('td').html());
+            num += newnum; 
+        });
+        $('.zongshu').html(num);
+    }
+    num(); 
+    $(document).ready(function(){
+        showLocation();
+
+        //显示id对应的地址
+        $('.info').each(function(){
+            var info=$(this).find('span').attr('dizhi');
+            var res=change(info);
+            $(this).find('span').html(res);
+        });
+
+        function change(info){
+            var arr=info.split('/');
+            var xx=new Location();
+            var xx=xx.items;
+            var sheng=xx[0][arr[0]];
+            var shi=xx[0+','+arr[0]][arr[1]];
+            var xian=xx[0+','+arr[0]+','+arr[1]][arr[2]];
+
+            return sheng+shi+xian;
+        }
+
+    });
+    var c = $('#order-memo').html();
+    $('#tijiao').next('input').attr('value',c);
+    var t =  $('#zongjia').html();
+    $('#tijiao').next('input').next('input').attr('value',t);
 </script>
 <script>
     // 基础邮费

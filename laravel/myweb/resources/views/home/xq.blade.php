@@ -9,19 +9,8 @@
     <title>商品详情</title>
     <meta name="keywords" content="X9Plus 星空灰版">
     <meta name="description" content="X9Plus 星空灰版">
-    <link rel="shortcut icon" href="/xq/favicon_7761e1f.ico">
-<link rel="stylesheet" type="text/css" href="/xq/index.css" media="all">
-<link href="/ym/css/base.css?v=10001" rel="stylesheet" type="text/css" />
-
-<link href="/ym/css/vivo.layout.css?v=10002" rel="stylesheet" type="text/css" />
-<link href="/ym/css/vivo.media.css?v=10000" rel="stylesheet" type="text/css" />
-
-<!--<link href="/css/2016guoqing.css?v=20170117093229" rel="stylesheet" type="text/css" />-->
-<!--[if lte IE 8]><link href="/css/vivo.layout.fixed.css?v=20170117093229" rel="stylesheet" type="text/css" /><![endif]-->
-<script src="/ym/js/jquery.js" type="text/javascript"></script>
-<script src="/ym/js/vivo.main.js?v=20170117093229" type="text/javascript"></script>
-<link href="/ym/css/vivo.highlight2016.layout.css?v=20170117093229" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="/xq/index.css" media="all">
+    <link rel="shortcut icon" href="/ho/xq/favicon_7761e1f.ico">
+<link rel="stylesheet" type="text/css" href="/ho/xq/index.css" media="all">
 </head>
 <body class="">
 <header id="header">
@@ -32,7 +21,7 @@
     </div>
     <div class="wrapper">
         <nav id="navigator" class="cl">
-            <a href="https://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/xq/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
+            <a href="https://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/ho/xq/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
             <ul class="cl">
                 <li class="current"><a href="https://shop.vivo.com.cn/product/phone">手机</a></li>
                 <li><a href="https://shop.vivo.com.cn/product/parts">配件</a></li>
@@ -75,7 +64,7 @@
                 </div>
                 <div id="j_SpecItems" class="spec-items">
                     <ul class="cl" id="smallImgUl">
-                            <li class="current"><a href="javascript:;"><img src="/uploads/14867389672025.png"></a></li>
+                            <li class="current"><a href="javascript:;">{{$v['con']}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,102 +79,79 @@
                             <div class="table-cell"><span class="label">赠品</span></div>
                             <div class="table-cell gift-box">
                                     <span class="gift-item" title="【vivo】配件收纳包" sku-id="4061">
-                                        <a href="#" target="_top">{{$v['erji']}}<img src="{{$v['pictype']}}"> x 1</a>
+                                        <a href="https://shop.vivo.com.cn/product/9921?giftSkuid=4061" target="_top">{{$v['erji']}}<img src="{{$v['picname']}}"> x 1 {{$v['cdq']}}<img src="{{$v['picname']}}"> x 1 {{$v['zpg']}}<img src="{{$v['picname']}}"> x 1</a>
 
                                     </span>
                             </div>
                         </li>
                 </ul>
-                <form action="https://shop.vivo.com.cn/product/9986?source=vivo" id="prod-detail-form" method="post">
-                    <input id="spuId" name="spuId" value="9986" type="hidden">
-                    <input id="cmdyCategoryId" name="cmdyCategoryId" value="146" type="hidden">
-                    <input id="queryFlag" name="queryFlag" value="1" type="hidden">
-                <dl class="prod-params cl" id="j_colors" marketable="1">
-                                <dt>版本：</dt>
-                                <dd>
-                                    <ul class="tags nettype-tags">
-                                        <input id="netType" name="netType" value="58" type="hidden">
-                                        @foreach($as as $ca)
-                                            <li name="netTypeLi" nettype="58" class="on"
-                                             @if($ca['banben']=='联通')
-                                               联通
-                                            @elseif($ca['banben']=='移动')
-                                               移动
-                                            @else
-                                               全网通
-                                         @endif id="a"></li>
-                                        @endforeach
-                                    </ul>
-//                                     <script src="/f/js/jquery-1.8.3.js">
-                                                
-//                                     </script>
-//                                     <script>
-                                            
-//                                           var str=$('#a').attr('aa'); //这是一字符串 
-// var strs= new Array(); //定义一数组 
-// strs=str.split("/"); //字符分割 
-
-//     $('.on').each(function(){
-//         $(this).html(strs[$(this).index()]);
-//     });
-//  //分割后的字符输出 
- 
-//                                     </script>
-                                </dd>
-                                <dt>尺寸</dt>
-                                <dd>
-                                    <ul class="tags storage-tags">
-                                        <input id="storage" name="storage" value="3" type="hidden">
-                                            <li name="storageLi" storage="4" class="on" dd="">{{$v['size']}}</li>
-                                    </ul>
-                                </dd>
-                                 <dt>容量：</dt>
-                                <dd>
-                                    <ul class="tags storage-tags">
-                                        <input id="storage" name="storage" value="3" type="hidden">
-                                            <li name="storageLi" storage="3" class="on" >{{$v['rongliang']}}</li>
-                                    </ul>
-                                </dd>
-                                <script type="text/javascript" src="/xq/jquery-1.8.3.js"></script>
-                                <script>
-                                var li=$('li[name="netTypeLi"] :eq(0)').attr('aa');
-                                console.log(li);
-                                </script>
-                            <dt>颜色</dt>
-                            <dd>
-                                <ul class="tags color-box" spuinstallment="1">
-                                        <li class="sub-sku on" sku-store="1" sku-id="4224" sku-fullpay="1"><a class="color-7f7f7f" style="background: none repeat scroll 0% 0% rgb(127, 127, 127);" href="javascript:;"></a>{{$v['color']}}<i></i></li>
+                <form action="/home/cart/add" id="prod-detail-form" method="post">
+                    {{csrf_field()}}
+                    <input id="spuId" name="id" value="{{$v['id']}}" type="hidden">
+                    <input id="cmdyCategoryId" name="goods" value="{{$v['goods']}}" type="hidden">
+                    <input id="queryFlag" name="pic" value="{{$v['picname']}}" type="hidden">
+                    <input name='price' value="{{$v['price']}}" type="hidden">
+                    <dl class="prod-params cl" id="j_colors" marketable="1">
+                        <dt>版本：</dt>
+                        <dd>
+                            <ul class="tags nettype-tags">
+                                <input id="netType" name="netType" value="{{$v['banben']}}" type="hidden">
+                                    <li name="netTypeLi" nettype="58" class="on" aa="">{{$v['banben']}}</li>
+                            </ul>
+                        </dd>
+                        <dt>尺寸</dt>
+                        <dd>
+                            <ul class="tags storage-tags">
+                                <input id="storage" name="storage" value="{{$v['size']}}" type="hidden">
+                                    <li name="storageLi" storage="4" class="on" dd="">{{$v['size']}}</li>
+                            </ul>
+                        </dd>
+                         <dt>容量：</dt>
+                        <dd>
+                            <ul class="tags storage-tags">
+                                <input id="storage" name="storage" value="{{$v['rongliang']}}" type="hidden">
+                                    <li name="storageLi" storage="3" class="on" >{{$v['rongliang']}}</li>
+                            </ul>
+                        </dd>
+                        <script type="text/javascript" src="/ho/xq/jquery-1.8.3.js"></script>
+                        <script>
+                        var li=$('li[name="netTypeLi"] :eq(0)').attr('aa');
+                        console.log(li);
+                        </script>
+                        <dt>颜色</dt>
+                        <dd>
+                            <ul class="tags color-box" spuinstallment="1">
+                                    <input  name="color" value="{{$v['color']}}" type="hidden">
+                                    <li class="sub-sku on" sku-store="1" sku-id="4224" sku-fullpay="1"><a class="color-7f7f7f" style="background: none repeat scroll 0% 0% rgb(127, 127, 127);" href="javascript:;"></a>{{$v['color']}}<i></i></li>
+                            </ul>
+                        </dd>
+                        <dt>服务：</dt>
+                        <dd>
+                                <ul class="tags service-tags">
+                                        <li name="broken-svc" sku-id="1634" svc-price="99" broken-svc-id="201" title="一年碎屏宝，服务类商品，此款碎屏宝不适配Xplay5机型，购买当天生效，不支持退款" class="broken">
+                                   {{$v['fuwu']}} &nbsp&nbsp  <span class="item-price"><dfn>¥</dfn>99</span><i></i>
+                                        </li>
+                                    <li class="detail"><a target="_top" href="https://shop.vivo.com.cn/helpcenter/broken-screen">详情&gt;</a></li>
                                 </ul>
-                            </dd>
-
-
-                                <dt>服务：</dt>
-                                <dd>
-                                        <ul class="tags service-tags">
-                                                <li name="broken-svc" sku-id="1634" svc-price="99" broken-svc-id="201" title="一年碎屏宝，服务类商品，此款碎屏宝不适配Xplay5机型，购买当天生效，不支持退款" class="broken">
-                                           {{$v['fuwu']}} &nbsp&nbsp  <span class="item-price"><dfn>¥</dfn>99</span><i></i>
-                                                </li>
-                                            <li class="detail"><a target="_top" href="https://shop.vivo.com.cn/helpcenter/broken-screen">详情&gt;</a></li>
-                                        </ul>
-                                </dd>
+                        </dd>
                         <dt>数量：</dt>
                         <dd class="order-num">
                             <label id="dec" class="disabled">-</label>
-                            <input id="add-num" maxlength="1" value="1" type="text">
+                            <input id="add-num" maxlength="1" name='num' value="1" type="text">
                             <label id="inc">+</label>
                             <small class="order-num-msg" id="order-num-msg">(仅限购3部)</small>
                         </dd>
-                </dl>
-                </form>
+                    </dl>
+                
 
                 <div class="btns">
 
-                    <button class="btn-next J_buy-button btn-appointment payall-order" type="button" title="加入购物车">加入购物车</button>
+                    <button class="btn-next  btn-appointment payall-order" type="submit" title="加入购物车">加入购物车</button>
                     <p class="count-down-text"></p>
 
-                    <div id="error-msg" class="red hidden"></div>
+                    
                 </div>
-
+                </form>
                 <div class="activity-tags">
                         <ul>
                             <li class="post-free"></li>
@@ -202,6 +168,18 @@
 <div style="padding-top: 0px;" class="prod-main-info">
     <div class="prod-main-tab">
         <div class="prod-tab-box">
+            <button style="display: none;" class="btn-next btn-appointment payall-order" type="button" title="全款预定">全款预定</button>
+            <div style="display: none;" class="thumb-goods cl">
+
+                <div class="figure">
+                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346629938hd_250x250.png" height="45" width="45"></li>
+                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346631134hd_250x250.png" height="45" width="45"></li>
+                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346631796hd_250x250.png" height="45" width="45"></li>
+                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346632597hd_250x250.png" height="45" width="45"></li>
+                </div>
+                <h3 title="X9Plus星空灰版【0首付 花呗12期分期免息】">X9Plus星空灰版【0首付 花呗12期分期免息】</h3>
+                <span>￥3498</span>
+            </div>
             <ul>
                 <li class="tab-information current" v="information"><a href="#">详情<b></b></a></li>
                 <li class="tab-parameter" v="parameter"><a href="#">参数<b></b></a></li>
@@ -214,33 +192,23 @@
     <div class="prod-main-box">
         <div style="display: block;" class="prod-main-information">
             <div class="section">
-            <p><a href="#" target="_top">
-           <div class="vc-main-events vc-ev-pic">
-            <h2 style="float:left">活动</h2>
-            <a class="event-morelink v-gb-ico" style="float:left;margin-top:-15px;" href="http://bbs.vivo.com.cn" target="_blank">更多</a>
-            <ul class="cl">
-                @foreach($aa as $vc)
-                <li>
-                     <a href="https://shop.vivo.com.cn/sp/X9Plus" target="_blank">
-                        <div class="figure"><img src="{{$vc['pic']}}" width="100" height="100" /></div>
-                        <h3>@if($vc['state']=='1')
-                                新活动
-                            @elseif($vc['state']=='2')
-                                活动开始
-                            @else
-                                活动结束
-                            @endif
-                        {{$vc['activityname']}}</h3>
-                        <p>{{$vc['type']}}</p>
-                    </a>
-                    <strong>商城</strong>
-                </li>
-                    @endforeach
-            </ul>
-            </div>
-            @foreach($as as $val)
-            <img data-src="{!!$val['contype']!!}" title="" alt="">
-            @endforeach
+            <p><a href="https://shop.vivo.com.cn/lottery?uuid=fd524d03-0902-47f7-a2b5-f1dcf27836a2" target="_top">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170208/20170208165257571485_original.jpg" title="" alt=""></a>
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/2017020616120915514_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206172353818849_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161217845670_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161221820359_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206173350888161_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161230604489_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161234742766_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161238576901_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161242211346_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161245902738_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161250252432_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/2017020616125493997_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161257389516_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170206/20170206161300156786_original.jpg" title="" alt="">
+            <img src="/ho/xq/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170208/20170208104808893403_original.jpg" title="" alt=""></p>
             </div>
         </div>
             <div style="display: none;" class="prod-main-parameter">
@@ -439,14 +407,14 @@
     var webCtx = "";
     var passportLoginUrlPrefix = "https://passport.vivo.com.cn/v3/web/login/authorize?client_id=3&redirect_uri=";
 </script>
-<script src="/xq/jquery.min_6163309.js"></script>
-<script src="/xq/jquery.cookie_a5283b2.js"></script>
-<script src="/xq/jquery.lazyload_546c1da.js"></script>
-<script src="/xq/jquery-placeholder_fb6154c.js"></script>
-<script src="/xq/vivo-common_38aa2f0.js"></script>
-<script src="/xq/dialog_6a2b3fb.js"></script>
-<script src="/xq/vivo-stat_265b49b.js"></script>
-<script src="/xq/login_confirm_485e7b4.js"></script>
+<script src="/ho/xq/jquery.min_6163309.js"></script>
+<script src="/ho/xq/jquery.cookie_a5283b2.js"></script>
+<script src="/ho/xq/jquery.lazyload_546c1da.js"></script>
+<script src="/ho/xq/jquery-placeholder_fb6154c.js"></script>
+<script src="/ho/xq/vivo-common_38aa2f0.js"></script>
+<script src="/ho/xq/dialog_6a2b3fb.js"></script>
+<script src="/ho/xq/vivo-stat_265b49b.js"></script>
+<script src="/ho/xq/login_confirm_485e7b4.js"></script>
 <script>
     var imgHost = "https://swsdl.vivo.com.cn/vivoshop/";
     var skuImageJsonStr = '([{"bigPic":"commodity/24/4224_1486346629938hd_530x530.png","hdPic":"commodity/24/4224_1486346629938hd_1080x1080.png","imageNo":"1486346629938hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346629938hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346629938hd_100x100.png"},{"bigPic":"commodity/24/4224_1486346631134hd_530x530.png","hdPic":"commodity/24/4224_1486346631134hd_1080x1080.png","imageNo":"1486346631134hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346631134hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346631134hd_100x100.png"},{"bigPic":"commodity/24/4224_1486346631796hd_530x530.png","hdPic":"commodity/24/4224_1486346631796hd_1080x1080.png","imageNo":"1486346631796hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346631796hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346631796hd_100x100.png"},{"bigPic":"commodity/24/4224_1486346632597hd_530x530.png","hdPic":"commodity/24/4224_1486346632597hd_1080x1080.png","imageNo":"1486346632597hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346632597hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346632597hd_100x100.png"}])';
@@ -456,10 +424,10 @@
     var isSecondBuy = false;
     var maxNumberPerUser = 3;
 </script>
-<script src="/xq/simplestorage_f115cd4.js"></script>
-<script src="/xq/view_cbc6422.js"></script>
-<script src="/xq/view-hist_823c137.js"></script>
-<script src="/xq/dialog_6a2b3fb.js" type="text/javascript"></script>
+<script src="/ho/xq/simplestorage_f115cd4.js"></script>
+<script src="/ho/xq/view_cbc6422.js"></script>
+<script src="/ho/xq/view-hist_823c137.js"></script>
+<script src="/ho/xq/dialog_6a2b3fb.js" type="text/javascript"></script>
 
 <script>
     //百度统计代码

@@ -7,7 +7,6 @@ use App\Models\Order;
 use App\Models\Goods;
 use App\Models\Order_detail;
 
-
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -18,15 +17,28 @@ class OrderController extends Controller
     //因为用的不是隐式控制器所以就不用加post(老师用的是显示控制器.为了测试,我们这里还是用隐式)
     //路由代码->Route::controller('/home/cart','CartController')->放到路由组中设置中间件
     // public function getAdd(Request $reuqest){->因为没有表单提交所以的get
-    public function getAdd(){
-
+    public function getAdd(Request $request){
+        // dd(session('cart'));
+        // dd($request->input('t'));
+        $t = $request->input('t');
     	$address=AddressController::getAddressById(2);
-    	return view('order.add',['address'=>$address]);
+        $carts = session('cart');
+        $data = [];
+        foreach($carts as $v){
+            $temp = Goods::findOrFail($v['id']);
+            $temp['num'] = $v['num'];
+            $temp['color'] = $v['color'];
+            $data[] = $temp;
+        }
+    	return view('order.add',['t'=>$t,'data'=>$data,'address'=>$address]);
     }
 
+    // public function getindex(){
+    //     return view(in)
+    // }
     //获取当前用户的购物车中的订单总价
     public function getTotal(){
-    	$cart=session('cart');
+    	$carts=session('cart');
     	$total=0;
     	foreach($carts as $v){
     		$total+=Goods::findOrFail($v['id'])['price']*$v['num'];
@@ -36,27 +48,31 @@ class OrderController extends Controller
 
     //执行下单
     public function postXiadan(Request $request){
-    	// dd($request->all());
-    	$oder= new Order;
+    	// dd($request->input('commit'));
+    	$order= new Order;
 
     	//参数的注入
     	$order->order_num=time().rand(10000,99999);
     	$order->user_id=2;//session获取登陆者的id
     	$order->address_id=$request->input('address_id');
     	$order->total=$this->getTotal();
+        $order->commit=$request->input('commit');
     	$order->status=0;// 0新订单 1已发货 2已收货
 
     	if($order->save()){//产生新的订单
     		//获取新订单的id
     		// dd($order->id);
     		$data=[];
-    		foreach(session('carts') as $v){
+    		foreach(session('cart') as $v){
     			$temp['goods_id']=$v['id'];
     			$temp['num']=$v['num'];
     			$temp['order_id']=$order->id;
+                $temp['color']=$v['color'];
     			$data[]=$temp;
     		}
-    	}    
+            Order_detail::insert($data);
+    	} 
+        return view('order.syt',['temp'=>$temp]);    
     }
 
     public function postDelxiadan(Request $request){
@@ -65,12 +81,56 @@ class OrderController extends Controller
         $res=DB::table('addresses')->where('id',$id)->delete();
 
         if($res){
-            return redirect('/order/add');
+            return redirect('/home/order/add');
         }else{
             return back();
         }
-
     }
 
-   
+    public function getShoujian(Request $request){
+        $id = $request->input('id');
+        $data = DB::table('addresses')->where('id',$id)->first();
+
+        if($data){
+           echo json_encode($data);
+        }
+    }
+
+    public function getXq(){
+        // $id = session('id');//存入session的用户id
+        $id = 2;
+        $data = DB::table('orders as o')
+         ->join('order_details as od','o.id','=','od.order_id')
+         ->join('goods as g','g.id','=','od.goods_id')
+         ->select('g.goods','o.*','g.picname','od.color','g.price','od.num')
+         ->where('o.user_id','=',$id)
+         ->get();
+        return view('order.xq',['data'=>$data]);
+    }
+
+    public function getUpload(Request $request){
+        $id = $request->input('id');
+        DB::table('orders')->where('id',$id)->update(['status'=>1]);
+        return redirect('/home/order/xq');
+    }
+
+    public function getDel($id){
+        $data = DB::table('orders')->where('id',$id)->first();
+        if($data['status']==3){
+            DB::table('orders')->where('id',$id)->update(['status'=>5]);
+            return redirect('/home/order/xq');
+        }else{
+            return redirect('/home/order/xq');
+        }
+    }
+
+    public function getShou($id){
+        $data = DB::table('orders')->where('id',$id)->first();
+        if($data['status']==2){
+            DB::table('orders')->where('id',$id)->update(['status'=>3]);
+            return redirect('/home/order/xq');
+        }else{
+            return redirect('/home/order/xq');
+        }
+    }
 }

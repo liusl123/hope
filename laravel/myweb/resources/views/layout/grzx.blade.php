@@ -10,14 +10,14 @@
     <meta name="keywords" content="vivo智能手机官方商城">
     <meta name="description" content="vivo智能手机官方商城">
     <link rel="shortcut icon" href="/grzx/favicon_7761e1f.ico">
-    <!-- 个人资料的css -->
-    <link media="all" href="/grzxgrzl/index.css" type="text/css" rel="stylesheet">
+    <link media="all" href="/ho/grzxgrzl/index.css" type="text/css" rel="stylesheet">
+
     <!-- 后期自己加的css-->
-    <link rel="stylesheet" href="/myq.css">
-    <link rel="stylesheet" href="/myw.css">
-    <link rel="stylesheet" href="/mye.css">
-    <link rel="stylesheet" href="/myr.css">
-    <link rel="stylesheet" href="/myt.css">
+    <link rel="stylesheet" href="/ho/grzx/myq.css">
+    <link rel="stylesheet" href="/ho/grzx/myw.css">
+    <link rel="stylesheet" href="/ho/grzx/mye.css">
+    <link rel="stylesheet" href="/ho/grzx/myr.css">
+    <link rel="stylesheet" href="/ho/grzx/myt.css">
   
     
     
@@ -29,9 +29,9 @@
     <!--[if lt IE 9]>
     <script src="https://swsdl.vivo.com.cn/vivoshop/web/dist/js/bower_components/html5shiv/dist/html5shiv.min_23e126e.js"></script>
     <![endif]-->
+<link rel="stylesheet" type="text/css" href="/ho/ddxq/index.css" media="all">
 
 
-<link media="all" href="index.css" type="text/css" rel="stylesheet">
 </head>
 <body class="member-center">
 <header id="header">
@@ -42,7 +42,7 @@
     </div>
     <div class="wrapper">
         <nav id="navigator" class="cl">
-            <a href="http://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/grzx/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
+            <a href="http://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/ho/grzx/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
             <ul class="cl">
                 <li><a href="http://shop.vivo.com.cn/product/phone">手机</a></li>
                 <li><a href="http://shop.vivo.com.cn/product/parts">配件</a></li>
@@ -55,10 +55,10 @@
                 <ul class="top-quick-menu">
                     <li id="j_SearchTrigger" class="search"><a href="javascript:void(0)" rel="nofollow"><b></b></a></li>
                     <li id="j_UserMenuTrigger">
-                        <a href="http://shop.vivo.com.cn/my/" class="user"><b><img src="/grzx/small"></b></a>
+                        <a href="#" class="user"><b><img src="/ho/grzx/small"></b></a>
                         <ul class="user-menu">
-                            <li class="member-center"><a href="http://shop.vivo.com.cn/my/"><i></i>个人中心</a><span class="icon-angular"></span></li>
-                            <li class="my-order"><a href="http://shop.vivo.com.cn/my/order"><i></i>我的订单</a></li>
+                            <li class="member-center"><a href="/ho/login/grzx"><i></i>个人中心</a><span class="icon-angular"></span></li>
+                            <li class="my-order"><a href="http://www.lamp160.com/home/order/xq"><i></i>我的订单</a></li>
                             <li class="logout"><a href="/login/logout"><i></i>退出登录</a></li>
                         </ul>
                     </li>
@@ -79,7 +79,13 @@
             <img src="/grzx/big" width="160">
             </a>
         </li> -->
-        <li class="mem-name member-menu-nickName"><i class="icon-mem"></i>{{session('home')}}</li>
+        <li class="mem-name member-menu-nickName"><i class="icon-mem"></i>
+         @if(!empty(session('name'))) 
+            {{session('name')}}
+        @else 
+            游客
+        @endif 
+        </li>
         <li class="vcoin-info">我的V币：<a href="http://shop.vivo.com.cn/my/vcoin"><span class="red member-vcoin-number">0</span></a> V币</li>
     </ul>
     <dl id="j_MyCenterMenus" class="menu">
@@ -93,21 +99,20 @@
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/remark/all-remark">我的评论</a></dd>
         <dt class="menu-title"><i class="icon-account"></i>我的账户</dt>
         <dd class="menu-item"><a href="/login/grzxgrzl">个人资料</a></dd>
-        <dd class="menu-item"><a href="/login/grzxshdz">收货地址</a></dd>
+        <!-- <dd class="menu-item"><a href="/login/grzxshdz">收货地址</a></dd> -->
+        <!-- <dd class="menu-item"><a href="/login/grzxshdz">收货地址</a></dd> -->
+        <dd class="menu-item"><a href="/order/add">收货地址</a></dd>
         <dd class="menu-item"><a href="/login/xgmm">我的密码</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/coupon">我的优惠券</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/favorite">我的收藏</a></dd>
     </dl>
-</aside>    
-    <article class="content">
-    @section('con')
-    
-    @show()
-
-    </article>
+</aside>   
+<article class="content">
+@section('con')
+@show()
+</article>
 </div>
 </div>
-
 <footer id="footer">
     <div class="shop-agree">
         <div class="wrapper cl">
@@ -178,7 +183,7 @@
                 成为vivo粉丝:<a href="http://weibo.com/vivomobile" target="_top" class="sina"><b></b></a>
                 <a href="http://t.qq.com/vivomobile" target="_top" class="tencent"><b></b></a>
                 <a href="http://page.renren.com/vivo?checked=true" target="_top" class="renren"><b></b></a>
-                <a href="javascript:;" class="weixin"><b></b><div class="vivo-weixin-overbox"><img src="/grzx/vivo-weixin-ico_f8c8800.jpg"><b></b></div></a>
+                <a href="javascript:;" class="weixin"><b></b><div class="vivo-weixin-overbox"><img src="/ho/grzx/vivo-weixin-ico_f8c8800.jpg"><b></b></div></a>
             </div>
             <div class="copy-info">
                 <a href="http://shop.vivo.com.cn/index.html" class="footer-logo"></a>Copyright ©2011-2016 广东步步高电子工业有限公司<br>版权所有 保留一切权利粤B2-20080267 | <a href="http://www.miitbeian.gov.cn/" target="_top">粤ICP备05100288号</a>
@@ -192,7 +197,7 @@
         <li>
             <a class="qrcode">
                 <div class="qrcode-container">
-                    <img src="/grzx/qrcode_6a6b792.png">
+                    <img src="/ho/grzx/qrcode_6a6b792.png">
                     <p>支付宝扫码<br>关注享最新活动福利</p>
                 </div>
             </a>
@@ -225,40 +230,31 @@
         </li>
         <li class="hide" id="J_backtop" style="display: none;"><a class="backtop"></a></li>
     </ul>
-</div><script src="/grzx/hm.js" async=""></script><script>
+</div><script src="/ho/grzx/hm.js" async=""></script><script>
     var webCtx = "";
     var passportLoginUrlPrefix = "https://passport.vivo.com.cn/v3/web/login/authorize?client_id=3&redirect_uri=";
 </script>
-<script src="/grzx/jquery.min_6163309.js"></script>
-<script src="/grzx/jquery.cookie_a5283b2.js"></script>
-<script src="/grzx/jquery.lazyload_546c1da.js"></script>
-<script src="/grzx/jquery-placeholder_fb6154c.js"></script>
-<script src="/grzx/vivo-common_38aa2f0.js"></script>
-<script src="/grzx/dialog_6a2b3fb.js"></script>
-<script src="/grzx/vivo-stat_265b49b.js"></script>
-<script src="/grzx/login_confirm_485e7b4.js"></script>
-<script src="/grzx/query-vcoin_32d1f89.js"></script>
-<script>
-    var webCtx = "";
-    var passportLoginUrlPrefix = "https://passport.vivo.com.cn/v3/web/login/authorize?client_id=3&redirect_uri=";
-</script>
-<script src="/grzxgrzl/jquery.validate.min_76c74f2.js"></script>
-<script src="/grzxgrzl/dialog_6a2b3fb.js" type="text/javascript"></script>
-<script src="/grzxgrzl/region_a46b4bb.js"></script>
-<script src="/grzxgrzl/calendar_e0577ca.js"></script>
-<script src="/grzxgrzl/chinese.birthday.selector_724b59a.js"></script>
-<script src="/grzxgrzl/member-detail_f3c5ed8.js" type="text/javascript"></script>
-<!-- 城市级联 -->
-<script type="text/javascript" src="/cj/jquery.js"></script>
-<script type="text/javascript" src="/cj/area.js"></script>
-<script type="text/javascript" src="/cj/location.js"></script>
+<script src="/ho/grzx/jquery.min_6163309.js"></script>
+<script src="/ho/grzx/jquery.cookie_a5283b2.js"></script>
+<script src="/ho/grzx/jquery.lazyload_546c1da.js"></script>
+<script src="/ho/grzx/jquery-placeholder_fb6154c.js"></script>
+<script src="/ho/grzx/vivo-common_38aa2f0.js"></script>
+<script src="/ho/grzx/dialog_6a2b3fb.js"></script>
+<script src="/ho/grzx/vivo-stat_265b49b.js"></script>
+<script src="/ho/grzx/login_confirm_485e7b4.js"></script>
+<script src="/ho/grzx/query-vcoin_32d1f89.js"></script>
 
-<script type="text/javascript">
-            $(document).ready(function(){
-                showLocation();
-                
-            });
-        </script>
+<script src="/ho/grzxgrzl/jquery.validate.min_76c74f2.js"></script>
+<script src="/ho/grzxgrzl/dialog_6a2b3fb.js" type="text/javascript"></script>
+<script src="/ho/grzxgrzl/region_a46b4bb.js"></script>
+<script src="/ho/grzxgrzl/calendar_e0577ca.js"></script>
+<script src="/ho/grzxgrzl/chinese.birthday.selector_724b59a.js"></script>
+<script src="/ho/grzxgrzl/member-detail_f3c5ed8.js" type="text/javascript"></script>
+
+
+<script src="/ho/ddxq/my_order_44f932e.js" type="text/javascript"></script>
+
+
 <script>
     //百度统计代码
     var _hmt = _hmt || [];
