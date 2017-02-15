@@ -40,10 +40,8 @@
                             <thead>
                                 <tr role="row">
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">ID</th>
-	                               	<th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">商品图片</th>
+	                               	<th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">类别ID</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">版本</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">赠品</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">color</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">服务</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">尺寸</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">容量</th>
@@ -59,10 +57,8 @@
                        		<tr class="even">
                        	@endif
 	                        <td class=" ">{{$v['id']}}</td>
-	                       	<td class=" "><img src="{{$v['pictype']}}" width="60"></td>
+	                        <td class=" ">{{$v['cate']}}</td>
 	                        <td class=" ">{{$v['banben']}}</td>
-	                       	<td class=" ">{{$v['zping']}}</td>
-	                        <td class=" ">{{$v['color']}}</td>
 	                        <td class=" ">{{$v['fuwu']}}</td>
 	                        <td class=" "
 							@if($v['size']=='4.5')
@@ -80,6 +76,8 @@
 	                        	<a href="/admin/xq/del/{{$v['id']}}" class='icon-trash' style="font-size:20px;color:yellowgreen"></a>
 	                        	&nbsp;&nbsp;
 	                        	<a href="/admin/xq/edit/{{$v['id']}}" class='icon-wrench' style="font-size:20px;color:yellowgreen"></a>
+	                        	&nbsp;&nbsp;
+	                        	<a href="/admin/photo/add/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:yellowgreen"></a>
 	                        </td>
                         </tr>
                        	@endforeach

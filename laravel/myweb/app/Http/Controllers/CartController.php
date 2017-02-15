@@ -42,6 +42,11 @@ class CartController extends Controller
         $carts = session('cart');
         $data = [];
         foreach ($carts as $v) {
+            
+            // $temp = DB::table('goods as g')->join('good_xq as xq','g.id','=','xq.good_id')
+            //                        ->select('xq.zping','xq.nume','xq.color','xq.fuwu','xq.size','xq.rongliang','g.goods','g.id','g.goods','g.cate','g.company','g.descr','g.price','g.picname','g.con','g.erji','g.cdq','g.zpg','g.state')
+            //                        ->where('xq.good_id','=',$v['id'])
+            //                        ->get();
             $temp = Goods::findOrFail($v['id']);
             $temp['num'] = $v['num'];
             $temp['color'] = $v['color'];

@@ -30,7 +30,7 @@ class AddressController extends Controller
     	$address->isdefault=$request->input('defaultAddress',0);
 
     	if($address->save()){
-    		return back();
+    		return redirect('/home/order/add');
     	}
     }
 }

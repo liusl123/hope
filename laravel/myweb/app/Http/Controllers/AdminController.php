@@ -13,7 +13,7 @@ use Session;
 
 class AdminController extends Controller
 {
-    public function index(){
+    public function getIndex(){
         return view('admin.index');
     }
 
@@ -31,7 +31,7 @@ class AdminController extends Controller
                     // 将用户信息存入到session中
                     session(['admin'=>$res]);
                     // dd(session('admin')['name']);
-                    return redirect('/admin');
+                    return redirect('/admin/index');
                 }else{
                     return back()->with('error','密码错误');
                 }

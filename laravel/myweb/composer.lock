@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1ed3e6074cf5a3b9907c9f436a2e2cb",
+    "content-hash": "1de9e73a3b35157a2b2b285d6c8c2a2f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1125,7 +1125,12 @@
         },
         {
             "name": "symfony/console",
+
+
             "version": "v2.7.24",
+
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -1181,7 +1186,9 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+
             "time": "2017-02-03T21:25:39+00:00"
+
         },
         {
             "name": "symfony/css-selector",
@@ -1234,7 +1241,9 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
+
             "time": "2017-01-02T20:30:24+00:00"
+
         },
         {
             "name": "symfony/debug",
@@ -1291,7 +1300,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
+
+
             "time": "2017-01-25T12:11:45+00:00"
+
+
         },
         {
             "name": "symfony/dom-crawler",
@@ -1346,7 +1359,13 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
+
+
             "time": "2017-01-20T16:54:19+00:00"
+
+
+
+
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1406,7 +1425,9 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
+
             "time": "2017-01-02T20:30:24+00:00"
+
         },
         {
             "name": "symfony/finder",
@@ -1455,7 +1476,12 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
+
+
+
             "time": "2017-01-02T20:30:00+00:00"
+
+
         },
         {
             "name": "symfony/http-foundation",
@@ -1511,7 +1537,12 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
+
+
             "time": "2017-02-02T13:27:35+00:00"
+
+
+
         },
         {
             "name": "symfony/http-kernel",
@@ -1764,7 +1795,11 @@
         },
         {
             "name": "symfony/process",
+
             "version": "v2.7.24",
+
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -1809,7 +1844,12 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
+
+
             "time": "2017-02-02T13:55:53+00:00"
+
+
+
         },
         {
             "name": "symfony/routing",
@@ -1883,7 +1923,12 @@
                 "uri",
                 "url"
             ],
+
+
             "time": "2017-01-23T20:38:04+00:00"
+
+
+
         },
         {
             "name": "symfony/translation",
@@ -1946,7 +1991,13 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
+
+
             "time": "2017-01-02T20:30:00+00:00"
+
+
+
+
         },
         {
             "name": "symfony/var-dumper",
@@ -3333,7 +3384,11 @@
         },
         {
             "name": "symfony/yaml",
+
+
             "version": "v3.2.3",
+
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",

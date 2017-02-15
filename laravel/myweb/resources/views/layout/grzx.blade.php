@@ -10,14 +10,15 @@
     <meta name="keywords" content="vivo智能手机官方商城">
     <meta name="description" content="vivo智能手机官方商城">
     <link rel="shortcut icon" href="/grzx/favicon_7761e1f.ico">
+
     <link media="all" href="/grzxgrzl/index.css" type="text/css" rel="stylesheet">
 
     <!-- 后期自己加的css-->
-    <link rel="stylesheet" href="/myq.css">
-    <link rel="stylesheet" href="/myw.css">
-    <link rel="stylesheet" href="/mye.css">
-    <link rel="stylesheet" href="/myr.css">
-    <link rel="stylesheet" href="/myt.css">
+    <link rel="stylesheet" href="/ho/grzx/myq.css">
+    <link rel="stylesheet" href="/ho/grzx/myw.css">
+    <link rel="stylesheet" href="/ho/grzx/mye.css">
+    <link rel="stylesheet" href="/ho/grzx/myr.css">
+    <link rel="stylesheet" href="/ho/grzx/myt.css">
   
     
     
@@ -29,9 +30,9 @@
     <!--[if lt IE 9]>
     <script src="https://swsdl.vivo.com.cn/vivoshop/web/dist/js/bower_components/html5shiv/dist/html5shiv.min_23e126e.js"></script>
     <![endif]-->
+<link rel="stylesheet" type="text/css" href="/ho/ddxq/index.css" media="all">
 
 
-<link media="all" href="index.css" type="text/css" rel="stylesheet">
 </head>
 <body class="member-center">
 <header id="header">
@@ -42,7 +43,7 @@
     </div>
     <div class="wrapper">
         <nav id="navigator" class="cl">
-            <a href="http://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/grzx/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
+            <a href="http://shop.vivo.com.cn/index.html" class="vivo-logo"><img src="/ho/grzx/vivo-logo_865fdf1.png" alt="vivo智能手机官方网站"></a>
             <ul class="cl">
                 <li><a href="http://shop.vivo.com.cn/product/phone">手机</a></li>
                 <li><a href="http://shop.vivo.com.cn/product/parts">配件</a></li>
@@ -55,6 +56,7 @@
                 <ul class="top-quick-menu">
                     <li id="j_SearchTrigger" class="search"><a href="javascript:void(0)" rel="nofollow"><b></b></a></li>
                     <li id="j_UserMenuTrigger">
+
                         <a href="#" class="user"><b><img src="/grzx/small"></b></a>
                         <ul class="user-menu">
                             <li class="member-center"><a href="/login/grzx"><i></i>个人中心</a><span class="icon-angular"></span></li>
@@ -183,7 +185,7 @@
                 成为vivo粉丝:<a href="http://weibo.com/vivomobile" target="_top" class="sina"><b></b></a>
                 <a href="http://t.qq.com/vivomobile" target="_top" class="tencent"><b></b></a>
                 <a href="http://page.renren.com/vivo?checked=true" target="_top" class="renren"><b></b></a>
-                <a href="javascript:;" class="weixin"><b></b><div class="vivo-weixin-overbox"><img src="/grzx/vivo-weixin-ico_f8c8800.jpg"><b></b></div></a>
+                <a href="javascript:;" class="weixin"><b></b><div class="vivo-weixin-overbox"><img src="/ho/grzx/vivo-weixin-ico_f8c8800.jpg"><b></b></div></a>
             </div>
             <div class="copy-info">
                 <a href="http://shop.vivo.com.cn/index.html" class="footer-logo"></a>Copyright ©2011-2016 广东步步高电子工业有限公司<br>版权所有 保留一切权利粤B2-20080267 | <a href="http://www.miitbeian.gov.cn/" target="_top">粤ICP备05100288号</a>
@@ -197,7 +199,7 @@
         <li>
             <a class="qrcode">
                 <div class="qrcode-container">
-                    <img src="/grzx/qrcode_6a6b792.png">
+                    <img src="/ho/grzx/qrcode_6a6b792.png">
                     <p>支付宝扫码<br>关注享最新活动福利</p>
                 </div>
             </a>
@@ -230,10 +232,14 @@
         </li>
         <li class="hide" id="J_backtop" style="display: none;"><a class="backtop"></a></li>
     </ul>
-</div><script src="/grzx/hm.js" async=""></script><script>
+</div><script src="/ho/grzx/hm.js" async=""></script><script>
     var webCtx = "";
     var passportLoginUrlPrefix = "https://passport.vivo.com.cn/v3/web/login/authorize?client_id=3&redirect_uri=";
 </script>
+
+
+<script src="/ho/ddxq/my_order_44f932e.js" type="text/javascript"></script>
+
 <script src="/grzx/jquery.min_6163309.js"></script>
 <script src="/grzx/jquery.cookie_a5283b2.js"></script>
 <script src="/grzx/jquery.lazyload_546c1da.js"></script>

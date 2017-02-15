@@ -1,0 +1,94 @@
+/* ::::: https://pay.vivo.com.cn/webpay/css/main.css?v=1.1.0 ::::: */
+
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var { margin: 0px; padding: 0px; }
+ol, ul { list-style: none outside none; }
+:focus { outline: 0px none; }
+a { color: rgb(0, 0, 0); }
+img { vertical-align: middle; }
+button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner { border: medium none; padding: 0px; }
+.fl { float: left; }
+.fr { float: right; }
+.clearfix:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.clearfix { display: block; }
+.w { width: 1000px; margin: 0px auto; }
+html { overflow-y: scroll; }
+body { font: 12px/150% "Microsoft YaHei",Arial,Verdana,"宋体"; color: rgb(102, 102, 102); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+a { text-decoration: none; }
+a { cursor: pointer; }
+#overlay { top: 0px; position: fixed; width: 100%; height: 100%; background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3); display: none; z-index: 9; }
+#head { background-color: rgb(247, 247, 247); }
+.login-bar { width: 1000px; margin: 0px auto; color: rgb(90, 90, 90); height: 28px; line-height: 28px; }
+.login-bar ul li { float: left; }
+.login-bar ul li a, .login-bar ul li a:visited { color: rgb(90, 90, 90); }
+.login-bar ul li a:hover { color: rgb(0, 140, 215); }
+.cash-logo { border-top: 1px solid rgb(237, 237, 237); border-bottom: 1px solid rgb(242, 242, 242); background-color: rgb(255, 255, 255); }
+.cash-logo img { padding: 20px 0px; }
+.order-info {  }
+.order-info .order-p-right { float: right; width: 100%; }
+.order-info-less { margin-top: 60px; margin-bottom: 45px; padding-left: 30px; background: url('succ-tick.png') no-repeat scroll 0px center transparent; }
+.order-info-less .order-id { float: left; margin-left: 20px; }
+.order-info-less .order-id .orderid-d { font-size: 18px; color: rgb(72, 72, 72); }
+.order-info-less .order-id .orderid-cancle span { color: rgb(240, 65, 65); }
+.order-info-less .order-id .orderid-cancle { font-size: 13px; color: rgb(72, 72, 72); margin-top: 10px; }
+.order-info-less .order-total {  }
+.order-info-less .order-total p { font-size: 18px; color: rgb(72, 72, 72); }
+.order-info-less .order-total p span { font-size: 24px; padding: 0px 4px; color: rgb(240, 65, 65); }
+.order-info-less .order-total a { display: inline-block; margin-top: 10px; font-size: 13px; color: rgb(0, 140, 214); float: right; }
+.order-total .triangle { margin-left: 5px; width: 0px; height: 0px; display: inline-block; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid rgb(66, 158, 220); }
+.order-details { display: none; width: 90%; background-color: rgb(249, 249, 249); margin: -25px auto 15px; }
+.order-details ul { padding: 10px 30px; }
+.order-details ul li { line-height: 25px; color: rgb(157, 157, 157); font-size: 13px; }
+.pay-way-outer { min-height: 180px; position: relative; margin-bottom: 20px; background-color: rgb(255, 255, 255); }
+.pay-way-outer .pay-wraper { padding: 45px; border: 4px solid rgb(227, 245, 255); }
+.pay-wraper .pay-item { cursor: pointer; width: 180px; height: 50px; border: 1px solid rgb(179, 179, 179); background-image: url('pay-icon.jpg'); background-repeat: no-repeat; }
+.pay-wraper .other-paylist .pay-item { margin-bottom: 40px; }
+.pay-wraper .pay-item.selected { border-color: rgb(240, 65, 65); border-width: 2px; width: 178px; height: 48px; position: relative; }
+.pay-wraper .pay-item.selected:before { content: ""; display: block; position: absolute; width: 23px; height: 16px; background: url('tick.png') no-repeat scroll center center transparent; top: 0px; right: 0px; }
+.pay-wraper .p-alipay { float: left; background-position: 0px 0px; }
+.pay-wraper .order-total { float: right; font-size: 16px; color: rgb(105, 105, 105); line-height: 50px; }
+.pay-wraper .order-total span { font-size: 18px; color: rgb(240, 65, 65); padding: 0px 4px; }
+.other-pay { padding: 0px 32px; height: 50px; border: 1px dashed rgb(208, 208, 208); font-size: 16px; line-height: 50px; text-align: center; float: left; cursor: pointer; margin-left: 35px; color: rgb(0, 140, 214); background: url('otherpay-arrowdown.png') no-repeat scroll 90% center transparent; }
+.other-paylist { margin: 40px 0px 25px; display: none; }
+.other-paylist ul li { float: left; margin-right: 25px; }
+.pay-item a { display: block; width: 100%; height: 100%; }
+.other-paylist .p-alipay-qr { background-position: 0px -50px; }
+.other-paylist .p-weixin-qr { background-position: 0px -100px; }
+.other-paylist .p-cft { background-position: 0px -150px; }
+.other-paylist .p-yl { background-position: 0px -200px; }
+.pay-way-outer .pay-btn { width: 175px; line-height: 38px; border-radius: 4px; background-color: rgb(240, 65, 65); text-align: center; font-size: 18px; color: rgb(255, 255, 255); }
+.pay-btn-wrap { padding-top: 18px; }
+.pay-btn-wrap .pay-btn { float: right; }
+.pay-in-progress-wrap { background-color: rgba(0, 0, 0, 0.1); position: absolute; left: 50%; top: 50%; margin-left: -306px; margin-top: -181px; display: none; }
+.pay-in-progress { background-color: rgb(255, 255, 255); width: 612px; height: 292px; color: rgb(88, 88, 88); font-size: 16px; position: relative; }
+.pay-in-progress .notice { text-align: center; padding-top: 80px; padding-bottom: 30px; }
+.pay-in-progress .suc-other-wrap { margin: 30px auto 0px; width: 400px; }
+.pay-in-progress .suc-other-wrap:after { content: ""; display: block; clear: both; }
+.pay-in-progress .suc-other-wrap .paysuccess { line-height: 36px; width: 160px; background-color: rgb(86, 189, 255); color: rgb(255, 255, 255); display: block; text-align: center; float: left; border-radius: 4px; }
+.pay-in-progress .suc-other-wrap .otherpayment { line-height: 36px; width: 160px; background-color: rgb(223, 243, 255); color: rgb(114, 136, 156); display: block; text-align: center; float: right; border-radius: 4px; }
+.pay-in-progress .paygowrong { color: rgb(20, 158, 247); width: 88%; line-height: 50px; border-top: 1px solid rgb(236, 236, 236); margin: 40px auto 0px; display: block; }
+#footer { width: 1000px; margin: 0px auto; padding-top: 10px; border-top: 1px solid rgb(204, 204, 204); }
+.footer-copyright .copyright { float: left; height: 27px; line-height: 27px; color: rgb(110, 110, 111); }
+.footer-copyright .sns-box { color: rgb(110, 110, 111); position: relative; float: right; }
+.footer-copyright .sns-box a { width: 27px; height: 27px; display: inline-block; margin-left: 8px; border-radius: 4px; transition: background 0.2s ease-in-out 0s; vertical-align: middle; }
+.footer-copyright .sns-box a > b { width: 27px; height: 27px; overflow: hidden; display: inline-block; background: url('vivo-sns-ico.png') no-repeat scroll 0% 0% / 135px 54px transparent; }
+.footer-copyright .sns-box a:hover > b { transition-delay: 0.1s; }
+.footer-copyright .sns-box a.sina b { background-position: 0px 0px; }
+.footer-copyright .sns-box a.sina:hover { background: none repeat scroll 0% 0% rgb(229, 44, 66); }
+.footer-copyright .sns-box a.sina:hover b { background-position: 0px -27px; }
+.footer-copyright .sns-box a.tencent b { background-position: -27px 0px; }
+.footer-copyright .sns-box a.tencent:hover { background: none repeat scroll 0% 0% rgb(20, 173, 223); }
+.footer-copyright .sns-box a.tencent:hover b { background-position: -27px -27px; }
+.footer-copyright .sns-box a.weixin > b { background-position: -54px 0px; }
+.footer-copyright .sns-box a.weixin { position: relative; }
+.footer-copyright .sns-box a.weixin:hover { background: none repeat scroll 0% 0% rgb(32, 169, 0); }
+.footer-copyright .sns-box a.weixin:hover > b { background-position: -54px -27px; }
+.footer-copyright .sns-box a.qzone b { background-position: -81px 0px; }
+.footer-copyright .sns-box a.qzone:hover { background: none repeat scroll 0% 0% rgb(255, 198, 0); }
+.footer-copyright .sns-box a.qzone:hover b { background-position: -81px -27px; }
+.footer-copyright .sns-box a.renren b { background-position: -108px 0px; }
+.footer-copyright .sns-box a.renren:hover { background: none repeat scroll 0% 0% rgb(5, 107, 232); }
+.footer-copyright .sns-box a.renren:hover b { background-position: -108px -27px; }
+.vivo-weixin-overbox { width: 143px; height: 143px; position: absolute; bottom: 40px; left: -57px; background: url('vivo-weixin-ico.jpg') no-repeat scroll center center rgb(255, 255, 255); box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); z-index: 9; display: none; }
+.weixin:hover .vivo-weixin-overbox { display: block; }
+.vivo-weixin-overbox b { width: 18px; height: 12px; overflow: hidden; background: url('overbox-cd-icon.png') no-repeat scroll 0% 0% transparent; position: absolute; bottom: -12px; left: 50%; margin-left: -9px; }
+.close-btn { position: absolute; width: 36px; height: 36px; background: url('close-btn.png') no-repeat scroll center center transparent; right: 10px; top: 10px; cursor: pointer; }
