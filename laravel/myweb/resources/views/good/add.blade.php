@@ -1,10 +1,5 @@
 @extends('layout.adminindex')
 @section('con')
-<script type="text/javascript" charset="utf-8" src="/ue/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="/ue/ueditor.all.min.js"> </script>
-<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
-<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
-<script type="text/javascript" charset="utf-8" src="/ue/lang/zh-cn/zh-cn.js"></script>
 <div class="mws-panel grid_8">
 	<div class="mws-panel-header">
     	<span>商品添加</span>
@@ -79,12 +74,6 @@
                              <input type="text" class="small" name='store' value='{{old('store')}}'>
                         </div>
                    </div>
-                    <div class="mws-form-row">
-                        <label class="mws-form-label">商品内容</label>
-                        <div class="mws-form-item">
-                          <script id="editor"  name='con' type="text/plain" style="width:600px;height:420px;"></script>
-                        </div>
-                    </div>
                      <div class="mws-form-row">
                         <label class="mws-form-label"><font><font>图片</font></font></label>
                         <div class="mws-form-item">
@@ -98,7 +87,4 @@
          </form>
     </div>    	
 </div>
-<script type="text/javascript">
-var ue = UE.getEditor('editor');
-</script>
 @endsection

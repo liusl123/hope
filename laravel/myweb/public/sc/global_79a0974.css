@@ -1,0 +1,22 @@
+/* Code tidied up by ScrapBook */
+*::-moz-selection { background: rgb(0, 140, 214) none repeat scroll 0% 0%; color: rgb(255, 255, 255); text-shadow: none; }
+body { font: 14px/1.5 "Microsoft Yahei",Arial; text-rendering: optimizelegibility; }
+a { color: rgb(0, 140, 215); text-decoration: none; cursor: pointer; outline: 0px none; }
+a:hover { color: rgb(83, 83, 83); text-decoration: none; }
+a:focus { border: 0px none; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+ol, li, ul, dl, dt, dd { list-style: outside none none; }
+fieldset, img { border: 0px none; }
+input, textarea, select, button { font-family: inherit; font-size: inherit; font-weight: inherit; outline-style: none; outline-width: 0px; resize: none; padding: 0px; margin: 0px; }
+input[type="text"], input[type="tel"], textarea { padding: 3px 6px; border: 1px solid rgb(204, 204, 204); border-radius: 2px; }
+input[type="text"]:focus, input[type="tel"]:focus, textarea:focus, select:focus { background-color: rgb(255, 255, 255); border-color: rgb(134, 206, 244) ! important; box-shadow: 0px 1px 2px rgba(0, 140, 214, 0.075) inset, 0px 0px 4px rgba(0, 140, 214, 0.75); }
+area { outline: 0px none; }
+area:active { outline: 0px none; }
+textarea { overflow: auto; vertical-align: top; resize: none; }
+button { cursor: pointer; }
+.btn-blue { color: rgb(255, 255, 255); background-color: rgb(0, 140, 214); border: 1px solid rgb(0, 140, 214); }
+.btn-blue:hover { background-color: rgb(2, 114, 173); border-color: rgb(2, 114, 173); }
+b, em, i { font-weight: 400; font-style: normal; }
+.cl::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.cl {  }
+.wrapper { width: 1200px; margin: 0px auto; }

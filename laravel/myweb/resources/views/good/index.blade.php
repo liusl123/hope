@@ -78,6 +78,8 @@
 	                        	<a href="/admin/good/edit/{{$v['id']}}" class='icon-wrench' style="font-size:20px;color:yellowgreen"></a>
 	                        	&nbsp;&nbsp;
 	                        	<a href="/admin/xq/add/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:yellowgreen"></a>
+	                        	&nbsp;&nbsp;
+	                        	<a href="/admin/color/add/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:green"></a>
 	                        </td>
                         </tr>
                        	@endforeach

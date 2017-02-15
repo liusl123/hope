@@ -42,7 +42,7 @@
 
 <li class="nav-gb nav-h-products "><a href="/product.html" onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/产品'])">产品</a></li>
 
-<li class="nav-gb"><a onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/商城'])" href="https://shop.vivo.com.cn/" target="_blank" >商城</a></li>
+<li class="nav-gb"><a onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/商城'])" href="/home/sc/index" target="_blank" >商城</a></li>
 
 <li class="nav-gb "><a href="/store" onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/体验中心'])">体验中心</a></li>
 

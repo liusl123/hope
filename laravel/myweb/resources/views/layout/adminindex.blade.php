@@ -272,8 +272,10 @@
                         <a href="#"><i class="icon-folder-closed"></i>后台商品管理</a>
                         <ul class="closed">
                             <li><a href="/admin/good/index">商品浏览</a></li>
-                            <li><a href="/admin/xq/index">商品详情浏览</a></li>
                             <li><a href="/admin/good/add">商品添加</a></li>
+                            <li><a href="/admin/color/index">颜色浏览</a></li>
+                            <li><a href="/admin/photo/index">图片浏览</a></li>
+                             <li><a href="/admin/xq/index">商品详情浏览</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -283,14 +285,6 @@
                         <ul class="closed">
                             <li><a href="/admin/activity/index">活动浏览</a></li>
                             <li><a href="/admin/activity/add">活动添加</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#"><i class="icon-truck"></i>商品订单管理</a>
-                        <ul class="closed">
-                            <li><a href="/admin/orders/index">订单浏览</a></li>
                         </ul>
                     </li>
                 </ul>
