@@ -9,6 +9,10 @@
 <!-- Viewport Metatag -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+<!-- 自己添加的 -->
+<link rel="stylesheet" type="text/css" href="/ad/css/login.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/ad/css/my.css" media="screen">
+
 <!-- Plugin Stylesheets first to ease overrides -->
 <link rel="stylesheet" type="text/css" href="/ad/plugins/colorpicker/colorpicker.css" media="screen">
 
@@ -31,6 +35,7 @@
 <!-- Theme Stylesheet -->
 <link rel="stylesheet" type="text/css" href="/ad/css/mws-theme.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/ad/css/themer.css" media="screen">
+
 <link rel="stylesheet" type="text/css" href="/ad/css/my.css" media="screen">
 
 <title>MWS Admin - Icons</title>
@@ -39,13 +44,15 @@
 
 <body>
 
-	<!-- Themer (Remove if not needed) -->  
-	<div id="mws-themer">
+    <!-- Themer (Remove if not needed) -->  
+    <div id="mws-themer">
+        
         <div id="mws-themer-css-dialog">
-        	<form class="mws-form">
-            	<div class="mws-form-row">
-		        	<div class="mws-form-item">
-                    	<textarea cols="auto" rows="auto" readonly="readonly"></textarea>
+            <form class="mws-form">
+                <div class="mws-form-row">
+                    <div class="mws-form-item">
+                        <textarea cols="auto" rows="auto" readonly="readonly"></textarea>
+	
                     </div>
                 </div>
             </form>
@@ -53,34 +60,35 @@
     </div>
     <!-- Themer End -->
 
-	<!-- Header -->
-	<div id="mws-header" class="clearfix">
+    <!-- Header -->
+    <div id="mws-header" class="clearfix">
     
-    	<!-- Logo Container -->
-    	<div id="mws-logo-container">
+        <!-- Logo Container -->
+        <div id="mws-logo-container">
         
-        	<!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
-        	<div id="mws-logo-wrap">
-            	<img src="/ad/images/mws-logo.png" alt="mws admin">
-			</div>
+            <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
+            <div id="mws-logo-wrap">
+                <img src="/ad/images/mws-logo.png" alt="mws admin">
+            </div>
         </div>
         
         <!-- User Tools (notifications, logout, profile, change password) -->
         <div id="mws-user-tools" class="clearfix">
         
-        	<!-- Notifications -->
-        	<div id="mws-user-notif" class="mws-dropdown-menu">
-            	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
+            {{--<!-- Notifications -->
+            <div id="mws-user-notif" class="mws-dropdown-menu">
+                <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
                 
                 <!-- Unread notification count -->
-                <span class="mws-dropdown-notif">35</span>
+                <span style='display:none' class="mws-dropdown-notif">35</span>
                 
                 <!-- Notifications dropdown -->
                 <div class="mws-dropdown-box">
-                	<div class="mws-dropdown-content">
+                    <div class="mws-dropdown-content">
                         <ul class="mws-notifications">
-                        	<li class="read">
-                            	<a href="#">
+                            <li class="read">
+                                <a href="#">
+
                                     <span class="message">
                                         Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
                                     </span>
@@ -99,6 +107,7 @@
                                     </span>
                                 </a>
                             </li>
+
                         	<li class="unread">
                             	<a href="#">
                                     <span class="message">
@@ -109,6 +118,7 @@
                                     </span>
                                 </a>
                             </li>
+
                         	<li class="unread">
                             	<a href="#">
                                     <span class="message">
@@ -121,12 +131,14 @@
                             </li>
                         </ul>
                         <div class="mws-dropdown-viewall">
+
 	                        <a href="#">View All Notifications</a>
                         </div>
                     </div>
                 </div>
             </div>
             
+
             <!-- Mess/ad/ages -->
             <div id="mws-user-message" class="mws-dropdown-menu">
             	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
@@ -149,6 +161,7 @@
                                     </span>
                                 </a>
                             </li>
+
                         	<li class="read">
                             	<a href="#">
                                     <span class="sender">John Doe</span>
@@ -160,6 +173,7 @@
                                     </span>
                                 </a>
                             </li>
+
                         	<li class="unread">
                             	<a href="#">
                                     <span class="sender">John Doe</span>
@@ -171,6 +185,7 @@
                                     </span>
                                 </a>
                             </li>
+
                         	<li class="unread">
                             	<a href="#">
                                     <span class="sender">John Doe</span>
@@ -184,15 +199,17 @@
                             </li>
                         </ul>
                         <div class="mws-dropdown-viewall">
-	                        <a href="#">View All Messages</a>
+                            <a href="#">View All Messages</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--}}
+
             
             <!-- User Information and functions section -->
             <div id="mws-user-info" class="mws-inset">
             
+
             	<!-- User Photo -->
             	<div id="mws-user-photo">
                 	<img src="/ad/example/profile.jpg" alt="User Photo">
@@ -201,12 +218,17 @@
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
-                        Hello, John Doe
+                    @if(empty(session('admin')))
+                        hello 
+                    @else
+                        Hello, {{session('admin')['name']}}  
+                    @endif 
                     </div>
                     <ul>
-                    	<li><a href="#">Profile</a></li>
-                        <li><a href="#">Change Password</a></li>
-                        <li><a href="index.html">Logout</a></li>
+                        {{--<li><a href="#">Profile</a></li>
+                        <li><a href="#">Change Password</a></li>--}}
+                        <li><a href="/admin/logout" class='icon-off'></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -216,6 +238,7 @@
     <!-- Start Main Wrapper -->
     <div id="mws-wrapper">
     
+
     	<!-- Necessary markup, do not remove -->
 		<div id="mws-sidebar-stitch"></div>
 		<div id="mws-sidebar-bg"></div>
@@ -229,7 +252,7 @@
                 <span></span>
                 <span></span>
             </div>
-            
+
         	<!-- Searchbox -->
         	<div id="mws-searchbox" class="mws-inset">
             	<form action="typography.html">
@@ -240,6 +263,7 @@
             
             <!-- Main Navigation -->
             <div id="mws-navigation">
+
                  <ul>
                     <li>
                         <a href="#"><i class="icon-official"></i>前台用户管理</a>
@@ -248,8 +272,7 @@
                             <li><a href="/admin/user/add">用户添加</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul>
+               
                     <li>
                         <a href="#"><i class="icon-user"></i>后台用户管理</a>
                         <ul  class='closed'>
@@ -257,8 +280,7 @@
                             <li><a href="/admin/administrator/add">用户添加</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul>
+                
                     <li>
                         <a href="#"><i class="icon-th-list"></i>商品分类管理</a>
                         <ul class="closed">
@@ -266,8 +288,7 @@
                             <li><a href="/admin/cate/add">分类添加</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul>
+               
                     <li>
                         <a href="#"><i class="icon-folder-closed"></i>后台商品管理</a>
                         <ul class="closed">
@@ -278,13 +299,25 @@
                              <li><a href="/admin/xq/index">商品详情浏览</a></li>
                         </ul>
                     </li>
-                </ul>
-                 <ul>
+                
                     <li>
                         <a href="#"><i class="icon-gift"></i>后台活动管理</a>
                         <ul class="closed">
                             <li><a href="/admin/activity/index">活动浏览</a></li>
                             <li><a href="/admin/activity/add">活动添加</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-truck"></i>商品订单管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/orders/index">订单浏览</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-trash"></i>回收站</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/recycle/user">用户回收站</a></li>
+                            <li><a href="/admin/recycle/goods">商品回收站</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -294,6 +327,7 @@
         <!-- Main Container Start -->
         <div id="mws-container" class="clearfix">
         
+
         	<!-- Inner Container Start -->
             <div class="container">
                     @if (count($errors) > 0)
@@ -326,6 +360,7 @@
                        
             <!-- Footer -->
             <div id="mws-footer">
+
             	My live is LOVE~
             </div>
             

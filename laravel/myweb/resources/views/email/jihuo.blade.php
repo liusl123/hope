@@ -6,7 +6,8 @@
 </head>
 <body>
 	<!-- <a href="http://www.lamp169.com/login/jihuo?id={{$id}}&token={{$token}}">点击链接,激活账户</a> -->
-	<a href="http://www.lamp169.com/login/jihuo?id={{$id}}&token={{$token}}">点击链接,激活账户</a>
+	<a href="http://www.lamp169.com/login/jihuo?id={{$id}}&token={{$token}}">快来啊来啊</a>
+	<!-- <a>快来啊来啊</a> -->
 	
 	
 </body>
