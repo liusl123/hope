@@ -11,10 +11,10 @@ class PhotoController extends Controller
 {
 	public function getAdd($id){
    	// dd($id);
-   			$vo = DB::table('goods')->where('id',$id)->first();
+   			$vo = DB::table('good_xq')->where('id',$id)->first();
 
 			$data =	DB::table('goods')->get();
-			// dd($data);
+			// dd($vo);
 			return view('photo.add',['list'=>$data,'vo'=>$vo]);
 		}
 
@@ -23,11 +23,11 @@ class PhotoController extends Controller
 			/admin/val/insertcolor
 		*/
 		public function postInsert(Request $request){
-			$data= PhotoController::dealPic($request);
+				$data= PhotoController::dealPic($request);
 			// dd($newdata);
 			 // dd($data);
-       	 		$lala=DB::table('goods')->where('id',$request->input("id"))->first();
-        		$data['goodid']=$lala['id'];
+       	 		$lala=DB::table('good_xq')->where('id',$request->input("id"))->first();
+        		$data['goodid']=$lala['goodid'];
     		// dd($data['goodid']);
 
 			if(DB::table('photo')->insert($data)){
@@ -72,7 +72,7 @@ class PhotoController extends Controller
 						unlink('.'.$v);
 					}							
 				}
-				return redirect('/admin/photo/indexh')->with('success','删除成功');
+				return redirect('/admin/photo/index')->with('success','删除成功');
 			}else{
 				return back()->with('error','删除失败');
 			}

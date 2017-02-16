@@ -114,11 +114,11 @@
 
 <div class="vc-main-events vc-ev-pic">
     <h2>活动</h2>
-    <a class="event-morelink v-gb-ico" href="http://bbs.vivo.com.cn" target="_blank">更多</a>
+    <a class="event-morelink v-gb-ico" href="#" target="_blank">更多活动请关注~</a>
     <ul class="cl">
         @foreach($vo as $v)
         <li>
-             <a href="https://shop.vivo.com.cn/sp/X9Plus" target="_blank">
+             <a href="/home/hd/xi/{{$v['id']}}" target="_blank">
                 <div class="figure"><img src="{{$v['pic']}}" width="100" height="100" /></div>
                 <h3>@if($v['state']=='1')
                         新活动

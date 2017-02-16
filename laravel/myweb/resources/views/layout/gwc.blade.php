@@ -40,9 +40,10 @@
                 <ul class="top-quick-menu">
                     <li id="j_SearchTrigger" class="search"><a href="javascript:void(0)" rel="nofollow"><b></b></a></li>
                     <li id="j_UserMenuTrigger">
-                        <a indepth="true" href="/gwc/default_003.html" class="user"><b></b></a>
+                        <a indepth="true" href="/login/grzx" class="user"><b></b></a>
                     </li>
-                    <li><a indepth="true" href="/gwc/index.html" class="shoppingcart"><b></b><span class="shopcart-num">0</span></a></li>
+                    <li><a indepth="true" href="/home/cart/index" class="shoppingcart"><b></b></a></li>
+
                 </ul>
             </div>
         </nav>

@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class OrdersController extends Controller
 {
     public function getIndex(){
-        $id=2;
+        $id=session('id');
         $res= DB::table('orders as o')
          ->join('order_details as od','o.id','=','od.order_id')
          ->join('goods as g','g.id','=','od.goods_id')

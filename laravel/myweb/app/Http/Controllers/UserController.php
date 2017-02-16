@@ -33,7 +33,7 @@ class UserController extends Controller
         $data['pass'] = $data['pass'];//解密Hash::check()
         $data['token'] = str_random(50);
         $data['status'] = 0;
-
+        // dd($data);
         $res = DB::table('user') -> insert($data);
         if($res){
             return redirect('/admin/user/index')->with('success','添加成功');
@@ -44,17 +44,18 @@ class UserController extends Controller
     public function getIndex(Request $request){
         $data = DB::table('user') -> where(function($query) use($request){
             if($request -> input('keyword')!=null){
-                $query -> where('name','like','%'.$request -> input('keyword').'%')
-                       -> orwhere('email','like','%'.$request -> input('keyword').'%')
-                       -> orwhere('status' , $request -> input('keyword'));
+                $query -> where('username','like','%'.$request -> input('keyword').'%')
+                       -> orwhere('email','like','%'.$request -> input('keyword').'%');
+                       
             }
             
-        }) -> where('status','<=','1') -> paginate($request -> input('num',5));
+        }) -> where('status','<=',1) -> paginate($request -> input('num',5));
+        // dd($data);
         return view('user.index',['list' => $data,'request' => $request -> all()]);
     }
     // 删除
     public function getDel($id){
-        $res = DB::table('user')->where('id',$id)->update(['status'=>2]);
+        $res = DB::table('user')->where('id',$id)->update(['status'=>4]);
         // dd($res);
         if($res){
             return redirect('/admin/user/index')->with('success','删除成功');

@@ -67,7 +67,7 @@
                             <tr class="even">
                         @endif
                                 <td class=" sorting_1">{{$v['id']}}</td>
-                                <td class=" ">{{$v['name']}}</td>
+                                <td class=" ">{{$v['username']}}</td>
                                 <td class=" ">{{$v['email']}}</td>
                                 <td class=" ">{{$v['phone']}}</td>
                                 <td class=" ">

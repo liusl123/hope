@@ -23,7 +23,7 @@ class AdministratorController extends Controller
 		if($res){
 			return redirect('/admin/administrator/index')->with('success','添加成功');
 		}else{
-			return back()->withInput();
+			return back()->with('error','删除失败');
 		}
     }
     public function getIndex(Request $request){
@@ -36,11 +36,34 @@ class AdministratorController extends Controller
 		return view('administrator.index',['list'=>$data,'request'=>$request->all()]);	
 	}
 	public function getDel($id){
-		$res = DB::table('admin')->where('id',$id)->delete();
-		if($res){
-			return redirect('/admin/administrator/index')->with('success','删除成功');
-		}else{
-			return back()->with('error','删除失败');
+			$a = DB::table('admin')->where('id',$id)->first();
+		
+			if($a['status']=='2'){
+				 if(DB::table('admin')->where('id',$id)->delete()){
+				 	return redirect('/admin/administrator/index')->with('success','删除成功');
+				 }
+			}else{
+				return back()->with('error','超级管理员不能被删除');
+			}	
+		}
+		 public function getEdit($id){
+		// echo '用户的修改';
+		// echo "$id";
+			$data=DB::table('admin')->where('id',$id)->first();
+		// dd($data);
+			return view('administrator.edit',['vo'=>$data]);    
+		}
+
+		public function postUpdate(Request $request){
+		    $data=$request->only('id','name','email','phone');
+		   $lala=DB::table('admin')->where('id',$request->input("id"))->first();
+		   // dd($lala);
+		   if($lala['status']=='2'){
+		   		if(DB::table('admin')->where('id',$data['id'])->update($data)){
+		   			return redirect('/admin/administrator/index')->with('success','修改成功');
+		   		}
+		   }else{
+		   		return redirect('/admin/administrator/index')->with('error','超级管理员不能被修改');
+		   }
 		}
 	}
-}

@@ -16,10 +16,10 @@
 	    <!--页头登录订单信息-->
 	    <div class="login-bar">
 	        <ul class="p-right fr">
-	            <li style="margin-right: 15px; margin-left: 15px;">vivo欢迎您，<a onclick="myInfoCenter()">123玩家</a></li>
-	            <li style="margin-right: 15px; margin-left: 15px;"><a onclick="exit()">退出登录</a></li>
-	            <li style="margin-right: 15px; margin-left: 15px;"><a onclick="myOrders()">我的订单</a></li>
-	            <li style="margin-right: 15px; margin-left: 10px;"><a onclick="helpCenter()">帮助中心</a></li>
+	            <li style="margin-right: 15px; margin-left: 15px;">vivo欢迎您，<a onclick="myInfoCenter()">{{session('name')}}</a></li>
+	            <li style="margin-right: 15px; margin-left: 15px;"><a href="/login/logout">退出登录</a></li>
+	            <li style="margin-right: 15px; margin-left: 15px;"><a href="/home/order/xq">我的订单</a></li>
+	            <li style="margin-right: 15px; margin-left: 10px;"><a href="#">帮助中心</a></li>
 	        </ul>
 	    </div>
 	</div>

@@ -17,7 +17,7 @@ class RecycleController extends Controller
                 $query -> where('name','like','%'.$request -> input('keyword').'%')
                        -> orwhere('email','like','%'.$request -> input('keyword').'%');
             }
-        }) -> where('state','0') -> paginate($request -> input('num',5));
+        }) -> where('status',4) -> paginate($request -> input('num',5));
         return view('recycle.user',['list' => $data,'request' => $request -> all()]);
     }
     // 用户的删除
@@ -31,7 +31,7 @@ class RecycleController extends Controller
     }
     // 用户的还原
     public function getRestoreu($id){
-        $res = DB::table('user')->where('id',$id)->update(['state'=>1]);
+        $res = DB::table('user')->where('id',$id)->update(['status'=>1]);
         if($res){
             return redirect('/admin/recycle/user')->with('success','用户还原成功');
         }else{

@@ -285,6 +285,15 @@
                              <li><a href="/admin/xq/index">商品详情浏览</a></li>
                         </ul>
                     </li>
+                     <li>
+                        <a href="#"><i class="icon-folder-closed"></i>后台配件管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/pj/index">配件浏览</a></li>
+                            <li><a href="/admin/pj/add">配件添加</a></li>
+                            <li><a href="/admin/pjphoto/index">图片浏览</a></li>
+                             <li><a href="/admin/pjxq/index">配件详情浏览</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="#"><i class="icon-gift"></i>后台活动管理</a>
                         <ul class="closed">
@@ -298,20 +307,7 @@
                             <li><a href="/admin/orders/index">订单浏览</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><i class="icon-th-list"></i>分类模块</a>
-                        <ul class='closed'>
-                            <li><a href="/admin/cate/index">浏览分类</a></li>
-                            <li><a href="/admin/cate/add">添加分类</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-th"></i>商品模块</a>
-                        <ul class='closed'>
-                            <li><a href="/admin/goods/index">浏览商品</a></li>
-                            <li><a href="/admin/goods/add">添加商品</a></li>
-                        </ul>
-                    </li>
+                    
                     <li>
                         <a href="#"><i class="icon-trash"></i>回收站</a>
                         <ul class='closed'>
@@ -358,7 +354,7 @@
                        
             <!-- Footer -->
             <div id="mws-footer">
-                2017/2/8  修改
+                先锋A队后台模板
             </div>
             
         </div>

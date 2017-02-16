@@ -63,7 +63,7 @@
 
 <a class="nav-t-search" href="#" onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/导航搜索'])"><b class="v-gb-ico"></b></a>
 
-                    <a class="nav-t-user" href="https://passport.vivo.com.cn/v3/web/login/authorize?client_id=5&redirect_uri=http%3A%2F%2Fwww.vivo.com.cn%2Fauth.php%3Freferer%3Dhttp%253A%252F%252Fwww.vivo.com.cn%252F"><b class="v-gb-ico"></b></a>
+                    <a class="nav-t-user" href="/login/grzx"><b class="v-gb-ico"></b></a>
 
                     <a class="nav-t-menu" href="#"><b class="v-gb-ico"></b></a>
 

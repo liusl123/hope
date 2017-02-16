@@ -64,7 +64,7 @@
                             <li class="logout"><a href="/login/logout"><i></i>退出登录</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://shop.vivo.com.cn/shoppingcart" class="shoppingcart"><b></b><span class="shopcart-num">0</span></a></li>
+                    <li><a href="/home/cart/index" class="shoppingcart"><b></b></a></li>
                 </ul>
             </div>
         </nav>
