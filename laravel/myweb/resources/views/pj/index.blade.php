@@ -2,11 +2,11 @@
 @section('con')
 	<div class="mws-panel grid_8">
                 	<div class="mws-panel-header">
-                    	<span><i class="icon-table"></i>商品订单页面</span>
+                    	<span><i class="icon-table"></i>配件浏览页面</span>
                     </div>
                     <div class="mws-panel-body no-padding">
                         <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
-                        		<form action="/admin/good/index">
+                        		<form action="/admin/pj/index">
                         	<div id="DataTables_Table_1_length" class="dataTables_length">
 		                       <label>Show 
 		                    		<select size="1" name="num" size='1' aria-controls="DataTables_Table_1">
@@ -39,12 +39,12 @@
                        <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
                             <thead>
                                 <tr role="row">
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">订单ID</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">ID</th>
 	                                	                               	<th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">商品图片</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">商品名称</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">总价</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">订单创建时间</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">订单备注</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">单价</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">商品分类</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">简介</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">状态</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">操作</th>
 	                               </tr>
@@ -57,40 +57,38 @@
                        	@else
                        		<tr class="even">
                        	@endif
-	                        <td class=" ">{{$v['order_num']}}</td>
-	       
-	                        <td class=" "><img src="{{ $v['picname'] }}" alt=""></td>
-	                       	<td class=" ">{{$v['goods']}}</td>
-	                        
-	                        <td class=" ">{{$v['total']}}</td>
-	                        <td class=" ">{{$v['created_at']}}</td>
-	                        
-	                        <td class=" ">{{$v['commit']}}</td>
+	                        <td class=" ">{{$v['id']}}</td>
+	                       	<td class=" "><img src="{{$v['pjpic']}}" style="width:60px"></td>
+	                        <td class=" ">{{$v['pjname']}}</td>
+	                       	<td class=" ">{{$v['price']}}</td>
+	                        <td class=" ">{{$v['cate']}}</td>
+	                        <td class=" ">{{$v['descr']}}</td>
 	                        <td class=" ">
-	                        			@if($v['status']==0)
-											未付款
-	                        			@elseif($v['status']==1)
-	                        				已付款
-	                        			@elseif($v['status']==2)
-	                        				已发货
-	                        			@elseif($v['status']==3)
-	                        				已收货
+	                        			@if($v['state']=='1')
+											新添加
+	                        			@elseif($v['state']=='2')
+	                        				在售
 	                        			@else
-	                        				已关闭
+	                        				下架
 	                        			@endif
 	                        </td>
 	                        <td>
-	                        	<a href="/admin/orders/fahuo/{{$v['order_num']}}" class='' >执行发货</a>
-	                    
+	                        	<a href="/admin/pj/del/{{$v['id']}}" class='icon-trash' style="font-size:20px;color:yellowgreen"></a>
+	                        	&nbsp;&nbsp;
+	                        	<a href="/admin/pj/edit/{{$v['id']}}" class='icon-wrench' style="font-size:20px;color:yellowgreen"></a>
+	                        	&nbsp;&nbsp;
+	                        	<a href="/admin/pjxq/add/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:yellowgreen"></a>
+	                        	&nbsp;&nbsp;
+	                        	<a href="/admin/pjphoto/add/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:green"></a>
 	                        </td>
                         </tr>
                        	@endforeach
                        </tbody>
                        </table>
                        	<div class="dataTables_paginate paging_full_numbers" id="page">
-	        				
+	        					{!!$list->appends($request)->render()!!}
                             </div>
                        </div>
                  </div>
-    </div>
+           </div>
 @endsection

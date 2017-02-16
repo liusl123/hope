@@ -79,7 +79,7 @@ class GoodController extends Controller
             $dd = $yy['color']; 
             $rr = explode('/',$dd);
             $tt=$rr;
-              // dd($dada);
+              // dd($arr[1]);
               return view('home.good',[
               'as'=>$v,
               'aa'=>$c,

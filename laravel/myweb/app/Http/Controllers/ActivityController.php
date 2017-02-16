@@ -91,17 +91,19 @@ class ActivityController extends Controller
      public function getSy(Request $request){
         // $id=$request->input('id');
         // dd($id);
-        $c = DB::table('cate')->join('activity','cate.cate','=','activity.cate')->select('activity.*','cate.cate')->get();
+        $c = DB::table('cate')->join('activity','cate.cate','=','activity.cate')->select('activity.*','cate.cate')->limit('3')->get();
         $b = DB::table('cate')
         ->join('goods','cate.cate','=','goods.cate')
         ->join('photo','goods.id','=','photo.goodid')
-        ->select('goods.*','photo.photo5','cate.cate')->get();
-        // $v = DB::table('lb')->get();
+        ->select('goods.*','photo.photo5','cate.cate')->limit('3')->get();
         // dd($c);
+        // $v = DB::table('lb')->get();
+        // dd($b);
         return view('home.index',[
             'vo'=>$c,
             'as'=>$b,
             // 'vc'=>$v
             ]);
+
     }
 }

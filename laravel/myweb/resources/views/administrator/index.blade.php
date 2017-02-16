@@ -70,6 +70,7 @@
 	                        </td>
 	                        <td class=" ">
 	                        	<a href="/admin/administrator/del/{{$v['id']}}" class='icon-trash' style="font-size:20px;color:yellowgreen"></a>
+	                        	<a href="/admin/administrator/edit/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:yellowgreen"></a>
 	                        </td>
                         </tr>
                        	@endforeach

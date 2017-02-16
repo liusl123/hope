@@ -7,7 +7,7 @@
     <div class="mws-panel-body no-padding">
         <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
         
-            <form action="/admin/user/index" method='get'>
+            <form action="/admin/recycle/user" method='get'>
                 <div id="DataTables_Table_1_length" class="dataTables_length">
                     <label>Show 
                         <select size="1" name="num" aria-controls="DataTables_Table_1">
@@ -67,7 +67,7 @@
                             <tr class="even">
                         @endif
                                 <td class=" sorting_1">{{$v['id']}}</td>
-                                <td class=" ">{{$v['name']}}</td>
+                                <td class=" ">{{$v['username']}}</td>
                                 <td class=" ">{{$v['email']}}</td>
                                 <td class=" ">{{$v['phone']}}</td>
                                 <td class=" ">

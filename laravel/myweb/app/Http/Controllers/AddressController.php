@@ -26,7 +26,7 @@ class AddressController extends Controller
     	$address->jiedao=$request->input('jiedao');
     	$address->phone=$request->input('mobilePhone');
     	$address->name=$request->input('receiverName');
-    	$address->user_id=2;
+    	$address->user_id=session('id');
     	$address->isdefault=$request->input('defaultAddress',0);
 
     	if($address->save()){
@@ -45,11 +45,11 @@ class AddressController extends Controller
         $address->jiedao=$request->input('jiedao');
         $address->phone=$request->input('mobilePhone');
         $address->name=$request->input('receiverName');
-        $address->user_id=2;
+        $address->user_id=session('id');
         $address->isdefault=$request->input('defaultAddress',0);
 
         if($address->save()){
-            return redirect('order/indexadd');
+            return redirect('/order/indexadd');
         }
     }
 }

@@ -21,7 +21,7 @@ class OrderController extends Controller
         // dd(session('cart'));
         // dd($request->input('t'));
         $t = $request->input('t');
-    	$address=AddressController::getAddressById(2);
+    	$address=AddressController::getAddressById(session('id'));
         $carts = session('cart');
         $data = [];
         foreach($carts as $v){
@@ -36,8 +36,8 @@ class OrderController extends Controller
 
 
     public function getIndexadd(){
-
-        $address=AddressController::getAddressById(2);
+        // dd(session('id'));
+        $address=AddressController::getAddressById(session('id'));
         return view('order.indexadd',['address'=>$address]);
     }
 
@@ -59,7 +59,7 @@ class OrderController extends Controller
 
     	//参数的注入
     	$order->order_num=time().rand(10000,99999);
-    	$order->user_id=2;//session获取登陆者的id
+    	$order->user_id=session('id');//session获取登陆者的id
     	$order->address_id=$request->input('address_id');
     	$order->total=$this->getTotal();
         $order->commit=$request->input('commit');
@@ -126,7 +126,7 @@ class OrderController extends Controller
 
     public function getXq(){
         // $id = session('id');//存入session的用户id
-        $id = 2;
+        $id = session('id');
         $data = DB::table('orders as o')
          ->join('order_details as od','o.id','=','od.order_id')
          ->join('goods as g','g.id','=','od.goods_id')

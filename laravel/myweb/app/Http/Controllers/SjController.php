@@ -11,6 +11,7 @@ class SjController extends Controller
 {
     public function getSj(){
     	$b = DB::table('photo')->join('goods','photo.goodid','=','goods.id')->select('goods.*','photo.photo5')->get();
+    	// dd($b);
     	return view('sj.index',['vo'=>$b]);
     }
 }

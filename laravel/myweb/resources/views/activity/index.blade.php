@@ -78,6 +78,8 @@
 	                        	<a href="/admin/activity/del/{{$v['id']}}" class='icon-trash' style="font-size:20px;color:yellowgreen"></a>
 	                        	&nbsp;&nbsp;
 	                        	<a href="/admin/activity/edit/{{$v['id']}}" class='icon-wrench' style="font-size:20px;color:yellowgreen"></a>
+	                        	&nbsp;&nbsp;
+	                        	<a href="/admin/activityxq/add/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:yellowgreen"></a>
 	                        </td>
                         </tr>
                        	@endforeach
