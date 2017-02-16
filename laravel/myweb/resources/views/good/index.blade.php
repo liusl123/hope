@@ -39,17 +39,14 @@
                        <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
                             <thead>
                                 <tr role="row">
-	                                <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 156px;">ID</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">ID</th>
+	                                	                               	<th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">商品图片</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 208px;">商品名称</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">商品分类</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 136px;">生产厂家</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">简介</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">单价</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">商品分类</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">简介</th>
 	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">状态</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">存库量</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">购买量</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">点击数</th>
-	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">商品图片</th>
+	                                <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 101px;">操作</th>
 	                               </tr>
                             </thead>
                             
@@ -60,12 +57,12 @@
                        	@else
                        		<tr class="even">
                        	@endif
-	                        <td class=" sorting_1">{{$v['id']}}</td>
+	                        <td class=" ">{{$v['id']}}</td>
+	                       	<td class=" "><img src="{{$v['picname']}}" style="width:60px"></td>
 	                        <td class=" ">{{$v['goods']}}</td>
+	                       	<td class=" ">{{$v['price']}}</td>
 	                        <td class=" ">{{$v['cate']}}</td>
-	                        <td class=" ">{{$v['company']}}</td>
 	                        <td class=" ">{{$v['descr']}}</td>
-	                        <td class=" ">{{$v['price']}}</td>
 	                        <td class=" ">
 	                        			@if($v['state']=='1')
 											新添加
@@ -75,12 +72,9 @@
 	                        				下架
 	                        			@endif
 	                        </td>
-	                        <td class=" ">{{$v['store']}}</td>
-	                        <td class=" ">{{$v['num']}}</td>
-	                        <td class=" ">{{$v['clicknum']}}</td>
-	                        <td class=" "><img src="{{$v['picname']}}" width="60"></td>
 	                        <td>
 	                        	<a href="/admin/good/del/{{$v['id']}}" class='icon-trash' style="font-size:20px;color:yellowgreen"></a>
+	                        	&nbsp;&nbsp;
 	                        	<a href="/admin/good/edit/{{$v['id']}}" class='icon-wrench' style="font-size:20px;color:yellowgreen"></a>
 	                        	&nbsp;&nbsp;
 	                        	<a href="/admin/xq/add/{{$v['id']}}" class='icon-edit' style="font-size:20px;color:yellowgreen"></a>

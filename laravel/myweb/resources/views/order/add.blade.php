@@ -177,7 +177,8 @@
                                                     </colgroup>
                                                     <tbody>
                                                         <tr class="prod-info">
-                                                            <td class="prod-name" colspan="2">
+                                                            <td><img src="{{$v['picname']}}" width="100px" alt=""></td>
+                                                            <td class="prod-name">
                                                                 <a class="figure" href="https://shop.vivo.com.cn/product/90" target="_top">{{$v['goods']}}</a>
                                                                 <br> 颜色：{{$v['color']}}
                                                             </td>
@@ -243,7 +244,7 @@
                         <input type="hidden" name='address_id' value='{{$v['id']}}' />
                         <!-- <input type="hidden" name='total' value='{{$t}}' /> -->
                         
-                        <a href="/home/cart/index"><button id="btn-back2shoppingcart" class="btn-cancel" title="返回购物车">返回购物车</button></a>
+                        <a href="/home/cart/index"><button id="btn-back2shoppingcart" class="btn-cancel" type="button" title="返回购物车">返回购物车</button></a>
                         <button id="btn-submit-order" class="btn-confirm" title="提交订单">提交订单</button>
                     
                 </div>

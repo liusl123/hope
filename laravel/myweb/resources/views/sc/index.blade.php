@@ -40,7 +40,7 @@
 </div>
             </li>
     </ul>
-    <div id="j_bannerIndicator" class="indicator"><span class="on"></span><span class=""></span><span class=""></span><span class=""></span></div>
+
 </div>
 <div class="home-content-wrapper">
 <div class="structure-module full">

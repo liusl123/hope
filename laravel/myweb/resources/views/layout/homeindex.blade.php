@@ -27,7 +27,7 @@
 <script src="/ym/js/jquery.js" type="text/javascript"></script>
 <script src="/ym/js/vivo.main.js?v=20170117093229" type="text/javascript"></script>
 <link href="/ym/css/vivo.highlight2016.layout.css?v=20170117093229" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="/xq/index.css" media="all">
+<link rel="stylesheet" type="text/css" href="/ho/xq/index.css" media="all">
 </head> 
 <body class="vivomain-page">
         <div id="vivo-wrap">

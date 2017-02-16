@@ -83,4 +83,9 @@ class CateController extends Controller
             return back()->with('error','修改失败');
         }
     }
+
+     public static function fun(){
+        $cate = self::getCates();
+        return view('layout.nav',['cate'=>$cate]);
+    }
 }

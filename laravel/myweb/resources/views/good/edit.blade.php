@@ -5,7 +5,6 @@
 <span>商品添加</span>
 </div>
 <div class="mws-panel-body no-padding">
-
 <form enctype="multipart/form-data" action="/admin/good/update" class="mws-form" method="post">
 {{csrf_field()}}
 <input type="hidden" name="id" value='{{$vo['id']}}'>

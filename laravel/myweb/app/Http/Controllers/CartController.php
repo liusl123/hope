@@ -27,10 +27,14 @@ class CartController extends Controller
     //加入购物车
     public function postAdd(Request $request){
         // dd($request->all());
-        $data = $request->only(['id','num','color']);
+        // $id=$request->input('id');
+
+        $data = $request->only(['id','num','color','picname']);
+
         // 检测该商品在不在购物车中
         if ($this->checkExists($data['id'])) {
             $request->session()->push('cart',$data);
+            // dd(session('cart'));
         }
         return redirect('/home/cart/index'); 
     }

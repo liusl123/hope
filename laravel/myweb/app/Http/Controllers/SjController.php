@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class SjController extends Controller
 {
     public function getSj(){
-    	$b = DB::table('cate')->join('goods','cate.cate','=','goods.cate')->select('goods.*','cate.cate')->get();
+    	$b = DB::table('photo')->join('goods','photo.goodid','=','goods.id')->select('goods.*','photo.photo5')->get();
     	return view('sj.index',['vo'=>$b]);
     }
 }

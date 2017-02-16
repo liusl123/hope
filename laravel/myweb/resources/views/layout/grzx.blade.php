@@ -60,7 +60,7 @@
                         <a href="#" class="user"><b><img src="/grzx/small"></b></a>
                         <ul class="user-menu">
                             <li class="member-center"><a href="/login/grzx"><i></i>个人中心</a><span class="icon-angular"></span></li>
-                            <li class="my-order"><a href="http://shop.vivo.com.cn/my/order"><i></i>我的订单</a></li>
+                            <li class="my-order"><a href="/home/order/xq"><i></i>我的订单</a></li>
                             <li class="logout"><a href="/login/logout"><i></i>退出登录</a></li>
                         </ul>
                     </li>
@@ -71,7 +71,7 @@
     </div>
 </header><div id="content" class="cl">
 <div class="wrapper">
-        <div class="crumbs">您的位置：<a href="http://shop.vivo.com.cn/index.html">首页</a><b></b>会员中心</div>
+        <div class="crumbs">您的位置：<a href="/home/activity/sy">首页</a><b></b>会员中心</div>
 </div>
 <div class="wrapper">
 <aside class="menu-bar">
@@ -92,7 +92,7 @@
     </ul>
     <dl id="j_MyCenterMenus" class="menu">
         <dt class="menu-title"><i class="icon-deal"></i>交易管理</dt>
-        <dd class="menu-item"><a href="/login/grzxwddd">我的订单</a></dd>
+        <dd class="menu-item"><a href="/home/order/xq">我的订单</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/refund">退款/退货</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/lottery">我的中奖</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/exchange">我的兑换</a></dd>

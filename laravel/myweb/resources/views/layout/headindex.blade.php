@@ -56,7 +56,10 @@
 <!--[if lte IE 8]><link href="/css/vivo.layout.fixed.css?v=20170117093229" rel="stylesheet" type="text/css" /><![endif]-->
 <script src="/ym/js/jquery.js" type="text/javascript"></script>
 <script src="/ym/js/vivo.main.js?v=20170117093229" type="text/javascript"></script>
-<link href="/ym/css/vivo.highlight2016.layout.css?v=20170117093229" rel="stylesheet" type="text/css" />
+<link href="/ym/css/vivo.highlight2016.layout.css?v=20170117093229" rel="stylesheet" type="text/css" /><link href="/ym/css/base.css?v=10001" rel="stylesheet" type="text/css" />
+
+
+<link rel="stylesheet" type="text/css" href="/ho/xq/index.css" media="all">
 
 
 <script src="/sj/https://swsdl.vivo.com.cn/vivoshop/web/dist/js/bower_components/html5shiv/dist/html5shiv.min_23e126e.js"></script>

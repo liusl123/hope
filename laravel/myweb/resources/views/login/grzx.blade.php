@@ -56,7 +56,7 @@
                     	<a href="#" class="user"><b><img src="/grzx/small"></b></a>
                         <ul class="user-menu">
                         	<li class="member-center"><a href="/login/grzx"><i></i>个人中心</a><span class="icon-angular"></span></li>
-                            <li class="my-order"><a href="http://shop.vivo.com.cn/my/order"><i></i>我的订单</a></li>
+                            <li class="my-order"><a href="/home/order/xq"><i></i>我的订单</a></li>
                             <li class="logout"><a href="/login/logout"><i></i>退出登录</a></li>
                         </ul>
                     </li>
@@ -67,7 +67,7 @@
     </div>
 </header><div id="content" class="cl">
 <div class="wrapper">
-        <div class="crumbs">您的位置：<a href="http://shop.vivo.com.cn/index.html">首页</a><b></b>会员中心</div>
+        <div class="crumbs">您的位置：<a href="/home/activity/sy">首页</a><b></b>会员中心</div>
 </div>
 <div class="wrapper">
 <aside class="menu-bar">
@@ -88,7 +88,7 @@
     </ul>
     <dl id="j_MyCenterMenus" class="menu">
         <dt class="menu-title"><i class="icon-deal"></i>交易管理</dt>
-        <dd class="menu-item"><a href="/login/grzxwddd">我的订单</a></dd>
+        <dd class="menu-item"><a href="/home/order/xq">我的订单</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/refund">退款/退货</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/lottery">我的中奖</a></dd>
         <dd class="menu-item"><a href="http://shop.vivo.com.cn/my/exchange">我的兑换</a></dd>
@@ -119,21 +119,15 @@
             <li class="login-time">
             </li>
         </ul>
-        <div class="statistic-list">
-            <ul>
-                <li class="item">未付款订单<a href="http://shop.vivo.com.cn/my/order?status=not_paid">0</a></li>
-                <li class="item evaluation">评论和回复<a href="http://shop.vivo.com.cn/my/remark/unRemark-prod">0</a></li>
-                <li class="item coupon">优惠券<a href="http://shop.vivo.com.cn/my/coupon"></a></li>
-            </ul>
-        </div>
+  
 
         <div class="page-module">
-            <h2 class="title">最近的订单</h2>
+            <h2 class="title"></h2>
                 <div class="no-record no-order special"><img src="/grzx/no-order-icon_3030d23.png"><span>您还没有订单</span>
                 </div>
         </div>
         <div class="page-module">
-            <h2 class="title">最近浏览</h2>
+            <h2 class="title"></h2>
             <div class="no-record no-browse-record special" colspan="5"><img src="/grzx/no-browse-record-icon_141eec4.png"><span>您还没有任何浏览记录</span></div>
         </div>
     </dd>

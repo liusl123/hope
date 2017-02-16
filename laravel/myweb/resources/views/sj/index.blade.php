@@ -79,7 +79,7 @@
                             <li class="prod-item ">
                                 <a target="_blank" href="/home/good/xq/{{$v['id']}}">
                                 <div class="figure">
-                                    <img src="{{$v['picname']}}" style="position: relative;">
+                                    <img src="{{$v['photo5']}}" style="position: relative;">
                                 </div>
                                 <h3 title="X9Plus星空灰版【0首付 花呗12期分期免息】">
                                 {{$v['goods']}}

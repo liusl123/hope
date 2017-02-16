@@ -1,5 +1,6 @@
 @extends('layout.headindex')
 @section('con')
+<!-- 商品详情 -->
 <div id="content" class="cl">
 <input name="pageNavMappingIndex" id="pageNavMappingIndex" value="0" type="hidden">
 <input id="preview" name="preview" value="" type="hidden">
@@ -27,7 +28,6 @@
                 </div>
                 <div id="j_SpecItems" class="spec-items">
                     <ul class="cl" id="smallImgUl">
-
                     @foreach($ww as $vi)
                      @for($i=1;$i<5;$i++)
                             <li class=""> <a href="javascript:;"> <img src='{{$vi['photo'.$i]}}' alt=''></a></li>
@@ -75,73 +75,19 @@
                         </li>
 
                 </ul>
-                <form action="/home/cart/add" id="prod-detail-form" method="post">
+                <form id="prod-detail-form" action="/home/cart/add" method="post">
                     {{csrf_field()}}
-                    <input id="spuId" name="id" value="{{$v['id']}}" type="hidden">
-                    <input id="cmdyCategoryId" name="goods" value="{{$v['goods']}}" type="hidden">
-                    <input id="queryFlag" name="pic" value="{{$v['picname']}}" type="hidden">
-                    <input name='price' value="{{$v['price']}}" type="hidden">
+                    <input type="hidden" name='price' value="{{$v['price']}}">
+                    <input type="hidden" name='picname' value="{{$v['picname']}}">
+
+                    <input  name="id" value="{{$v['id']}}" type="hidden">
+                    <!-- <input id="cmdyCategoryId" name="cmdyCategoryId" value="146" type="hidden"> -->
+                    <input  name="num" value="1" type="hidden">
                     <dl class="prod-params cl" id="j_colors" marketable="1">
-                        <dt>版本：</dt>
-                        <dd>
-                            <ul class="tags nettype-tags">
-                                <input id="netType" name="netType" value="{{$v['banben']}}" type="hidden">
-                                    <li name="netTypeLi" nettype="58" class="on" aa="">{{$v['banben']}}</li>
-                            </ul>
-                        </dd>
-                        <dt>尺寸</dt>
-                        <dd>
-                            <ul class="tags storage-tags">
-                                <input id="storage" name="storage" value="{{$v['size']}}" type="hidden">
-                                    <li name="storageLi" storage="4" class="on" dd="">{{$v['size']}}</li>
-                            </ul>
-                        </dd>
-                         <dt>容量：</dt>
-                        <dd>
-                            <ul class="tags storage-tags">
-                                <input id="storage" name="storage" value="{{$v['rongliang']}}" type="hidden">
-                                    <li name="storageLi" storage="3" class="on" >{{$v['rongliang']}}</li>
-                            </ul>
-                        </dd>
-                        <script type="text/javascript" src="/ho/xq/jquery-1.8.3.js"></script>
-                        <script>
-                        var li=$('li[name="netTypeLi"] :eq(0)').attr('aa');
-                        console.log(li);
-                        </script>
-                        <dt>颜色</dt>
-                        <dd>
-                            <ul class="tags color-box" spuinstallment="1">
-                                    <input  name="color" value="{{$v['color']}}" type="hidden">
-                                    <li class="sub-sku on" sku-store="1" sku-id="4224" sku-fullpay="1"><a class="color-7f7f7f" style="background: none repeat scroll 0% 0% rgb(127, 127, 127);" href="javascript:;"></a>{{$v['color']}}<i></i></li>
-                            </ul>
-                        </dd>
-                        <dt>服务：</dt>
-                        <dd>
-                                <ul class="tags service-tags">
-                                        <li name="broken-svc" sku-id="1634" svc-price="99" broken-svc-id="201" title="一年碎屏宝，服务类商品，此款碎屏宝不适配Xplay5机型，购买当天生效，不支持退款" class="broken">
-                                   {{$v['fuwu']}} &nbsp&nbsp  <span class="item-price"><dfn>¥</dfn>99</span><i></i>
-                                        </li>
-                                    <li class="detail"><a target="_top" href="https://shop.vivo.com.cn/helpcenter/broken-screen">详情&gt;</a></li>
-                                </ul>
-                        </dd>
-                        <dt>数量：</dt>
-                        <dd class="order-num">
-                            <label id="dec" class="disabled">-</label>
-                            <input id="add-num" maxlength="1" name='num' value="1" type="text">
-                            <label id="inc">+</label>
-                            <small class="order-num-msg" id="order-num-msg">(仅限购3部)</small>
-                        </dd>
-                    </dl>
-                
-                <form id="prod-detail-form" method="post">
-                    <input id="spuId" name="spuId" value="9986" type="hidden">
-                    <input id="cmdyCategoryId" name="cmdyCategoryId" value="146" type="hidden">
-                    <input id="queryFlag" name="queryFlag" value="1" type="hidden">
-                <dl class="prod-params cl" id="j_colors" marketable="1">
                                 <dt>版本：</dt>
                                 <dd>
                                     <ul class="tags nettype-tags">
-                                        <input id="a"  value="3" type="hidden">
+                                        <input id="a" name="banben" value="3" type="hidden">
                                         @foreach($xx as $k=>$w)
                                             <li class="on">{{$w}}<i></i></li>
                                         @endforeach
@@ -150,7 +96,7 @@
                                 <dt>容量：</dt>
                                 <dd>
                                     <ul class="tags storage-tags">
-                                        <input id="b"  value="3" type="hidden">
+                                        <input id="b" name='rongliang'  value="3" type="hidden">
                                          @foreach($rr as $key=>$wa)
                                             <li class="aa">{{$wa}}<i></i></li>
                                         @endforeach
@@ -159,7 +105,7 @@
                                  <dt>尺寸：</dt>
                                 <dd>
                                     <ul class="tags storage-tags">
-                                        <input id="c"  value="3" type="hidden">
+                                        <input id="c" name="size" value="3" type="hidden">
                                         @foreach($zz as $kr=>$cv)
                                             <li class="bb">{{$cv}}<i></i></li>
                                         @endforeach
@@ -169,7 +115,7 @@
                             <dt>颜色</dt>
                             <dd>
                                 <ul class="tags color-box" spuinstallment="1">
-                                <input id="o" value="颜色" type="hidden">
+                                <input id="o" name="color" value="color" type="hidden">
                                 @foreach($tt as $kj=>$gb)
                               
                                         <li class="e">{{$gb}}</li>
@@ -177,7 +123,7 @@
                                
                                 </ul>
                             </dd>
-                                            <script type="text/javascript" src="/xq/jquery-18.3.js">
+                                            <script type="text/javascript" src="/xq/jquery-1.8.3.js">
                                              </script>
                                              <script type="text/javascript">
                                                     $('.on').each(function(){
@@ -207,7 +153,7 @@
                                               $('.e').each(function(){
                                                 $(this).toggle(function(){
                                                     $(this).css('borderColor','#008DD5');
-                                                    $('#c').val($(this).text());
+                                                    $('#o').val($(this).text());
                                                 },function(){
                                                     $(this).css('borderColor','#DDDDDD'); 
                                                 });
@@ -226,17 +172,17 @@
                                             <li class="detail"><a target="_blank" href="https://shop.vivo.com.cn/helpcenter/broken-screen">详情&gt;</a></li>
                                         </ul>
                                 </dd>
-                </dl>
-                </form>
+                    </dl>
+                    <div class="btns">
 
-                <div class="btns">
-
-                    <button class="btn-next  btn-appointment payall-order" type="submit" title="加入购物车">加入购物车</button>
+                    <button class="btn-next J_buy-button btn-appointment payall-order" type="submit" title="加入购物车">加入购物车</button>
                     <p class="count-down-text"></p>
 
-                    
-                </div>
+                    </div>
                 </form>
+                 
+                
+
                 <div class="activity-tags">
                         <ul>
                             <li class="post-free"></li>
@@ -252,18 +198,6 @@
 <div class="prod-main-info" style="padding-top: 0px;">
     <div class="prod-main-tab">
         <div class="prod-tab-box">
-            <button style="display: none;" class="btn-next btn-appointment payall-order" type="button" title="全款预定">全款预定</button>
-            <div style="display: none;" class="thumb-goods cl">
-
-                <div class="figure">
-                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346629938hd_250x250.png" height="45" width="45"></li>
-                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346631134hd_250x250.png" height="45" width="45"></li>
-                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346631796hd_250x250.png" height="45" width="45"></li>
-                        <li> <img id="j_smallPic" src="/ho/xq/4224_1486346632597hd_250x250.png" height="45" width="45"></li>
-                </div>
-                <h3 title="X9Plus星空灰版【0首付 花呗12期分期免息】">X9Plus星空灰版【0首付 花呗12期分期免息】</h3>
-                <span>￥3498</span>
-            </div>
             <ul>
                 <li class="tab-information current" v="information"><a href="#">详情<b></b></a></li>
                 <li class="tab-parameter" v="parameter"><a href="#">参数<b></b></a></li>
@@ -276,30 +210,8 @@
     <div class="prod-main-box">
         <div style="display: block;" class="prod-main-information">
             <div class="section">
-            <p><a href="#" target="_top">
-           <div class="vc-main-events vc-ev-pic">
-            <h2 style="float:left">活动</h2>
-            <a class="event-morelink v-gb-ico" style="float:left;margin-top:-15px;" href="http://bbs.vivo.com.cn" target="_blank">更多</a>
-            <ul class="cl">
-                @foreach($aa as $vc)
-                <li>
-                     <a href="https://shop.vivo.com.cn/sp/X9Plus" target="_blank">
-                        <div class="figure"><img src="{{$vc['pic']}}" style="width:100;height:100" /></div>
-                        <h3>@if($vc['state']=='1')
-                                新活动
-                            @elseif($vc['state']=='2')
-                                活动开始
-                            @else
-                                活动结束
-                            @endif
-                        {{$vc['activityname']}}</h3>
-                        <p>{{$vc['type']}}</p>
-                    </a>
-                    <strong>商城</strong>
-                </li>
-                    @endforeach
-            </ul>
-            </div>
+            <p><a href="#" target="_top"></a></p>
+
             @foreach($pp as $ty)
              @for($i=1;$i<5;$i++)
            <li> <img src='{{$ty['pic'.$i]}}' title="" alt=""></li>
@@ -499,10 +411,6 @@
     var webCtx = "";
     var passportLoginUrlPrefix = "https://passport.vivo.com.cn/v3/web/login/authorize?client_id=3&redirect_uri=";
 </script>
-<script src="/ho/xq/jquery.min_6163309.js"></script>
-<script src="/ho/xq/jquery.cookie_a5283b2.js"></script>
-<script src="/ho/xq/jquery.lazyload_546c1da.js"></script>
-
 <script src="/xq/jquery.js"></script>
 <script src="/xq/jquery_003.js"></script>
 <script src="/xq/jquery_002.js"></script>
@@ -511,7 +419,6 @@
 <script src="/xq/dialog_6a2b3fb.js"></script>
 <script src="/xq/vivo-stat_265b49b.js"></script>
 <script src="/xq/login_confirm_485e7b4.js"></script>
-
 <script>
     var imgHost = "https://swsdl.vivo.com.cn/vivoshop/";
     var skuImageJsonStr = '([{"bigPic":"commodity/24/4224_1486346629938hd_530x530.png","hdPic":"commodity/24/4224_1486346629938hd_1080x1080.png","imageNo":"1486346629938hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346629938hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346629938hd_100x100.png"},{"bigPic":"commodity/24/4224_1486346631134hd_530x530.png","hdPic":"commodity/24/4224_1486346631134hd_1080x1080.png","imageNo":"1486346631134hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346631134hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346631134hd_100x100.png"},{"bigPic":"commodity/24/4224_1486346631796hd_530x530.png","hdPic":"commodity/24/4224_1486346631796hd_1080x1080.png","imageNo":"1486346631796hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346631796hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346631796hd_100x100.png"},{"bigPic":"commodity/24/4224_1486346632597hd_530x530.png","hdPic":"commodity/24/4224_1486346632597hd_1080x1080.png","imageNo":"1486346632597hd","imageType":"","skuId":"4224","smallPic":"commodity/24/4224_1486346632597hd_250x250.png","thumbnailPic":"commodity/24/4224_1486346632597hd_100x100.png"}])';
@@ -521,7 +428,6 @@
     var isSecondBuy = false;
     var maxNumberPerUser = 3;
 </script>
-
 <script src="/xq/simpleStorage_f115cd4.js"></script>
 <script src="/xq/view_cbc6422.js"></script>
 <script src="/xq/view-hist_823c137.js"></script>

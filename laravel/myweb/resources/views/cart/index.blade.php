@@ -1,4 +1,4 @@
-@extends('layout.homeindex')
+@extends('layout.home')
 @section('con')
 <div id="content" class="cl">
     <div class="wrapper">
@@ -35,7 +35,7 @@
                                 <input type="hidden" name='color' value='{{$v['color']}}' />
                                 <input type="hidden" name='price' value='{{$v['price']}}' />
                                 <input type="hidden" name='num' value='{{$v['num']}}' />
-                                <input type="hidden" name='pic' value='{{$v['pic']}}'  />
+                                <input type="hidden" name='picname' value='{{$v['picname']}}'  />
                                     <!-- <td class="td-check">
                                         <input class="J_viewInfo" data-uniquecode="1_4020" data-carttype="1" data-suitecode="" data-suitediscount="" data-suitevcoin="" data-suitestatus="" type="hidden">
                                         <i class="checkbox J_viewCheckBox J_operate checked" data-uniquecode="1_4020" ></i>
@@ -53,7 +53,8 @@
                                             </colgroup>
                                             <tbody>
                                                 <tr class="prod-info">
-                                                    <td class="prod-name" colspan="2">
+                                                    <td><img src="{{$v['picname']}}"  width='100px'alt=""></td>
+                                                    <td class="prod-name" >
                                                         <a class="figure" href="https://shop.vivo.com.cn/product/249?colorSkuid=4020" target="_top">{{$v['goods']}}</a>
                                                         <br>{{$v['color']}}
                                                     </td>
@@ -96,8 +97,7 @@
                 </div>
                        <input type="hidden" id='zong' name='t' value='' />
                 <div class="btn-box">
-                    
-                    <a href="/home/good/index"><button class="btn-cancel J_goShopping" href="/home/goods/index.html" title="继续购物">继续购物</button></a>
+                    <a href="/home/sc/index"><button class="btn-cancel J_goShopping" type="button" href="/home/sc/index" title="继续购物">继续购物</button></a>
                     
                     
                     <button class="btn-confirm btn-submit J_btnConfirm" type='submit' title="去结算">去结算

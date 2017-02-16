@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 
 class GoodController extends Controller
 {
+     public function getXq($id){
+        // dd($id);
       // $r = DB::table('color')->get();
       // dd($r);
        // $cd = DB::table('goods as g')
@@ -77,7 +79,7 @@ class GoodController extends Controller
             $dd = $yy['color']; 
             $rr = explode('/',$dd);
             $tt=$rr;
-              // dd($arr[1]);
+              // dd($dada);
               return view('home.good',[
               'as'=>$v,
               'aa'=>$c,

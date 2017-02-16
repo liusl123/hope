@@ -28,6 +28,7 @@ class OrderController extends Controller
             $temp = Goods::findOrFail($v['id']);
             $temp['num'] = $v['num'];
             $temp['color'] = $v['color'];
+            $temp['picname'] = $v['picname'];
             $data[] = $temp;
         }
     	return view('order.add',['t'=>$t,'data'=>$data,'address'=>$address]);
@@ -74,6 +75,7 @@ class OrderController extends Controller
     			$temp['order_id']=$order->id;
                 $temp['color']=$v['color'];
     			$data[]=$temp;
+                // dd($data);
     		}
             Order_detail::insert($data);
     	} 
@@ -90,6 +92,23 @@ class OrderController extends Controller
            
 
             return redirect('/home/order/add');
+
+        }else{
+            return back();
+        }
+    }
+
+    //并行的系统不能删除
+    public function postDelxxiadan(Request $request){
+        $id=$request->input('address_id');
+        // dd($id);
+        $res=DB::table('addresses')->where('id',$id)->delete();
+
+        if($res){
+
+           
+
+            return redirect('/order/indexadd');
 
         }else{
             return back();

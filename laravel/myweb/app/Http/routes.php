@@ -43,6 +43,18 @@ Route::group(['middleware'=>'login'],function(){
 });
 // 后台登录
 Route::controller('/admin','AdminController');
+
+//登录模块
+Route::controller('/login','LoginController');
+
+//axjx阿贾克斯
+Route::controller('/ajax','AjaxController');
+
+//临时测试订单的路由
+Route::controller('/order','OrderController');
+
+Route::controller('/address','AddressController');
+
 // 验证码
 Route::get('/code','AdminController@code');
 

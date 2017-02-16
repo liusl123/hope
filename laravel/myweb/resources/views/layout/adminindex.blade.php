@@ -286,6 +286,19 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="#"><i class="icon-gift"></i>后台活动管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/activity/index">活动浏览</a></li>
+                            <li><a href="/admin/activity/add">活动添加</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-truck"></i>商品订单管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/orders/index">订单浏览</a></li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#"><i class="icon-th-list"></i>分类模块</a>
                         <ul class='closed'>
                             <li><a href="/admin/cate/index">浏览分类</a></li>

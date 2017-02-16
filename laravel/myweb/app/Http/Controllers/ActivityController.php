@@ -51,13 +51,6 @@ class ActivityController extends Controller
 			if(file_exists('.'.$vo['pic'])){
 				unlink('.'.$vo['pic']);
 			}
-            $reg = '/src=[\'"]?([^\'"]*)[\'"]?/';
-            preg_match_all($reg,$vo['con'],$arr);
-            foreach($arr[1] as $path){
-                if(file_exists('.'.$path)){
-                    unlink('.'.$path);
-                }
-            }
 			return redirect('/admin/activity/index')->with('success','删除成功');
 		}else{
 			return back()->with('error','删除失败');	
@@ -88,20 +81,6 @@ class ActivityController extends Controller
                 unlink('.'.$vo['pic']);
             }
         }
-        $reg = '/src=[\'"]?([^\'"]*)[\'"]?/';
-        preg_match_all($reg,$vo['con'],$arr1);
-        preg_match_all($reg,$data['con'],$arr2);
-        // dd($arr1);
-        $res = $arr1==$arr2?true:false;
-        
-        if(!$res){      
-            foreach($arr1[1] as $path){
-                if(file_exists('.'.$path)){
-                    unlink('.'.$path);
-                }
-            }
-        }
-		// dd($data);
 		if(DB::table('activity')->where('id',$request->input('id'))->update($data)){
 			return redirect('/admin/activity/index')->with('success','修改成功');
 			// echo '啦啦啦';
@@ -118,7 +97,7 @@ class ActivityController extends Controller
         ->join('photo','goods.id','=','photo.goodid')
         ->select('goods.*','photo.photo5','cate.cate')->get();
         // $v = DB::table('lb')->get();
-        // dd($b);
+        // dd($c);
         return view('home.index',[
             'vo'=>$c,
             'as'=>$b,

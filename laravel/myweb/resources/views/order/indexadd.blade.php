@@ -50,14 +50,14 @@
 
                         <br>  
                     <!-- 删除下单操作 -->
-                        <form action="/order/delxiadan" method="post">
+                        <form action="/order/delxxiadan" method="post">
                             {{csrf_field()}}
                             <input type="hidden" name='address_id'value=''>
                             <input type="submit" value="删除地址" id="saveAddress " class="btn-blue submit">
                         </form>
                     </ul>    
                    <!--  <form id="shipping-address-new-edit" method="post" onsubmit="return false" novalidate="novalidate" action="/order/doadd"> -->
-                    <form action="/address/doadd" method="post">
+                    <form action="/address/dooadd" method="post">
                         {{csrf_field()}}
                         <dl class="address-info-new cl hidden" style="display: none;">
                             <dt><span class="must">*</span>收货人：</dt>

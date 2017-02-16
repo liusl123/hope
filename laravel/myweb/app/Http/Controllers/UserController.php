@@ -30,7 +30,7 @@ class UserController extends Controller
             'email.email' => '邮箱格式不正确'
         ]);
         $data = $request -> except(['_token','repass']);
-        $data['pass'] = Hash::make($data['pass']);//解密Hash::check()
+        $data['pass'] = $data['pass'];//解密Hash::check()
         $data['token'] = str_random(50);
         $data['status'] = 0;
 
@@ -49,12 +49,12 @@ class UserController extends Controller
                        -> orwhere('status' , $request -> input('keyword'));
             }
             
-        }) -> where('state','1') -> paginate($request -> input('num',5));
+        }) -> where('status','<=','1') -> paginate($request -> input('num',5));
         return view('user.index',['list' => $data,'request' => $request -> all()]);
     }
     // 删除
     public function getDel($id){
-        $res = DB::table('user')->where('id',$id)->update(['state'=>0]);
+        $res = DB::table('user')->where('id',$id)->update(['status'=>2]);
         // dd($res);
         if($res){
             return redirect('/admin/user/index')->with('success','删除成功');
