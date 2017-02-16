@@ -25,7 +25,9 @@
 <!--<link href="/css/2016guoqing.css?v=20170117093229" rel="stylesheet" type="text/css" />-->
 <!--[if lte IE 8]><link href="/css/vivo.layout.fixed.css?v=20170117093229" rel="stylesheet" type="text/css" /><![endif]-->
 <script src="/ym/js/jquery.js" type="text/javascript"></script>
+<script src="/ym/js/jquery-1.8.3.js" type="text/javascript"></script>
 <script src="/ym/js/vivo.main.js?v=20170117093229" type="text/javascript"></script>
+
 <link href="/ym/css/vivo.highlight2016.layout.css?v=20170117093229" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="/ho/xq/index.css" media="all">
 </head> 
@@ -41,7 +43,7 @@
 
 <li class="nav-gb current"><a  onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/首页'])" href="/home/activity/sy">首页</a></li>
 
-<li class="nav-gb nav-h-products "><a href="/product.html" onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/产品'])">产品</a></li>
+<li class="nav-gb nav-h-products "><a href="/home/shouji/sj" onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/产品'])">产品</a></li>
 
 <li class="nav-gb"><a onclick="_hmt.push(['_trackEvent', 'nav', 'click', 'nav/商城'])" href="/home/sc/index" target="_blank" >商城</a></li>
 

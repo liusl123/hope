@@ -29,7 +29,6 @@ Route::group(['middleware'=>'login'],function(){
     Route::get('/admin', 'AdminController@index');
 
     //分类模块
-    // Route::controller('/admin/cate','CateController');
     Route::controller('/admin/cate','CateController');
     Route::controller('/admin/good','GoodsController');
     Route::controller('/admin/administrator','AdministratorController');
@@ -68,7 +67,6 @@ Route::controller('/home/cart','CartController');
 Route::controller('/home/good','GoodController');
 
 // 订单
-// Route::any('/home/order/add','OrderController@add');
 Route::controller('/home/order','OrderController');
 
 // 地址

@@ -4,16 +4,20 @@
 <div class="vms-bigbox">
 
 <div class="vms-box cl">
-
-<dl>
 @foreach($cate as $v)
-<dt><a class="v-gb-ico" href="/product.html">{{$v['cate']}}</a></dt>
+    <dl>
+        <dt><a class="v-gb-ico" href="/home/shouji/sj/{{$v['cate']}}">{{$v['cate']}}</a></dt>
+        @foreach($v['sub'] as $val)
+            <dd><a class="v-gb-ico shop" href="" >{{$val['cate']}}</a></dd> <!-- ="/home/shouji/sj/{{$val['cate']}}" -->
+        @endforeach
+    </dl>
 @endforeach
-</dl>
-
 
 </div>
 
 </div>
 
 </div>
+
+
+

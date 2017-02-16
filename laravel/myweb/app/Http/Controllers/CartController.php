@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Goods;
-// use DB;
+use DB;
 use App\Http\Controllers\Controller;
 
 class CartController extends Controller
@@ -102,4 +102,5 @@ class CartController extends Controller
         session(['cart'=>[]]);
         session(['cart'=>$carts]);
     }
+    
 }

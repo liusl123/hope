@@ -17,7 +17,7 @@ class RecycleController extends Controller
                 $query -> where('name','like','%'.$request -> input('keyword').'%')
                        -> orwhere('email','like','%'.$request -> input('keyword').'%');
             }
-        }) -> where('state','0') -> paginate($request -> input('num',5));
+        }) -> where('status','0') -> paginate($request -> input('num',5));
         return view('recycle.user',['list' => $data,'request' => $request -> all()]);
     }
     // 用户的删除
@@ -40,16 +40,14 @@ class RecycleController extends Controller
     }
 
     //商品
-    // public function getGoods(){
-    //     return view('recycle.goods');
-    // }
+    
     public function getGoods(Request $request){
         $data = DB::table('goods') -> where(function($query) use($request){
             if($request -> input('keyword')!=null){
                 $query -> where('goods','like','%'.$request -> input('keyword').'%')
                        -> orwhere('cate','like','%'.$request -> input('keyword').'%');
             }
-        }) -> where('state','4') -> paginate($request -> input('num',5));
+        }) -> where('status','4') -> paginate($request -> input('num',5));
         return view('recycle.goods',['list' => $data,'request' => $request -> all()]);
     }
     // 商品的删除
